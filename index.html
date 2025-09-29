@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmine Restaurant & Bar - Oludeniz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="jasmine.png" alt="Jasmine Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Jasmine</h1>
+                        <span>Restaurant & Bar</span>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#restaurant">Restaurant</a></li>
+                    <li><a href="#hotel">Hotel</a></li>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Welcome to Jasmine</h1>
+                <h2>Restaurant & Bar • Hotel</h2>
+                <p>Experience comfortable family accommodation and delicious home-style dining in the heart of Oludeniz,
+                    Turkey.</p>
+                <div class="hero-buttons">
+                    <a href="#restaurant" class="btn btn-primary">Explore Restaurant</a>
+                    <a href="#rooms" class="btn btn-secondary">View Rooms</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Img/poolFromR.jpeg" alt="Jasmine Pool Area" />
+        </div>
+    </section>
+
+    <!-- Special Offer Section -->
+    <section class="special-offer">
+        <div class="container">
+            <div class="offer-content">
+                <div class="offer-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <div class="offer-text">
+                    <p><strong>Free facilities use on departure day!</strong></p>
+                    <p>Checking out today from your hotel? If you have a late flight, early arrival, or just want to use
+                        our facilities
+                        during the day, we offer:</p>
+                    <ul class="offer-features">
+                        <li><i class="fas fa-suitcase"></i> Free luggage storage</li>
+                        <li><i class="fas fa-shower"></i> Free shower facilities</li>
+                        <li><i class="fas fa-swimming-pool"></i> Free pool access</li>
+                        <li><i class="fas fa-sun"></i> Free sunbeds</li>
+                        <li><i class="fas fa-car"></i> Free pickup from your hotel</li>
+                    </ul>
+                    <p class="offer-note"><strong>Please note:</strong> You need to eat and drink at our restaurant to
+                        use these facilities.</p>
+                    <div class="offer-contact">
+                        <button class="btn btn-whatsapp offer-btn" onclick="contactPickupWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> Request Hotel Pickup
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Section -->
+    <section id="restaurant" class="restaurant-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Restaurant & Bar</h2>
+                <p>Enjoy delicious home-style Turkish meals in a relaxed family atmosphere</p>
+            </div>
+            <div class="restaurant-content">
+                <div class="restaurant-info">
+                    <h3>Family-Friendly Dining</h3>
+                    <p>Our restaurant offers a warm, welcoming atmosphere perfect for families. Enjoy traditional
+                        Turkish home cooking, fresh local ingredients, and a comfortable setting where everyone feels at
+                        home.</p>
+                    <ul class="features">
+                        <li><i class="fas fa-utensils"></i> Traditional Turkish Home Cooking</li>
+                        <li><i class="fas fa-cocktail"></i> Local Drinks & Refreshments</li>
+                        <li><i class="fas fa-swimming-pool"></i> Poolside Family Meals</li>
+                        <li><i class="fas fa-heart"></i> Kid-Friendly Menu</li>
+                    </ul>
+                </div>
+                <div class="restaurant-image">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt="Restaurant Interior" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Section -->
+    <section id="hotel" class="hotel-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Jasmine Hotel</h2>
+                <p>Comfortable family accommodation in the heart of Oludeniz</p>
+            </div>
+            <div class="hotel-content">
+                <div class="hotel-image">
+                    <img src="Img/front.jpeg" alt="Hotel Exterior" />
+                </div>
+                <div class="hotel-info">
+                    <h3>Your Home Away From Home</h3>
+                    <p>Located just minutes from the famous Oludeniz Beach and Blue Lagoon, Jasmine Hotel offers
+                        comfortable family-friendly accommodation with all the essentials for a relaxing stay.</p>
+                    <ul class="features">
+                        <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                        <li><i class="fas fa-swimming-pool"></i> Swimming Pool</li>
+                        <li><i class="fas fa-car"></i> Free Parking</li>
+                        <li><i class="fas fa-home"></i> Family-Friendly Service</li <li><i class="fas fa-child"></i>
+                        Kid-Friendly Environment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Rooms</h2>
+                <p>Choose from our selection of comfortable accommodations</p>
+            </div>
+
+            <!-- Date Selection -->
+            <div class="date-selection">
+                <h3>📅 Select Your Dates</h3>
+                <p class="date-requirement">Please select your check-in and check-out dates to contact us about room
+                    availability.</p>
+                <div class="date-inputs">
+                    <div class="date-input">
+                        <label for="checkin">Check-in Date *</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+                    <div class="date-input">
+                        <label for="checkout">Check-out Date *</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rooms Grid -->
+            <div class="rooms-grid">
+                <!-- 1 Bedroom Apartment First Floor -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="room-image-carousel" id="room1Carousel">
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="1 Bedroom Apartment First Floor" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="1 Bedroom Apartment Kitchen" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="1 Bedroom Apartment View" />
+                            </div>
+                        </div>
+                        <button class="room-image-nav prev" onclick="moveRoomImage('room1', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="room-image-nav next" onclick="moveRoomImage('room1', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="room-image-dots">
+                            <span class="room-image-dot active" onclick="goToRoomImage('room1', 0)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room1', 1)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room1', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3>1 Bedroom Apartment - First Floor</h3>
+                        <p>Comfortable first-floor apartment with double bed and kitchenette.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-bed"></i> 1 Double Bed</li>
+                            <li><i class="fas fa-couch"></i> 2 Sofa Beds</li>
+                            <li><i class="fas fa-utensils"></i> Kitchenette</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                        </ul>
+                        <div class="room-price">€45/night</div>
+                        <button class="btn btn-whatsapp"
+                            onclick="contactWhatsApp('1 Bedroom Apartment - First Floor', 45)">
+                            <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 1 Bedroom Apartment Ground Floor -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="room-image-carousel" id="room2Carousel">
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="1 Bedroom Apartment Ground Floor" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="1 Bedroom Apartment Kitchen" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="1 Bedroom Apartment Garden" />
+                            </div>
+                        </div>
+                        <button class="room-image-nav prev" onclick="moveRoomImage('room2', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="room-image-nav next" onclick="moveRoomImage('room2', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="room-image-dots">
+                            <span class="room-image-dot active" onclick="goToRoomImage('room2', 0)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room2', 1)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room2', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3>1 Bedroom Apartment - Ground Floor</h3>
+                        <p>Ground floor apartment with easy access and garden views.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-bed"></i> 1 Double Bed</li>
+                            <li><i class="fas fa-couch"></i> 2 Sofa Beds</li>
+                            <li><i class="fas fa-utensils"></i> Kitchenette</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                        </ul>
+                        <div class="room-price">€45/night</div>
+                        <button class="btn btn-whatsapp"
+                            onclick="contactWhatsApp('1 Bedroom Apartment - Ground Floor', 45)">
+                            <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2 Bedroom Apartment Ground Floor -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="room-image-carousel" id="room3Carousel">
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="2 Bedroom Apartment Ground Floor" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="2 Bedroom Apartment Kitchen" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="2 Bedroom Apartment Living" />
+                            </div>
+                        </div>
+                        <button class="room-image-nav prev" onclick="moveRoomImage('room3', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="room-image-nav next" onclick="moveRoomImage('room3', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="room-image-dots">
+                            <span class="room-image-dot active" onclick="goToRoomImage('room3', 0)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room3', 1)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room3', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3>2 Bedroom Apartment - Ground Floor</h3>
+                        <p>Spacious ground floor apartment perfect for families or groups.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-bed"></i> 1 Double Bed + 2 Single Beds</li>
+                            <li><i class="fas fa-couch"></i> 2 Sofa Beds</li>
+                            <li><i class="fas fa-utensils"></i> Kitchenette</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                        </ul>
+                        <div class="room-price">€75/night</div>
+                        <button class="btn btn-whatsapp"
+                            onclick="contactWhatsApp('2 Bedroom Apartment - Ground Floor', 75)">
+                            <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2 Bedroom Apartment First Floor -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="room-image-carousel" id="room4Carousel">
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="2 Bedroom Apartment First Floor" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="2 Bedroom Apartment Kitchen" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="2 Bedroom Apartment View" />
+                            </div>
+                        </div>
+                        <button class="room-image-nav prev" onclick="moveRoomImage('room4', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="room-image-nav next" onclick="moveRoomImage('room4', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="room-image-dots">
+                            <span class="room-image-dot active" onclick="goToRoomImage('room4', 0)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room4', 1)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room4', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3>2 Bedroom Apartment - First Floor</h3>
+                        <p>First floor apartment with great views and family-friendly layout.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-bed"></i> 1 Double Bed + 2 Single Beds</li>
+                            <li><i class="fas fa-couch"></i> 2 Sofa Beds</li>
+                            <li><i class="fas fa-utensils"></i> Kitchenette</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                        </ul>
+                        <div class="room-price">€75/night</div>
+                        <button class="btn btn-whatsapp"
+                            onclick="contactWhatsApp('2 Bedroom Apartment - First Floor', 75)">
+                            <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3 Bed Apartment Second Floor -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="swiper room5-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.1.jpeg" alt="3 Bed Apartment - Living Area" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.2.jpeg" alt="3 Bed Apartment - Kitchen" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.3.jpeg" alt="3 Bed Apartment - Bedroom 1" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.4.jpeg" alt="3 Bed Apartment - Bedroom 2" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.5.jpeg" alt="3 Bed Apartment - Bedroom 3" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.6.jpeg" alt="3 Bed Apartment - Bathroom" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.7.jpeg" alt="3 Bed Apartment - Balcony View" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.8.jpeg" alt="3 Bed Apartment - Outdoor Area" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.9.jpeg" alt="3 Bed Apartment - Pool View" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.10.jpeg" alt="3 Bed Apartment - Additional View" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.11.jpeg" alt="3 Bed Apartment - Interior Detail" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.12.jpeg" alt="3 Bed Apartment - Final View" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="room-content">
+                        <h3>3 Bed Apartment - Second Floor</h3>
+                        <p>Top floor apartment with balcony, wet bathroom, and panoramic views.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-bed"></i> 1 Double Bed + 3 Single Beds</li>
+                            <li><i class="fas fa-couch"></i> 2 Sofa Beds</li>
+                            <li><i class="fas fa-utensils"></i> Kitchenette</li>
+                            <li><i class="fas fa-bath"></i> Wet Bathroom</li>
+                            <li><i class="fas fa-mountain"></i> Balcony with Views</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                        </ul>
+                        <div class="room-price">€95/night</div>
+                        <button class="btn btn-whatsapp"
+                            onclick="contactWhatsApp('3 Bed Apartment - Second Floor', 95)">
+                            <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 1 Bedroom Apartment Garden Side -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="room-image-carousel" id="room6Carousel">
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="1 Bedroom Apartment Garden Side" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="1 Bedroom Apartment Garden View" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="1 Bedroom Apartment Kitchen" />
+                            </div>
+                        </div>
+                        <button class="room-image-nav prev" onclick="moveRoomImage('room6', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="room-image-nav next" onclick="moveRoomImage('room6', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="room-image-dots">
+                            <span class="room-image-dot active" onclick="goToRoomImage('room6', 0)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room6', 1)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room6', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3>1 Bedroom Apartment - Garden Side</h3>
+                        <p>Peaceful garden-side apartment with beautiful natural surroundings.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-bed"></i> 1 Double Bed</li>
+                            <li><i class="fas fa-couch"></i> 2 Sofa Beds</li>
+                            <li><i class="fas fa-utensils"></i> Kitchenette</li>
+                            <li><i class="fas fa-leaf"></i> Garden Views</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                        </ul>
+                        <div class="room-price">€50/night</div>
+                        <button class="btn btn-whatsapp"
+                            onclick="contactWhatsApp('1 Bedroom Apartment - Garden Side', 50)">
+                            <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Studio Room Garden Side -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="room-image-carousel" id="room7Carousel">
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="Studio Room Garden Side" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="Studio Room Garden View" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="Studio Room Living" />
+                            </div>
+                        </div>
+                        <button class="room-image-nav prev" onclick="moveRoomImage('room7', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="room-image-nav next" onclick="moveRoomImage('room7', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="room-image-dots">
+                            <span class="room-image-dot active" onclick="goToRoomImage('room7', 0)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room7', 1)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room7', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3>Studio Room - Garden Side</h3>
+                        <p>Compact studio room with garden views, perfect for solo travelers or couples.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-bed"></i> 1 Double Bed + 1 Single Bed</li>
+                            <li><i class="fas fa-leaf"></i> Garden Views</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                        </ul>
+                        <div class="room-price">€35/night</div>
+                        <button class="btn btn-whatsapp" onclick="contactWhatsApp('Studio Room - Garden Side', 35)">
+                            <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Studio 101 -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="room-image-carousel" id="room8Carousel">
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="Studio 101" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="Studio 101 Living" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                    alt="Studio 101 View" />
+                            </div>
+                        </div>
+                        <button class="room-image-nav prev" onclick="moveRoomImage('room8', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="room-image-nav next" onclick="moveRoomImage('room8', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="room-image-dots">
+                            <span class="room-image-dot active" onclick="goToRoomImage('room8', 0)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room8', 1)"></span>
+                            <span class="room-image-dot" onclick="goToRoomImage('room8', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3>Studio 101</h3>
+                        <p>Modern studio room with double bed, ideal for short stays.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-bed"></i> 1 Double Bed</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                        </ul>
+                        <div class="room-price">€30/night</div>
+                        <button class="btn btn-whatsapp" onclick="contactWhatsApp('Studio 101', 30)">
+                            <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch for reservations and inquiries</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Oludeniz, Fethiye, Turkey</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+90 553 728 30 45</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>jasminerestaurantbar@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/905537283045" target="_blank"
+                                    style="color: #25D366; text-decoration: none; font-weight: 600;">+90 553 728 30
+                                    45</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.3565216025736!2d29.144372174432867!3d36.56962548066551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c0477a64b73fdd%3A0xb20abcf06ae0ea4c!2sJasmine%20Restaurant%26Bar!5e0!3m2!1ses-419!2str!4v1759172523807!5m2!1ses-419!2str"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jasmine</h3>
+                    <p>Restaurant & Bar • Hotel</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#restaurant">Restaurant</a></li>
+                        <li><a href="#hotel">Hotel</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Oludeniz, Fethiye, Turkey</p>
+                    <p><a href="https://wa.me/905537283045" target="_blank"
+                            style="color: #25D366; text-decoration: none; font-weight: 600;">+90 553 728 30 45</a></p>
+                    <p>jasminerestaurantbar@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jasmine Restaurant & Bar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
