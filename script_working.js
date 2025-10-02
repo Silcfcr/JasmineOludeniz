@@ -613,49 +613,8 @@ function sendWhatsAppOrder() {
 
 // Initialize cart display on page load
 document.addEventListener('DOMContentLoaded', function () {
-    // Load menu dynamically
-    loadMenu();
-
     // Disable all minus buttons initially
     document.querySelectorAll('.quantity-btn.minus').forEach(btn => {
         btn.disabled = true;
     });
 });
-
-// Function to load menu from menu-data.js
-function loadMenu() {
-    const tabsContainer = document.getElementById('menu-tabs');
-    const contentContainer = document.getElementById('menu-content-tabs');
-    
-    if (tabsContainer && contentContainer && typeof generateMenuHTML === 'function') {
-        const menuData = generateMenuHTML();
-        tabsContainer.innerHTML = menuData.tabs;
-        contentContainer.innerHTML = menuData.content;
-        
-        // Re-initialize minus buttons after loading menu
-        const minusButtons = document.querySelectorAll('.quantity-btn.minus');
-        minusButtons.forEach(button => {
-            button.disabled = true;
-        });
-    }
-}
-
-// Function to switch between menu tabs
-function switchMenuTab(tabKey) {
-    // Remove active class from all tabs and content
-    document.querySelectorAll('.menu-tab').forEach(tab => {
-        tab.classList.remove('active');
-    });
-    document.querySelectorAll('.menu-tab-content').forEach(content => {
-        content.classList.remove('active');
-    });
-    
-    // Add active class to clicked tab and corresponding content
-    const activeTab = document.querySelector(`.menu-tab[onclick="switchMenuTab('${tabKey}')"]`);
-    const activeContent = document.getElementById(`tab-${tabKey}`);
-    
-    if (activeTab && activeContent) {
-        activeTab.classList.add('active');
-        activeContent.classList.add('active');
-    }
-}

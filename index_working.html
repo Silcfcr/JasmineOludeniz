@@ -151,14 +151,271 @@
                         </button>
                     </div>
 
-                    <!-- Menu Tabs -->
-                    <div class="menu-tabs" id="menu-tabs">
-                        <!-- Tabs will be generated dynamically -->
-                    </div>
-                    
-                    <!-- Menu Content -->
-                    <div class="menu-content-tabs" id="menu-content-tabs">
-                        <!-- Menu content will be loaded dynamically from menu-data.js -->
+                    <div class="menu-categories menu-two-columns">
+                        <!-- Breakfast -->
+                        <div class="menu-category">
+                            <h4><i class="fas fa-sun"></i> Breakfast (9am - 1pm)</h4>
+                            <div class="selectable-menu-items">
+                                <div class="selectable-menu-item" data-name="Traditional Village Breakfast"
+                                    data-price="350">
+                                    <div class="item-info">
+                                        <span class="item-name">Traditional Village Breakfast</span>
+                                        <span class="item-description">Olives, Cheese, Jam, Honey, Dried Apricots,
+                                            Salami, Tomato, Cucumber, Cheese Roll, Fried or Scrambled Egg, Fresh Turkish
+                                            Bread</span>
+                                        <span class="item-price">₺350</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Turkish Breakfast Plate" data-price="300">
+                                    <div class="item-info">
+                                        <span class="item-name">Turkish Breakfast Plate</span>
+                                        <span class="item-description">Olives, Cheese, Jam, Honey, Salami, Tomato,
+                                            Cucumber, Cheese Roll, Fried or Scrambled Egg, Fresh Turkish Bread</span>
+                                        <span class="item-price">₺300</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Full English Breakfast" data-price="320">
+                                    <div class="item-info">
+                                        <span class="item-name">Full English Breakfast</span>
+                                        <span class="item-description">Back Bacon, English Sausage, Mushrooms, Tomato,
+                                            Toasted Bread, Egg (Fried or Scrambled), Baked Beans</span>
+                                        <span class="item-price">₺320</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Hangover Breakfast" data-price="400">
+                                    <div class="item-info">
+                                        <span class="item-name">Hangover Breakfast</span>
+                                        <span class="item-description">2 Back Bacon, 2 English Sausage, Mushrooms,
+                                            Tomato, Toasted Bread, 2 Eggs (Fried or Scrambled), Baked Beans &
+                                            Chips</span>
+                                        <span class="item-price">₺400</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Toast -->
+                        <div class="menu-category">
+                            <h4><i class="fas fa-bread-slice"></i> Toast</h4>
+                            <div class="selectable-menu-items">
+                                <div class="selectable-menu-item" data-name="Butter Toast (v)" data-price="110">
+                                    <div class="item-info">
+                                        <span class="item-name">Butter Toast (v)</span>
+                                        <span class="item-description">Fresh toast with butter</span>
+                                        <span class="item-price">₺110</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Butter & Jam Toast (v)" data-price="120">
+                                    <div class="item-info">
+                                        <span class="item-name">Butter & Jam Toast (v)</span>
+                                        <span class="item-description">Fresh toast with butter and jam</span>
+                                        <span class="item-price">₺120</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Beans Toast (v)" data-price="150">
+                                    <div class="item-info">
+                                        <span class="item-name">Beans Toast (v)</span>
+                                        <span class="item-description">Toast with baked beans</span>
+                                        <span class="item-price">₺150</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Cheese Toast (v)" data-price="160">
+                                    <div class="item-info">
+                                        <span class="item-name">Cheese Toast (v)</span>
+                                        <span class="item-description">Toast with cheese</span>
+                                        <span class="item-price">₺160</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Burgers -->
+                        <div class="menu-category">
+                            <h4><i class="fas fa-hamburger"></i> Burgers</h4>
+                            <div class="selectable-menu-items">
+                                <div class="selectable-menu-item" data-name="Classic Burger" data-price="350">
+                                    <div class="item-info">
+                                        <span class="item-name">Classic Burger</span>
+                                        <span class="item-description">6 oz Beef Pattie, Lettuce, Tomato & Onion -
+                                            served with Chips</span>
+                                        <span class="item-price">₺350</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Jasmine Burger" data-price="500">
+                                    <div class="item-info">
+                                        <span class="item-name">Jasmine Burger</span>
+                                        <span class="item-description">6 oz Beef Pattie, Cheese, Bacon, Lettuce, Tomato
+                                            & Onion</span>
+                                        <span class="item-price">₺500</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Crispy Chicken Burger" data-price="350">
+                                    <div class="item-info">
+                                        <span class="item-name">Crispy Chicken Burger</span>
+                                        <span class="item-description">Deep Fried Chicken Breast, Lettuce, Tomato &
+                                            Onion</span>
+                                        <span class="item-price">₺350</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chicken -->
+                        <div class="menu-category">
+                            <h4><i class="fas fa-drumstick-bite"></i> Chicken</h4>
+                            <div class="selectable-menu-items">
+                                <div class="selectable-menu-item" data-name="Honey & Mustard Chicken" data-price="450">
+                                    <div class="item-info">
+                                        <span class="item-name">Honey & Mustard Chicken</span>
+                                        <span class="item-description">Chicken Breast in a creamy Honey & Mustard Sauce
+                                            with Mushrooms</span>
+                                        <span class="item-price">₺450</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Grilled Chicken Kebab" data-price="450">
+                                    <div class="item-info">
+                                        <span class="item-name">Grilled Chicken Kebab</span>
+                                        <span class="item-description">Marinated Pieces of Chicken Breast, Grilled
+                                            Tomato & Peppers served with Tortilla Wraps</span>
+                                        <span class="item-price">₺450</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Mixed Kebab" data-price="1300">
+                                    <div class="item-info">
+                                        <span class="item-name">Mixed Kebab</span>
+                                        <span class="item-description">Lamb Chop, Grilled Chicken Breast, Grilled
+                                            Meatballs, Beef Kebab, Grilled Tomato & Peppers served with Turkish
+                                            Wraps</span>
+                                        <span class="item-price">₺1300</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Beverages -->
+                        <div class="menu-category">
+                            <h4><i class="fas fa-cocktail"></i> Beverages</h4>
+                            <div class="selectable-menu-items">
+                                <div class="selectable-menu-item" data-name="Çay (Turkish Tea)" data-price="50">
+                                    <div class="item-info">
+                                        <span class="item-name">Çay (Turkish Tea)</span>
+                                        <span class="item-description">Traditional Turkish tea</span>
+                                        <span class="item-price">₺50</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Fresh Orange Juice" data-price="150">
+                                    <div class="item-info">
+                                        <span class="item-name">Fresh Orange Juice</span>
+                                        <span class="item-description">Freshly squeezed orange juice</span>
+                                        <span class="item-price">₺150</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Efes Beer" data-price="130">
+                                    <div class="item-info">
+                                        <span class="item-name">Efes Beer</span>
+                                        <span class="item-description">Turkish beer</span>
+                                        <span class="item-price">₺130</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="House Wine" data-price="100">
+                                    <div class="item-info">
+                                        <span class="item-name">House Wine</span>
+                                        <span class="item-description">Glass of House White or Red</span>
+                                        <span class="item-price">₺100</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -790,7 +1047,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="menu-data.js"></script>
     <script src="script.js"></script>
 </body>
 

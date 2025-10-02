@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasmine Restaurant & Bar - Oludeniz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="jasmine-logo2.png" alt="Jasmine Logo" class="logo-img">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#restaurant">Restaurant <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#restaurant" onclick="showMenuTab()">Menu</a></li>
+                            <li><a href="#restaurant" onclick="showDeliveryTab()">Free Delivery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#hotel">Hotel</a></li>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#customers">Our Customers</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Welcome to Jasmine</h1>
+                <h2>Restaurant & Bar • Hotel</h2>
+                <p>Experience comfortable family accommodation and delicious home-style dining in the heart of Oludeniz,
+                    Turkey.</p>
+                <div class="hero-buttons">
+                    <a href="#restaurant" class="btn btn-primary">Explore Restaurant</a>
+                    <a href="#rooms" class="btn btn-secondary">View Rooms</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="Img/poolFromR.jpeg" alt="Jasmine Pool Area" />
+        </div>
+    </section>
+
+    <!-- Special Offer Section -->
+    <section class="special-offer">
+        <div class="container">
+            <div class="offer-content">
+                <div class="offer-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <div class="offer-text">
+                    <p><strong>Free facilities use on departure day!</strong></p>
+                    <p>Checking out today from your hotel? If you have a late flight, early arrival, or just want to use
+                        our facilities
+                        during the day, we offer:</p>
+                    <ul class="offer-features">
+                        <li><i class="fas fa-suitcase"></i> Free luggage storage</li>
+                        <li><i class="fas fa-shower"></i> Free shower facilities</li>
+                        <li><i class="fas fa-swimming-pool"></i> Free pool access</li>
+                        <li><i class="fas fa-sun"></i> Free sunbeds</li>
+                        <li><i class="fas fa-car"></i> Free pickup from your hotel</li>
+                    </ul>
+                    <p class="offer-note"><strong>Please note:</strong> You need to eat and drink at our restaurant to
+                        use these facilities.</p>
+                    <div class="offer-contact">
+                        <button class="btn btn-whatsapp offer-btn" onclick="contactPickupWhatsApp()">
+                            <i class="fab fa-whatsapp"></i> Request Hotel Pickup
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Section -->
+    <section id="restaurant" class="restaurant-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Restaurant & Bar</h2>
+                <p>Enjoy delicious home-style Turkish meals in a relaxed family atmosphere</p>
+            </div>
+            <div class="restaurant-content">
+                <div class="restaurant-info">
+                    <h3>Family-Friendly Dining</h3>
+                    <p>Our restaurant offers a warm, welcoming atmosphere perfect for families. Enjoy traditional
+                        Turkish home cooking, fresh local ingredients, and a comfortable setting where everyone feels at
+                        home.</p>
+                    <ul class="features">
+                        <li><i class="fas fa-utensils"></i> Traditional Turkish Home Cooking</li>
+                        <li><i class="fas fa-cocktail"></i> Local Drinks & Refreshments</li>
+                        <li><i class="fas fa-swimming-pool"></i> Poolside Family Meals</li>
+                        <li><i class="fas fa-heart"></i> Kid-Friendly Menu</li>
+                    </ul>
+                </div>
+                <div class="restaurant-image">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt="Restaurant Interior" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Submenu -->
+    <section class="restaurant-submenu">
+        <div class="container">
+            <div class="submenu-tabs">
+                <button class="submenu-tab active" onclick="showSubmenuContent('menu')">
+                    <i class="fas fa-utensils"></i>
+                    <span>Menu</span>
+                </button>
+                <button class="submenu-tab" onclick="showSubmenuContent('delivery')">
+                    <i class="fas fa-truck"></i>
+                    <span>Free Delivery</span>
+                </button>
+            </div>
+
+            <!-- Menu Content -->
+            <div id="menu-content" class="submenu-content active">
+                <div class="interactive-menu">
+                    <h3>Our Traditional Turkish Menu</h3>
+                    <p>Select your items and quantities, then place your order!</p>
+
+                    <!-- Shopping Cart Summary -->
+                    <div class="cart-summary" id="cartSummary" style="display: none;">
+                        <div class="cart-header">
+                            <h4><i class="fas fa-shopping-cart"></i> Your Order</h4>
+                            <span class="cart-total" id="cartTotal">₺0</span>
+                        </div>
+                        <div class="cart-items" id="cartItems"></div>
+                        <button class="btn btn-whatsapp order-btn" onclick="sendWhatsAppOrder()">
+                            <i class="fab fa-whatsapp"></i> Order Now via WhatsApp
+                        </button>
+                        <button class="btn btn-secondary clear-btn" onclick="clearCart()">
+                            <i class="fas fa-trash"></i> Clear Cart
+                        </button>
+                    </div>
+
+                    <div class="menu-categories menu-two-columns">
+                        <!-- Breakfast -->
+                        <div class="menu-category">
+                            <h4><i class="fas fa-sun"></i> Breakfast (9am - 1pm)</h4>
+                            <div class="selectable-menu-items">
+                                <div class="selectable-menu-item" data-name="Traditional Village Breakfast"
+                                    data-price="350">
+                                    <div class="item-info">
+                                        <span class="item-name">Traditional Village Breakfast</span>
+                                        <span class="item-description">Olives, Cheese, Jam, Honey, Dried Apricots,
+                                            Salami, Tomato, Cucumber, Cheese Roll, Fried or Scrambled Egg, Fresh Turkish
+                                            Bread</span>
+                                        <span class="item-price">₺350</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Turkish Breakfast Plate" data-price="300">
+                                    <div class="item-info">
+                                        <span class="item-name">Turkish Breakfast Plate</span>
+                                        <span class="item-description">Olives, Cheese, Jam, Honey, Salami, Tomato,
+                                            Cucumber, Cheese Roll, Fried or Scrambled Egg, Fresh Turkish Bread</span>
+                                        <span class="item-price">₺300</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Full English Breakfast" data-price="320">
+                                    <div class="item-info">
+                                        <span class="item-name">Full English Breakfast</span>
+                                        <span class="item-description">Back Bacon, English Sausage, Mushrooms, Tomato,
+                                            Toasted Bread, Egg (Fried or Scrambled), Baked Beans</span>
+                                        <span class="item-price">₺320</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Hangover Breakfast" data-price="400">
+                                    <div class="item-info">
+                                        <span class="item-name">Hangover Breakfast</span>
+                                        <span class="item-description">2 Back Bacon, 2 English Sausage, Mushrooms,
+                                            Tomato, Toasted Bread, 2 Eggs (Fried or Scrambled), Baked Beans &
+                                            Chips</span>
+                                        <span class="item-price">₺400</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Toast -->
+                        <div class="menu-category">
+                            <h4><i class="fas fa-bread-slice"></i> Toast</h4>
+                            <div class="selectable-menu-items">
+                                <div class="selectable-menu-item" data-name="Butter Toast (v)" data-price="110">
+                                    <div class="item-info">
+                                        <span class="item-name">Butter Toast (v)</span>
+                                        <span class="item-description">Fresh toast with butter</span>
+                                        <span class="item-price">₺110</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Butter & Jam Toast (v)" data-price="120">
+                                    <div class="item-info">
+                                        <span class="item-name">Butter & Jam Toast (v)</span>
+                                        <span class="item-description">Fresh toast with butter and jam</span>
+                                        <span class="item-price">₺120</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Beans Toast (v)" data-price="150">
+                                    <div class="item-info">
+                                        <span class="item-name">Beans Toast (v)</span>
+                                        <span class="item-description">Toast with baked beans</span>
+                                        <span class="item-price">₺150</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Cheese Toast (v)" data-price="160">
+                                    <div class="item-info">
+                                        <span class="item-name">Cheese Toast (v)</span>
+                                        <span class="item-description">Toast with cheese</span>
+                                        <span class="item-price">₺160</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Burgers -->
+                        <div class="menu-category">
+                            <h4><i class="fas fa-hamburger"></i> Burgers</h4>
+                            <div class="selectable-menu-items">
+                                <div class="selectable-menu-item" data-name="Classic Burger" data-price="350">
+                                    <div class="item-info">
+                                        <span class="item-name">Classic Burger</span>
+                                        <span class="item-description">6 oz Beef Pattie, Lettuce, Tomato & Onion -
+                                            served with Chips</span>
+                                        <span class="item-price">₺350</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Jasmine Burger" data-price="500">
+                                    <div class="item-info">
+                                        <span class="item-name">Jasmine Burger</span>
+                                        <span class="item-description">6 oz Beef Pattie, Cheese, Bacon, Lettuce, Tomato
+                                            & Onion</span>
+                                        <span class="item-price">₺500</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Crispy Chicken Burger" data-price="350">
+                                    <div class="item-info">
+                                        <span class="item-name">Crispy Chicken Burger</span>
+                                        <span class="item-description">Deep Fried Chicken Breast, Lettuce, Tomato &
+                                            Onion</span>
+                                        <span class="item-price">₺350</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chicken -->
+                        <div class="menu-category">
+                            <h4><i class="fas fa-drumstick-bite"></i> Chicken</h4>
+                            <div class="selectable-menu-items">
+                                <div class="selectable-menu-item" data-name="Honey & Mustard Chicken" data-price="450">
+                                    <div class="item-info">
+                                        <span class="item-name">Honey & Mustard Chicken</span>
+                                        <span class="item-description">Chicken Breast in a creamy Honey & Mustard Sauce
+                                            with Mushrooms</span>
+                                        <span class="item-price">₺450</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Grilled Chicken Kebab" data-price="450">
+                                    <div class="item-info">
+                                        <span class="item-name">Grilled Chicken Kebab</span>
+                                        <span class="item-description">Marinated Pieces of Chicken Breast, Grilled
+                                            Tomato & Peppers served with Tortilla Wraps</span>
+                                        <span class="item-price">₺450</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Mixed Kebab" data-price="1300">
+                                    <div class="item-info">
+                                        <span class="item-name">Mixed Kebab</span>
+                                        <span class="item-description">Lamb Chop, Grilled Chicken Breast, Grilled
+                                            Meatballs, Beef Kebab, Grilled Tomato & Peppers served with Turkish
+                                            Wraps</span>
+                                        <span class="item-price">₺1300</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Beverages -->
+                        <div class="menu-category">
+                            <h4><i class="fas fa-cocktail"></i> Beverages</h4>
+                            <div class="selectable-menu-items">
+                                <div class="selectable-menu-item" data-name="Çay (Turkish Tea)" data-price="50">
+                                    <div class="item-info">
+                                        <span class="item-name">Çay (Turkish Tea)</span>
+                                        <span class="item-description">Traditional Turkish tea</span>
+                                        <span class="item-price">₺50</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Fresh Orange Juice" data-price="150">
+                                    <div class="item-info">
+                                        <span class="item-name">Fresh Orange Juice</span>
+                                        <span class="item-description">Freshly squeezed orange juice</span>
+                                        <span class="item-price">₺150</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="Efes Beer" data-price="130">
+                                    <div class="item-info">
+                                        <span class="item-name">Efes Beer</span>
+                                        <span class="item-description">Turkish beer</span>
+                                        <span class="item-price">₺130</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="selectable-menu-item" data-name="House Wine" data-price="100">
+                                    <div class="item-info">
+                                        <span class="item-name">House Wine</span>
+                                        <span class="item-description">Glass of House White or Red</span>
+                                        <span class="item-price">₺100</span>
+                                    </div>
+                                    <div class="item-controls">
+                                        <button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>
+                                        <span class="quantity">0</span>
+                                        <button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Free Delivery Content -->
+            <div id="delivery-content" class="submenu-content">
+                <div class="delivery-content">
+                    <h3>Free Delivery Service</h3>
+                    <p>Order your favorite meals and we'll deliver them to your location for free!</p>
+
+                    <div class="delivery-features">
+                        <div class="delivery-feature">
+                            <i class="fas fa-truck"></i>
+                            <h4>Free Delivery</h4>
+                            <p>No delivery charges within Oludeniz area</p>
+                        </div>
+                        <div class="delivery-feature">
+                            <i class="fas fa-clock"></i>
+                            <h4>Quick Service</h4>
+                            <p>Fast preparation and delivery</p>
+                        </div>
+                        <div class="delivery-feature">
+                            <i class="fas fa-phone"></i>
+                            <h4>Easy Ordering</h4>
+                            <p>Order through WhatsApp</p>
+                        </div>
+                    </div>
+
+                    <div class="delivery-order">
+                        <h4>Place Your Order</h4>
+                        <p>Click below to order through WhatsApp</p>
+                        <button class="btn btn-whatsapp delivery-btn" onclick="orderDeliveryWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                            Order Now via WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotel Section -->
+    <section id="hotel" class="hotel-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Jasmine Hotel</h2>
+                <p>Comfortable family accommodation in the heart of Oludeniz</p>
+            </div>
+            <div class="hotel-content">
+                <div class="hotel-image">
+                    <img src="Img/front.jpeg" alt="Hotel Exterior" />
+                </div>
+                <div class="hotel-info">
+                    <h3>Your Home Away From Home</h3>
+                    <p>Located just minutes from the famous Oludeniz Beach and Blue Lagoon, Jasmine Hotel offers
+                        comfortable family-friendly accommodation with all the essentials for a relaxing stay.</p>
+                    <ul class="features">
+                        <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                        <li><i class="fas fa-swimming-pool"></i> Swimming Pool</li>
+                        <li><i class="fas fa-car"></i> Free Parking</li>
+                        <li><i class="fas fa-home"></i> Family-Friendly Service</li>
+                        <li><i class="fas fa-child"></i> Kid-Friendly Environment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Rooms</h2>
+                <p>Choose from our selection of comfortable accommodations</p>
+            </div>
+
+            <!-- Date Selection -->
+            <div class="date-selection">
+                <h3>📅 Select Your Dates</h3>
+                <p class="date-requirement">Please select your check-in and check-out dates to contact us about room
+                    availability.</p>
+                <div class="date-inputs">
+                    <div class="date-input">
+                        <label for="checkin">Check-in Date *</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+                    <div class="date-input">
+                        <label for="checkout">Check-out Date *</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+                </div>
+                <div class="date-contact">
+                    <button class="btn btn-whatsapp" onclick="contactWithDates()">
+                        <i class="fab fa-whatsapp"></i> Check Availability
+                    </button>
+                </div>
+            </div>
+
+            <!-- Rooms Grid -->
+            <div class="rooms-grid">
+                <!-- 1 Bedroom Apartment First Floor -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <div class="room-image-carousel" id="room1Carousel">
+                            <div class="room-image-slide">
+                                <img src="Img/Apt3/Apt3.1.jpeg" alt="1 Bedroom Apartment - Living Area" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="Img/Apt3/Apt3.2.jpeg" alt="1 Bedroom Apartment - Kitchen" />
+                            </div>
+                            <div class="room-image-slide">
+                                <img src="Img/Apt3/Apt3.3.jpeg" alt="1 Bedroom Apartment - Bedroom" />
+                            </div>
+                        </div>
+                        <button class="room-image-nav prev" onclick="moveRoomImage('room1', -1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="room-image-nav next" onclick="moveRoomImage('room1', 1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="room-image-dots">
+                            <span class="dot active" onclick="currentRoomImage('room1', 1)"></span>
+                            <span class="dot" onclick="currentRoomImage('room1', 2)"></span>
+                            <span class="dot" onclick="currentRoomImage('room1', 3)"></span>
+                        </div>
+                    </div>
+                    <div class="room-content">
+                        <h3>1 Bedroom Apartment - First Floor</h3>
+                        <p>Comfortable apartment with modern amenities, perfect for couples or small families.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-bed"></i> 1 Double Bed</li>
+                            <li><i class="fas fa-bath"></i> Private Bathroom</li>
+                            <li><i class="fas fa-kitchen-set"></i> Kitchenette</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                        </ul>
+                        <button class="btn btn-whatsapp room-btn"
+                            onclick="contactRoom('1 Bedroom Apartment First Floor')">
+                            <i class="fab fa-whatsapp"></i> Contact for Availability
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Customers Section -->
+    <section id="customers" class="customers-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Happy Customers</h2>
+                <p>See the wonderful moments our guests have shared with us</p>
+            </div>
+
+            <div class="customer-gallery">
+                <div class="gallery-item" onclick="openGallery(0)">
+                    <img src="Img/costumers/cos1.jpeg" alt="Happy customers at Jasmine">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(1)">
+                    <img src="Img/costumers/cos2.jpeg" alt="Happy customers at Jasmine">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(2)">
+                    <img src="Img/costumers/cos3.jpeg" alt="Happy customers at Jasmine">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(3)">
+                    <img src="Img/costumers/cos4.jpeg" alt="Happy customers at Jasmine">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(4)">
+                    <img src="Img/costumers/cos5.jpeg" alt="Happy customers at Jasmine">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openGallery(5)">
+                    <img src="Img/costumers/cos6.jpeg" alt="Happy customers at Jasmine">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="customer-testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Amazing place! The food was delicious and the staff was so friendly. We had a wonderful time
+                            at Jasmine Restaurant & Hotel."</p>
+                        <div class="testimonial-author">
+                            <strong>Sarah & John</strong>
+                            <span>UK Visitors</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Perfect location, great rooms, and the best Turkish breakfast we've ever had. Highly
+                            recommend!"</p>
+                        <div class="testimonial-author">
+                            <strong>Maria & Carlos</strong>
+                            <span>Spanish Tourists</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for reservations and inquiries</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Oludeniz, Fethiye, Turkey</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+90 553 728 30 45</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@jasmineoludeniz.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jasmine Restaurant & Hotel</h3>
+                    <p>Experience authentic Turkish hospitality in the heart of Oludeniz. Delicious food, comfortable
+                        accommodation, and unforgettable memories.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#restaurant">Restaurant</a></li>
+                        <li><a href="#hotel">Hotel</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Oludeniz, Fethiye, Turkey</p>
+                    <p><i class="fas fa-phone"></i> +90 553 728 30 45</p>
+                    <p><i class="fas fa-envelope"></i> info@jasmineoludeniz.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Jasmine Restaurant & Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal">
+        <div class="gallery-modal-content">
+            <span class="gallery-close" onclick="closeGallery()">&times;</span>
+            <img id="galleryImage" src="" alt="Customer photo">
+            <div class="gallery-navigation">
+                <button class="gallery-prev" onclick="changeGalleryImage(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-next" onclick="changeGalleryImage(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="gallery-counter">
+                <span id="galleryCounter">1 / 6</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
