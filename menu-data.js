@@ -28,39 +28,32 @@ const menuData = {
                 name: "Menmen (v)",
                 price: 250,
                 description: "Egg, Tomato, Peppers, Onions & Fresh Turkish Bread"
-            }
-        ],
-        subcategories: {
-            "omelettes": {
-                title: "Omelettes",
-                items: [
-                    { name: "Cheese Omelette (v)", price: 250 },
-                    { name: "Mushroom Omelette (v)", price: 250 },
-                    { name: "Mixed Omelette (Tomato, Salami, Cheese)", price: 250 }
-                ]
             },
-            "eggOptions": {
-                title: "Egg Options",
-                items: [
-                    { name: "Egg & Chips (v) (Fried)", price: 200 },
-                    { name: "Egg & Chips (v) (Scrambled)", price: 200 },
-                    { name: "Egg on Toast (v) (Fried)", price: 180 },
-                    { name: "Egg on Toast (v) (Scrambled)", price: 180 }
-                ]
-            },
-            "addOns": {
-                title: "Add Ons:",
-                items: [
-                    { name: "Egg", price: 60 },
-                    { name: "Cheese", price: 60 },
-                    { name: "Butter", price: 60 },
-                    { name: "Bacon", price: 100 },
-                    { name: "English Sausage", price: 100 },
-                    { name: "Baked Beans", price: 60 },
-                    { name: "Tomato", price: 25 }
-                ]
-            }
-        }
+            { name: "Egg & Chips (v) (Fried)", price: 200 },
+            { name: "Egg & Chips (v) (Scrambled)", price: 200 },
+            { name: "Egg on Toast (v) (Fried)", price: 180 },
+            { name: "Egg on Toast (v) (Scrambled)", price: 180 }
+        ]
+    },
+    "omelettes": {
+        title: "OMELETTES",
+        items: [
+            { name: "Cheese Omelette (v)", price: 250 },
+            { name: "Mushroom Omelette (v)", price: 250 },
+            { name: "Mixed Omelette (Tomato, Salami, Cheese)", price: 250 }
+        ]
+    },
+    "breakfastAddOns": {
+        title: "BREAKFAST ADD ONS",
+        items: [
+            { name: "Egg", price: 60 },
+            { name: "Cheese", price: 60 },
+            { name: "Butter", price: 60 },
+            { name: "Bacon", price: 100 },
+            { name: "English Sausage", price: 100 },
+            { name: "Baked Beans", price: 60 },
+            { name: "Tomato", price: 25 }
+        ]
     },
     "toast": {
         title: "TOAST",
@@ -383,7 +376,7 @@ function generateMenuHTML() {
         'breakfast': {
             title: 'Breakfast',
             icon: 'fas fa-sun',
-            categories: ['breakfast', 'toast', 'pancakes', 'drinks']
+            categories: ['breakfast', 'omelettes', 'breakfastAddOns', 'toast', 'pancakes', 'drinks']
         },
         'mains': {
             title: 'Main Courses',
@@ -456,36 +449,6 @@ function generateMenuHTML() {
                 contentHTML += `</div>`;
             }
 
-            // Subcategories
-            if (category.subcategories) {
-                Object.keys(category.subcategories).forEach(subKey => {
-                    const subcategory = category.subcategories[subKey];
-                    contentHTML += `<div class="subcategory">`;
-                    contentHTML += `<h5>${subcategory.title}</h5>`;
-                    if (subcategory.note) {
-                        contentHTML += `<p class="subcategory-note">${subcategory.note}</p>`;
-                    }
-                    contentHTML += `<div class="selectable-menu-items">`;
-                    subcategory.items.forEach(item => {
-                        contentHTML += `<div class="selectable-menu-item" data-name="${item.name}" data-price="${item.price}">`;
-                        contentHTML += `<div class="item-info">`;
-                        contentHTML += `<span class="item-name">${item.name}</span>`;
-                        if (item.description) {
-                            contentHTML += `<span class="item-description">${item.description}</span>`;
-                        }
-                        contentHTML += `<span class="item-price">₺${item.price}</span>`;
-                        contentHTML += `</div>`;
-                        contentHTML += `<div class="item-controls">`;
-                        contentHTML += `<button class="quantity-btn minus" onclick="updateQuantity(this, -1)">-</button>`;
-                        contentHTML += `<span class="quantity">0</span>`;
-                        contentHTML += `<button class="quantity-btn plus" onclick="updateQuantity(this, 1)">+</button>`;
-                        contentHTML += `</div>`;
-                        contentHTML += `</div>`;
-                    });
-                    contentHTML += `</div>`;
-                    contentHTML += `</div>`;
-                });
-            }
 
             // Notes and extras
             if (category.note) {

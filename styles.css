@@ -2025,22 +2025,144 @@ body .hotel-section .features li i {
     }
 }
 
-/* Subcategory Styling */
-.subcategory {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    border-left: 4px solid var(--primary-color);
+/* Mobile Menu Tabs */
+@media (max-width: 768px) {
+    .menu-tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .menu-tab {
+        min-width: auto;
+        padding: 0.4rem 0.5rem;
+        font-size: 0.8rem;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    .menu-tab i {
+        display: none;
+    }
+    
+    .menu-tab-content .menu-categories {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .menu-category {
+        margin-bottom: 0.5rem;
+    }
+    
+    .menu-category h4 {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .selectable-menu-item {
+        padding: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .item-info {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .item-name {
+        font-size: 0.85rem;
+        margin-bottom: 0;
+        flex: 1;
+    }
+    
+    .item-description {
+        display: none;
+    }
+    
+    .item-price {
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-left: 0.5rem;
+    }
+    
+    .item-controls {
+        margin-top: 0;
+        margin-left: 0.5rem;
+    }
+    
+    .quantity-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 0.7rem;
+    }
+    
+    .quantity {
+        font-size: 0.8rem;
+        margin: 0 0.25rem;
+    }
 }
 
-.subcategory h5 {
+/* Very small mobile screens */
+@media (max-width: 480px) {
+    .menu-tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.25rem;
+    }
+    
+    .menu-tab {
+        padding: 0.3rem 0.25rem;
+        font-size: 0.7rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+    
+    .menu-tab-content {
+        padding: 0.25rem;
+    }
+    
+    .selectable-menu-item {
+        padding: 0.4rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .item-name {
+        font-size: 0.8rem;
+    }
+    
+    .item-description {
+        display: none;
+    }
+    
+    .item-price {
+        font-size: 0.8rem;
+    }
+    
+    .quantity-btn {
+        width: 22px;
+        height: 22px;
+        font-size: 0.6rem;
+    }
+    
+    .quantity {
+        font-size: 0.7rem;
+        margin: 0 0.2rem;
+    }
+}
+
+/* Subcategory Styling - Simplified */
+.subcategory-title {
     color: var(--primary-color);
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin: 1.5rem 0 0.5rem 0;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.25rem;
+    display: inline-block;
 }
 
 .subcategory-note {
