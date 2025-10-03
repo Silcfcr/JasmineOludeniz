@@ -1739,6 +1739,7 @@ h3 {
 }
 
 @media (max-width: 768px) {
+    /* Navigation improvements */
     .hamburger {
         display: flex;
     }
@@ -1779,6 +1780,82 @@ h3 {
 
     .dropdown > a i {
         display: none;
+    }
+
+    /* Tablet-specific improvements */
+    .container {
+        padding: 0 20px; /* Moderate padding for tablets */
+    }
+
+    /* Hero section tablet improvements */
+    .hero {
+        padding-top: 90px;
+    }
+
+    .hero-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-image img {
+        height: 350px; /* Medium size for tablets */
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem; /* Medium size for tablets */
+    }
+
+    .hero-text h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Section improvements for tablets */
+    .section {
+        padding: 4rem 0; /* Moderate section padding */
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem; /* Medium size for tablets */
+    }
+
+    /* Grid layouts for tablets */
+    .rooms-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+        gap: 1.5rem;
+    }
+
+    .customer-gallery {
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columns on tablets */
+        gap: 1rem;
+    }
+
+    /* Button improvements for tablets */
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        min-height: 44px;
+    }
+
+    /* Form improvements for tablets */
+    .date-selection {
+        padding: 2rem;
+    }
+
+    .date-inputs {
+        flex-direction: row; /* Keep side by side on tablets */
+        gap: 1rem;
+    }
+
+    /* Card improvements for tablets */
+    .room-card,
+    .offer-card {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Footer improvements for tablets */
+    .footer-content {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+        gap: 2rem;
+        text-align: left;
     }
 }
 
@@ -1865,6 +1942,259 @@ h3 {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
+    }
+
+    /* Enhanced mobile improvements */
+    .container {
+        padding: 0 10px; /* Reduced padding for more space */
+    }
+
+    .nav-container {
+        padding: 0.75rem; /* Reduced padding */
+    }
+
+    /* Better typography for mobile */
+    .hero-text h1 {
+        font-size: 1.8rem; /* Smaller for better mobile fit */
+        line-height: 1.2;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem; /* Smaller for better mobile fit */
+        line-height: 1.2;
+    }
+
+    .section-header p {
+        font-size: 0.9rem; /* Smaller description text */
+    }
+
+    /* Content sections with better spacing */
+    .room-content {
+        padding: 1rem; /* Reduced padding */
+    }
+
+    .btn {
+        padding: 12px 24px; /* Better touch targets */
+        font-size: 0.9rem;
+        min-height: 44px; /* Better touch target size */
+    }
+
+    /* Improved grid layouts */
+    .hotel-content,
+    .contact-content,
+    .restaurant-content {
+        grid-template-columns: 1fr;
+        gap: 1rem; /* Reduced gap */
+    }
+
+    .rooms-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem; /* Reduced gap */
+    }
+
+    .customer-gallery {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem; /* Reduced gap */
+    }
+
+    .customer-testimonials {
+        grid-template-columns: 1fr;
+        gap: 1rem; /* Reduced gap */
+    }
+
+    /* Hero section improvements */
+    .hero {
+        padding-top: 80px; /* Reduced padding */
+        min-height: auto; /* Remove fixed height */
+    }
+
+    .hero-content {
+        padding: 1.5rem 1rem; /* Reduced padding */
+    }
+
+    .hero-image {
+        padding: 0.5rem; /* Reduced padding */
+    }
+
+    .hero-image img {
+        height: 250px; /* Smaller image for mobile */
+        border-radius: 15px; /* Smaller border radius */
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem; /* Smaller for mobile */
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.2rem; /* Smaller subtitle */
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Smaller paragraph text */
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 0.75rem;
+    }
+
+    .hero-buttons .btn {
+        width: 100%; /* Full width buttons */
+        max-width: 280px; /* But not too wide */
+    }
+
+    /* Section spacing improvements */
+    .section {
+        padding: 3rem 0; /* Reduced section padding */
+    }
+
+    .section-header {
+        margin-bottom: 2rem; /* Reduced margin */
+    }
+
+    /* Card improvements */
+    .room-card,
+    .offer-card,
+    .testimonial {
+        margin-bottom: 1rem; /* Reduced margin */
+    }
+
+    /* Form improvements */
+    .date-selection {
+        padding: 1.5rem; /* Reduced padding */
+    }
+
+    .date-selection h3 {
+        font-size: 1.2rem; /* Smaller heading */
+    }
+
+    /* Footer improvements */
+    .footer {
+        padding: 2rem 0; /* Reduced padding */
+    }
+
+    .footer-content h3 {
+        font-size: 1.1rem; /* Smaller headings */
+        margin-bottom: 0.75rem;
+    }
+
+    .footer-content p,
+    .footer-content li {
+        font-size: 0.9rem; /* Smaller text */
+    }
+
+    /* Touch-friendly improvements */
+    .room-image-nav,
+    .gallery-nav,
+    .gallery-close {
+        min-height: 44px; /* Better touch targets */
+        min-width: 44px;
+    }
+
+    /* Improved form inputs for mobile */
+    .date-input input {
+        font-size: 16px; /* Prevent zoom on iOS */
+        padding: 12px;
+        min-height: 44px;
+    }
+
+    /* Better spacing for mobile cards */
+    .room-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .room-card:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Improved testimonial cards */
+    .testimonial {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Better offer cards */
+    .offer-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Improved contact section */
+    .contact-content {
+        gap: 1.5rem;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-info p,
+    .contact-info li {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Better map for mobile */
+    .contact-map {
+        height: 250px; /* Smaller map for mobile */
+        border-radius: 10px;
+    }
+
+    /* Improved restaurant section */
+    .restaurant-content {
+        gap: 1.5rem;
+    }
+
+    .restaurant-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .restaurant-info p,
+    .restaurant-info li {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Better hotel section */
+    .hotel-content {
+        gap: 1.5rem;
+    }
+
+    .hotel-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hotel-info p,
+    .hotel-info li {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Improved features lists */
+    .features {
+        padding-left: 0;
+    }
+
+    .features li {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+        padding-left: 1.5rem;
+    }
+
+    .features li i {
+        font-size: 0.8rem;
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -2027,52 +2357,65 @@ body .hotel-section .features li i {
 
 /* Mobile Menu Tabs */
 @media (max-width: 768px) {
+    .interactive-menu {
+        padding: 0.5rem; /* Reduce padding to use full width */
+        margin: 0; /* Remove margins */
+    }
+    
     .menu-tabs {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
+        gap: 0.25rem; /* Smaller gap */
+        margin-bottom: 0.5rem; /* Smaller margin */
+        padding: 0 0.25rem; /* Minimal padding */
     }
     
     .menu-tab {
         min-width: auto;
-        padding: 0.4rem 0.5rem;
-        font-size: 0.8rem;
+        padding: 0.3rem 0.25rem; /* Smaller padding */
+        font-size: 0.75rem; /* Smaller font size */
         text-align: center;
-        border-radius: 10px;
+        border-radius: 8px; /* Smaller border-radius */
     }
     
     .menu-tab i {
         display: none;
     }
     
+    .menu-tab-content {
+        padding: 0.25rem; /* Minimal padding */
+    }
+    
     .menu-tab-content .menu-categories {
         grid-template-columns: 1fr;
-        gap: 0.5rem;
+        gap: 0.25rem; /* Smaller gap */
+        padding: 0; /* Remove padding */
     }
     
     .menu-category {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem; /* Smaller margin */
+        padding: 0.75rem 0.5rem; /* Reduce padding */
     }
     
     .menu-category h4 {
-        font-size: 1rem;
-        margin-bottom: 0.25rem;
+        font-size: 0.9rem; /* Smaller font size */
+        margin-bottom: 0.25rem; /* Smaller margin */
     }
     
     .selectable-menu-item {
-        padding: 0.5rem;
-        margin-bottom: 0.25rem;
+        padding: 0.4rem 0.5rem; /* Smaller padding */
+        margin-bottom: 0.2rem; /* Smaller margin */
     }
     
     .item-info {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        gap: 0.5rem; /* Add small gap */
     }
     
     .item-name {
-        font-size: 0.85rem;
+        font-size: 0.8rem; /* Smaller font size */
         margin-bottom: 0;
         flex: 1;
     }
@@ -2082,54 +2425,77 @@ body .hotel-section .features li i {
     }
     
     .item-price {
-        font-size: 0.85rem;
+        font-size: 0.8rem; /* Smaller font size */
         font-weight: 600;
-        margin-left: 0.5rem;
+        margin-left: 0.25rem; /* Smaller margin */
     }
     
     .item-controls {
         margin-top: 0;
-        margin-left: 0.5rem;
+        margin-left: 0.25rem; /* Smaller margin */
     }
     
     .quantity-btn {
-        width: 25px;
-        height: 25px;
-        font-size: 0.7rem;
+        width: 22px; /* Smaller buttons */
+        height: 22px;
+        font-size: 0.6rem;
     }
     
     .quantity {
-        font-size: 0.8rem;
-        margin: 0 0.25rem;
+        font-size: 0.75rem; /* Smaller font */
+        margin: 0 0.2rem; /* Smaller margin */
     }
 }
 
 /* Very small mobile screens */
 @media (max-width: 480px) {
+    .interactive-menu {
+        padding: 0.25rem; /* Minimal padding for full width */
+        margin: 0;
+    }
+    
     .menu-tabs {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 0.25rem;
+        gap: 0.15rem; /* Even smaller gap */
+        margin-bottom: 0.25rem; /* Smaller margin */
+        padding: 0 0.15rem; /* Minimal padding */
     }
     
     .menu-tab {
-        padding: 0.3rem 0.25rem;
-        font-size: 0.7rem;
+        padding: 0.25rem 0.15rem; /* Smaller padding */
+        font-size: 0.65rem; /* Smaller font */
         text-align: center;
-        line-height: 1.2;
+        line-height: 1.1; /* Tighter line height */
+        border-radius: 6px; /* Smaller border radius */
     }
     
     .menu-tab-content {
-        padding: 0.25rem;
+        padding: 0.15rem; /* Minimal padding */
+    }
+    
+    .menu-tab-content .menu-categories {
+        padding: 0; /* Remove padding */
+        gap: 0.15rem; /* Smaller gap */
+    }
+    
+    .menu-category {
+        padding: 0.5rem 0.25rem; /* Minimal padding */
+        margin-bottom: 0.15rem; /* Smaller margin */
+    }
+    
+    .menu-category h4 {
+        font-size: 0.8rem; /* Smaller font */
+        margin-bottom: 0.15rem; /* Smaller margin */
     }
     
     .selectable-menu-item {
-        padding: 0.4rem;
-        margin-bottom: 0.2rem;
+        padding: 0.3rem 0.25rem; /* Smaller padding */
+        margin-bottom: 0.15rem; /* Smaller margin */
     }
     
     .item-name {
-        font-size: 0.8rem;
+        font-size: 0.75rem; /* Smaller font */
     }
     
     .item-description {
@@ -2137,18 +2503,18 @@ body .hotel-section .features li i {
     }
     
     .item-price {
-        font-size: 0.8rem;
+        font-size: 0.75rem; /* Smaller font */
     }
     
     .quantity-btn {
-        width: 22px;
-        height: 22px;
-        font-size: 0.6rem;
+        width: 20px; /* Smaller buttons */
+        height: 20px;
+        font-size: 0.5rem;
     }
     
     .quantity {
-        font-size: 0.7rem;
-        margin: 0 0.2rem;
+        font-size: 0.65rem; /* Smaller font */
+        margin: 0 0.15rem; /* Smaller margin */
     }
 }
 
