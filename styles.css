@@ -928,6 +928,12 @@ h3 {
         align-self: flex-end;
     }
     
+    .cart-summary {
+        width: 100%;
+        margin: 0 0 1rem 0;
+        padding: 1rem;
+    }
+    
     .cart-header {
         flex-direction: column;
         gap: 1rem;
@@ -2452,6 +2458,12 @@ body .hotel-section .features li i {
     .interactive-menu {
         padding: 0.25rem; /* Minimal padding for full width */
         margin: 0;
+    }
+    
+    .cart-summary {
+        width: 100%;
+        margin: 0 0 0.5rem 0;
+        padding: 0.75rem;
     }
     
     .menu-tabs {
