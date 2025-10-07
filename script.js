@@ -626,12 +626,12 @@ document.addEventListener('DOMContentLoaded', function () {
 function loadMenu() {
     const tabsContainer = document.getElementById('menu-tabs');
     const contentContainer = document.getElementById('menu-content-tabs');
-    
+
     if (tabsContainer && contentContainer && typeof generateMenuHTML === 'function') {
         const menuData = generateMenuHTML();
         tabsContainer.innerHTML = menuData.tabs;
         contentContainer.innerHTML = menuData.content;
-        
+
         // Re-initialize minus buttons after loading menu
         const minusButtons = document.querySelectorAll('.quantity-btn.minus');
         minusButtons.forEach(button => {
@@ -649,11 +649,11 @@ function switchMenuTab(tabKey) {
     document.querySelectorAll('.menu-tab-content').forEach(content => {
         content.classList.remove('active');
     });
-    
+
     // Add active class to clicked tab and corresponding content
     const activeTab = document.querySelector(`.menu-tab[onclick="switchMenuTab('${tabKey}')"]`);
     const activeContent = document.getElementById(`tab-${tabKey}`);
-    
+
     if (activeTab && activeContent) {
         activeTab.classList.add('active');
         activeContent.classList.add('active');
