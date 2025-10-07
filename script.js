@@ -364,35 +364,103 @@ function calculateNights(checkin, checkout) {
 }
 
 // Swiper Carousel initialization
-let room5Swiper;
+let room1Swiper, room2Swiper, room3Swiper, room4Swiper, room5Swiper, room6Swiper, room7Swiper, room8Swiper;
 
 function initializeSwipers() {
     // Small delay to ensure DOM is fully loaded
     setTimeout(() => {
-        // Initialize the 3 Bed apartment carousel
-        const swiperElement = document.querySelector('.room5-swiper');
-        if (swiperElement) {
-            room5Swiper = new Swiper('.room5-swiper', {
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
+        // Initialize all room carousels
+        const swiperConfig = {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'slide',
+            speed: 500,
+        };
+
+        // Room 1 - 1 Bedroom First Floor
+        const room1Element = document.querySelector('.room1-swiper');
+        if (room1Element) {
+            room1Swiper = new Swiper('.room1-swiper', {
+                ...swiperConfig,
                 navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+                    nextEl: '.room1-next',
+                    prevEl: '.room1-prev',
                 },
-                effect: 'slide',
-                speed: 500,
-                on: {
-                    init: function () {
-                        console.log('Room 5 Swiper initialized successfully');
-                    }
-                }
+                on: { init: () => console.log('Room 1 Swiper initialized') }
             });
-        } else {
-            console.log('Room 5 Swiper element not found');
         }
+
+        // Room 2 - 1 Bedroom Ground Floor
+        const room2Element = document.querySelector('.room2-swiper');
+        if (room2Element) {
+            room2Swiper = new Swiper('.room2-swiper', {
+                ...swiperConfig,
+                on: { init: () => console.log('Room 2 Swiper initialized') }
+            });
+        }
+
+        // Room 3 - 2 Bedroom Ground Floor
+        const room3Element = document.querySelector('.room3-swiper');
+        if (room3Element) {
+            room3Swiper = new Swiper('.room3-swiper', {
+                ...swiperConfig,
+                on: { init: () => console.log('Room 3 Swiper initialized') }
+            });
+        }
+
+        // Room 4 - 2 Bedroom First Floor
+        const room4Element = document.querySelector('.room4-swiper');
+        if (room4Element) {
+            room4Swiper = new Swiper('.room4-swiper', {
+                ...swiperConfig,
+                on: { init: () => console.log('Room 4 Swiper initialized') }
+            });
+        }
+
+        // Room 5 - 3 Bedroom Second Floor
+        const room5Element = document.querySelector('.room5-swiper');
+        if (room5Element) {
+            room5Swiper = new Swiper('.room5-swiper', {
+                ...swiperConfig,
+                on: { init: () => console.log('Room 5 Swiper initialized') }
+            });
+        }
+
+        // Room 6 - 1 Bedroom Garden Side
+        const room6Element = document.querySelector('.room6-swiper');
+        if (room6Element) {
+            room6Swiper = new Swiper('.room6-swiper', {
+                ...swiperConfig,
+                on: { init: () => console.log('Room 6 Swiper initialized') }
+            });
+        }
+
+        // Room 7 - Studio Garden Side
+        const room7Element = document.querySelector('.room7-swiper');
+        if (room7Element) {
+            room7Swiper = new Swiper('.room7-swiper', {
+                ...swiperConfig,
+                on: { init: () => console.log('Room 7 Swiper initialized') }
+            });
+        }
+
+        // Room 8 - Studio 101
+        const room8Element = document.querySelector('.room8-swiper');
+        if (room8Element) {
+            room8Swiper = new Swiper('.room8-swiper', {
+                ...swiperConfig,
+                on: { init: () => console.log('Room 8 Swiper initialized') }
+            });
+        }
+
+        console.log('All Swiper carousels initialized successfully');
     }, 100);
 }
 
@@ -409,15 +477,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Test function for Swiper debugging
 window.testSwiper = function () {
-    if (room5Swiper) {
-        console.log('Room 5 Swiper status:');
-        console.log('- Initialized: YES');
-        console.log('- Active slide:', room5Swiper.activeIndex);
-        console.log('- Total slides:', room5Swiper.slides.length);
-        console.log('- Is autoplay running:', room5Swiper.autoplay.running);
-    } else {
-        console.log('Room 5 Swiper not initialized!');
-    }
+    const swipers = [
+        { name: 'Room 1', swiper: room1Swiper },
+        { name: 'Room 2', swiper: room2Swiper },
+        { name: 'Room 3', swiper: room3Swiper },
+        { name: 'Room 4', swiper: room4Swiper },
+        { name: 'Room 5', swiper: room5Swiper },
+        { name: 'Room 6', swiper: room6Swiper },
+        { name: 'Room 7', swiper: room7Swiper },
+        { name: 'Room 8', swiper: room8Swiper }
+    ];
+
+    swipers.forEach(({ name, swiper }) => {
+        if (swiper) {
+            console.log(`${name} Swiper status:`);
+            console.log('- Initialized: YES');
+            console.log('- Active slide:', swiper.activeIndex);
+            console.log('- Total slides:', swiper.slides.length);
+            console.log('- Is autoplay running:', swiper.autoplay.running);
+        } else {
+            console.log(`${name} Swiper not initialized!`);
+        }
+    });
 };
 
 // Keyboard navigation support

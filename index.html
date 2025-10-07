@@ -114,18 +114,18 @@
                 </div>
             </div>
         </div>
+        <!-- Menu Center Section -->
+        <section class="menu-center-section">
+            <div class="menu-center-container">
+                <button class="btn btn-primary menu-center-btn" onclick="toggleMenu()">
+                    <i class="fas fa-utensils"></i>
+                    <span id="menuToggleText">View Our Menu</span>
+                    <i class="fas fa-chevron-down" id="menuToggleIcon"></i>
+                </button>
+            </div>
+        </section>
     </section>
 
-    <!-- Menu Center Section -->
-    <section class="menu-center-section">
-        <div class="menu-center-container">
-            <button class="btn btn-primary menu-center-btn" onclick="toggleMenu()">
-                <i class="fas fa-utensils"></i>
-                <span id="menuToggleText">View Our Menu</span>
-                <i class="fas fa-chevron-down" id="menuToggleIcon"></i>
-            </button>
-        </div>
-    </section>
 
 
 
@@ -232,28 +232,22 @@
                 <!-- 1 Bedroom Apartment First Floor -->
                 <div class="room-card">
                     <div class="room-image">
-                        <div class="room-image-carousel" id="room1Carousel">
-                            <div class="room-image-slide">
-                                <img src="Img/Apt3/Apt3.1.jpeg" alt="1 Bedroom Apartment - Living Area" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="Img/Apt3/Apt3.2.jpeg" alt="1 Bedroom Apartment - Kitchen" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="Img/Apt3/Apt3.3.jpeg" alt="1 Bedroom Apartment - Bedroom" />
+                        <div class="swiper room1-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.1.jpeg" alt="1 Bedroom Apartment - Living Area" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.2.jpeg" alt="1 Bedroom Apartment - Kitchen" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt3/Apt3.3.jpeg" alt="1 Bedroom Apartment - Bedroom" />
+                                </div>
                             </div>
                         </div>
-                        <button class="room-image-nav prev" onclick="moveRoomImage('room1', -1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="room-image-nav next" onclick="moveRoomImage('room1', 1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <div class="room-image-dots">
-                            <span class="dot active" onclick="currentRoomImage('room1', 1)"></span>
-                            <span class="dot" onclick="currentRoomImage('room1', 2)"></span>
-                            <span class="dot" onclick="currentRoomImage('room1', 3)"></span>
-                        </div>
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next room1-next"></div>
+                        <div class="swiper-button-prev room1-prev"></div>
                     </div>
                     <div class="room-content">
                         <h3>1 Bedroom Apartment - First Floor</h3>
@@ -276,31 +270,25 @@
                 <!-- 1 Bedroom Apartment Ground Floor -->
                 <div class="room-card">
                     <div class="room-image">
-                        <div class="room-image-carousel" id="room2Carousel">
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="1 Bedroom Apartment Ground Floor" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="1 Bedroom Apartment Kitchen" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="1 Bedroom Apartment Garden" />
+                        <div class="swiper room2-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="1 Bedroom Apartment Ground Floor" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="1 Bedroom Apartment Kitchen" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="1 Bedroom Apartment Garden" />
+                                </div>
                             </div>
                         </div>
-                        <button class="room-image-nav prev" onclick="moveRoomImage('room2', -1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="room-image-nav next" onclick="moveRoomImage('room2', 1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <div class="room-image-dots">
-                            <span class="room-image-dot active" onclick="goToRoomImage('room2', 0)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room2', 1)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room2', 2)"></span>
-                        </div>
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next room2-next"></div>
+                        <div class="swiper-button-prev room2-prev"></div>
                     </div>
                     <div class="room-content">
                         <h3>1 Bedroom Apartment - Ground Floor</h3>
@@ -323,31 +311,35 @@
                 <!-- 2 Bedroom Apartment Ground Floor -->
                 <div class="room-card">
                     <div class="room-image">
-                        <div class="room-image-carousel" id="room3Carousel">
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="2 Bedroom Apartment Ground Floor" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="2 Bedroom Apartment Kitchen" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="2 Bedroom Apartment Living" />
+                        <div class="swiper room3-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt.2.1.jpeg"
+                                        alt="2 Bedroom Apartment Ground Floor - Living Area" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.2.jpeg" alt="2 Bedroom Apartment Ground Floor - Bedroom" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.3.jpeg" alt="2 Bedroom Apartment Ground Floor - Kitchen" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.4.jpeg" alt="2 Bedroom Apartment Ground Floor - Bathroom" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.5.jpeg" alt="2 Bedroom Apartment Ground Floor - View" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.6.jpeg" alt="2 Bedroom Apartment Ground Floor - Outdoor" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.7.jpeg" alt="2 Bedroom Apartment Ground Floor - Details" />
+                                </div>
                             </div>
                         </div>
-                        <button class="room-image-nav prev" onclick="moveRoomImage('room3', -1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="room-image-nav next" onclick="moveRoomImage('room3', 1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <div class="room-image-dots">
-                            <span class="room-image-dot active" onclick="goToRoomImage('room3', 0)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room3', 1)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room3', 2)"></span>
-                        </div>
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next room3-next"></div>
+                        <div class="swiper-button-prev room3-prev"></div>
                     </div>
                     <div class="room-content">
                         <h3>2 Bedroom Apartment - Ground Floor</h3>
@@ -370,31 +362,35 @@
                 <!-- 2 Bedroom Apartment First Floor -->
                 <div class="room-card">
                     <div class="room-image">
-                        <div class="room-image-carousel" id="room4Carousel">
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="2 Bedroom Apartment First Floor" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="2 Bedroom Apartment Kitchen" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="2 Bedroom Apartment View" />
+                        <div class="swiper room4-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt.2.1.jpeg"
+                                        alt="2 Bedroom Apartment First Floor - Living Area" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.2.jpeg" alt="2 Bedroom Apartment First Floor - Bedroom" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.3.jpeg" alt="2 Bedroom Apartment First Floor - Kitchen" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.4.jpeg" alt="2 Bedroom Apartment First Floor - Bathroom" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.5.jpeg" alt="2 Bedroom Apartment First Floor - View" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.6.jpeg" alt="2 Bedroom Apartment First Floor - Outdoor" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Img/Apt2/Apt2.7.jpeg" alt="2 Bedroom Apartment First Floor - Details" />
+                                </div>
                             </div>
                         </div>
-                        <button class="room-image-nav prev" onclick="moveRoomImage('room4', -1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="room-image-nav next" onclick="moveRoomImage('room4', 1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <div class="room-image-dots">
-                            <span class="room-image-dot active" onclick="goToRoomImage('room4', 0)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room4', 1)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room4', 2)"></span>
-                        </div>
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next room4-next"></div>
+                        <div class="swiper-button-prev room4-prev"></div>
                     </div>
                     <div class="room-content">
                         <h3>2 Bedroom Apartment - First Floor</h3>
@@ -458,8 +454,8 @@
                             </div>
                         </div>
                         <!-- Navigation buttons -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next room5-next"></div>
+                        <div class="swiper-button-prev room5-prev"></div>
                     </div>
                     <div class="room-content">
                         <h3>3 Bed Apartment - Second Floor</h3>
@@ -483,31 +479,25 @@
                 <!-- 1 Bedroom Apartment Garden Side -->
                 <div class="room-card">
                     <div class="room-image">
-                        <div class="room-image-carousel" id="room6Carousel">
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="1 Bedroom Apartment Garden Side" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="1 Bedroom Apartment Garden View" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="1 Bedroom Apartment Kitchen" />
+                        <div class="swiper room6-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="1 Bedroom Apartment Garden Side" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="1 Bedroom Apartment Garden View" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="1 Bedroom Apartment Kitchen" />
+                                </div>
                             </div>
                         </div>
-                        <button class="room-image-nav prev" onclick="moveRoomImage('room6', -1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="room-image-nav next" onclick="moveRoomImage('room6', 1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <div class="room-image-dots">
-                            <span class="room-image-dot active" onclick="goToRoomImage('room6', 0)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room6', 1)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room6', 2)"></span>
-                        </div>
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next room6-next"></div>
+                        <div class="swiper-button-prev room6-prev"></div>
                     </div>
                     <div class="room-content">
                         <h3>1 Bedroom Apartment - Garden Side</h3>
@@ -531,31 +521,25 @@
                 <!-- Studio Room Garden Side -->
                 <div class="room-card">
                     <div class="room-image">
-                        <div class="room-image-carousel" id="room7Carousel">
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="Studio Room Garden Side" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="Studio Room Garden View" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="Studio Room Living" />
+                        <div class="swiper room7-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="Studio Room Garden Side" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="Studio Room Garden View" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="Studio Room Living" />
+                                </div>
                             </div>
                         </div>
-                        <button class="room-image-nav prev" onclick="moveRoomImage('room7', -1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="room-image-nav next" onclick="moveRoomImage('room7', 1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <div class="room-image-dots">
-                            <span class="room-image-dot active" onclick="goToRoomImage('room7', 0)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room7', 1)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room7', 2)"></span>
-                        </div>
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next room7-next"></div>
+                        <div class="swiper-button-prev room7-prev"></div>
                     </div>
                     <div class="room-content">
                         <h3>Studio Room - Garden Side</h3>
@@ -576,31 +560,25 @@
                 <!-- Studio 101 -->
                 <div class="room-card">
                     <div class="room-image">
-                        <div class="room-image-carousel" id="room8Carousel">
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="Studio 101" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="Studio 101 Living" />
-                            </div>
-                            <div class="room-image-slide">
-                                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                    alt="Studio 101 View" />
+                        <div class="swiper room8-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="Studio 101" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="Studio 101 Living" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                        alt="Studio 101 View" />
+                                </div>
                             </div>
                         </div>
-                        <button class="room-image-nav prev" onclick="moveRoomImage('room8', -1)">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="room-image-nav next" onclick="moveRoomImage('room8', 1)">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-                        <div class="room-image-dots">
-                            <span class="room-image-dot active" onclick="goToRoomImage('room8', 0)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room8', 1)"></span>
-                            <span class="room-image-dot" onclick="goToRoomImage('room8', 2)"></span>
-                        </div>
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next room8-next"></div>
+                        <div class="swiper-button-prev room8-prev"></div>
                     </div>
                     <div class="room-content">
                         <h3>Studio 101</h3>
