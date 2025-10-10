@@ -2,8 +2,17 @@ import React from 'react';
 
 const SpecialOffer: React.FC = () => {
     const contactPickupWhatsApp = () => {
-        const message = "Hi! I would like to request hotel pickup for the free facilities use on departure day. Can you help me arrange this?";
-        const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
+        const message = `Hello! I'm interested in using the free facilities on my departure day at Jasmine Restaurant & Bar.
+
+🏨 Free Departure Day Facilities:
+• Free luggage storage
+• Free shower facilities  
+• Free pool access
+• Free sunbeds
+• Free pickup from my hotel
+
+Please let me know more details about this service and how to arrange it. Thank you!`;
+        const whatsappUrl = `https://wa.me/50689268481?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     };
 
@@ -11,25 +20,60 @@ const SpecialOffer: React.FC = () => {
         <section className="special-offer">
             <div className="container">
                 <div className="offer-content">
-                    <div className="offer-icon">
-                        <i className="fas fa-gift"></i>
-                    </div>
-                    <div className="offer-text">
-                        <p><strong>Free facilities use on departure day!</strong></p>
-                        <p>Checking out today from your hotel? If you have a late flight, early arrival, or just want to use our facilities during the day, we offer:</p>
-                        <ul className="offer-features">
-                            <li><i className="fas fa-suitcase"></i> Free luggage storage</li>
-                            <li><i className="fas fa-shower"></i> Free shower facilities</li>
-                            <li><i className="fas fa-swimming-pool"></i> Free pool access</li>
-                            <li><i className="fas fa-sun"></i> Free sunbeds</li>
-                            <li><i className="fas fa-car"></i> Free pickup from your hotel</li>
-                        </ul>
-                        <p className="offer-note"><strong>Please note:</strong> You need to eat and drink at our restaurant to use these facilities.</p>
-                        <div className="offer-contact">
-                            <button className="btn btn-whatsapp offer-btn" onClick={contactPickupWhatsApp}>
-                                <i className="fab fa-whatsapp"></i> Request Hotel Pickup
-                            </button>
+                    <div className="offer-header">
+                        <div className="offer-icon">
+                            <i className="fas fa-plane-departure"></i>
                         </div>
+                        <h2>Special Departure Day Offer</h2>
+                        <p className="offer-subtitle">Make the most of your last day in Oludeniz</p>
+                    </div>
+
+                    <div className="offer-description">
+                        <p>Don't let your departure day go to waste! Whether you have a late flight, early arrival, or just want to enjoy our beautiful facilities one more time, we've got you covered.</p>
+                    </div>
+
+                    <div className="offer-features-grid">
+                        <div className="offer-feature">
+                            <i className="fas fa-suitcase"></i>
+                            <h4>Luggage Storage</h4>
+                            <p>Store your bags safely while you explore</p>
+                        </div>
+                        <div className="offer-feature">
+                            <i className="fas fa-shower"></i>
+                            <h4>Shower Facilities</h4>
+                            <p>Fresh and clean before your journey</p>
+                        </div>
+                        <div className="offer-feature">
+                            <i className="fas fa-swimming-pool"></i>
+                            <h4>Pool Access</h4>
+                            <p>Relax by our beautiful pool</p>
+                        </div>
+                        <div className="offer-feature">
+                            <i className="fas fa-sun"></i>
+                            <h4>Sunbeds</h4>
+                            <p>Comfortable lounging in the sun</p>
+                        </div>
+                        <div className="offer-feature">
+                            <i className="fas fa-car"></i>
+                            <h4>Hotel Pickup</h4>
+                            <p>Free transportation from your hotel</p>
+                        </div>
+                        <div className="offer-feature">
+                            <i className="fas fa-utensils"></i>
+                            <h4>Restaurant Access</h4>
+                            <p>Enjoy our delicious meals and drinks</p>
+                        </div>
+                    </div>
+
+                    <div className="offer-note">
+                        <i className="fas fa-info-circle"></i>
+                        <p><strong>Terms:</strong> Free facilities available when dining at our restaurant. Perfect for making your departure day comfortable and memorable!</p>
+                    </div>
+
+                    <div className="offer-contact">
+                        <button className="btn btn-primary offer-btn" onClick={contactPickupWhatsApp}>
+                            <i className="fab fa-whatsapp"></i> Book This Service
+                        </button>
                     </div>
                 </div>
             </div>

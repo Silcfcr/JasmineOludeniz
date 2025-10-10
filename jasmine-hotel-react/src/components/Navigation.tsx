@@ -11,6 +11,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, onSectionChange 
         { id: 'hotel', label: 'Hotel', icon: 'fas fa-building' },
         { id: 'restaurant', label: 'Restaurant', icon: 'fas fa-utensils' },
         { id: 'rooms', label: 'Rooms', icon: 'fas fa-bed' },
+        { id: 'car-rental', label: 'Car Rental', icon: 'fas fa-car' },
         { id: 'contact', label: 'Contact', icon: 'fas fa-phone' }
     ];
 

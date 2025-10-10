@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import SpecialOffer from './components/SpecialOffer';
 import RestaurantSection from './components/RestaurantSection';
 import MenuToggleSection from './components/MenuToggleSection';
 import HotelSection from './components/HotelSection';
 import RoomsSection from './components/RoomsSection';
+import SpecialOffer from './components/SpecialOffer';
 import HappyClientsSection from './components/HappyClientsSection';
+import CarRentalSection from './components/CarRentalSection';
 import Footer from './components/Footer';
+import DepartureModal from './components/DepartureModal';
 import { menuData } from './data/menuData';
 import './App.css';
 
@@ -91,6 +93,11 @@ function App() {
     window.open(whatsappUrl, '_blank');
   };
 
+  const handleCarRentalContact = (message: string) => {
+    const whatsappUrl = `https://wa.me/50689268481?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const handleQuantityChange = (itemId: string, quantity: number) => {
     setCart(prev => ({
       ...prev,
@@ -148,8 +155,6 @@ function App() {
 
       <Hero />
 
-      <SpecialOffer />
-
       <RestaurantSection
         onToggleMenu={toggleMenu}
         menuToggleText={showMenu ? 'Hide Menu' : 'View Our Menu'}
@@ -169,9 +174,15 @@ function App() {
 
       <RoomsSection onWhatsAppClick={handleWhatsAppClick} />
 
+      <SpecialOffer />
+
+      <CarRentalSection onContactClick={handleCarRentalContact} />
+
       <HappyClientsSection />
 
       <Footer />
+
+      <DepartureModal />
     </div>
   );
 }

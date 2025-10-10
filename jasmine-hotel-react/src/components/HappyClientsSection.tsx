@@ -35,39 +35,53 @@ const HappyClientsSection: React.FC = () => {
     return (
         <section id="customers" className="customers-section">
             <div className="container">
-                <div className="section-header">
-                    <h2>Our Happy Customers</h2>
-                    <p>See the wonderful moments our guests have shared with us</p>
-                </div>
-
-                <div className="customer-gallery">
-                    {customerImages.map((image, index) => (
-                        <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
-                            <img src={image.src} alt={image.alt} />
-                            <div className="gallery-overlay">
-                                <i className="fas fa-search-plus"></i>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <div className="customer-testimonials">
-                    <div className="testimonial">
-                        <div className="testimonial-content">
-                            <p>"Amazing place! The food was delicious and the staff was so friendly. We had a wonderful time at Jasmine Restaurant & Hotel."</p>
-                            <div className="testimonial-author">
-                                <strong>Sarah & John</strong>
-                                <span>UK Visitors</span>
-                            </div>
-                        </div>
+                <div className="customers-content">
+                    <div className="customers-header">
+                        <h2>Our Happy Customers</h2>
+                        <p>See the wonderful moments our guests have shared with us</p>
                     </div>
-                    <div className="testimonial">
-                        <div className="testimonial-content">
-                            <p>"Perfect location, great rooms, and the best Turkish breakfast we've ever had. Highly recommend!"</p>
-                            <div className="testimonial-author">
-                                <strong>Maria & Carlos</strong>
-                                <span>Spanish Tourists</span>
+
+                    <div className="customer-gallery">
+                        {customerImages.map((image, index) => (
+                            <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
+                                <img src={image.src} alt={image.alt} />
+                                <div className="gallery-overlay">
+                                    <i className="fas fa-search-plus"></i>
+                                </div>
                             </div>
+                        ))}
+                    </div>
+
+                    <div className="customer-testimonials">
+                        <div className="testimonial" onClick={() => window.open('https://www.tripadvisor.com/ShowUserReviews-g312737-d26286044-r1028933671-Jasmine_Restaurant_Bar-Oludeniz_Fethiye_Mugla_Province_Turkish_Aegean_Coast.html', '_blank')}>
+                            <div className="testimonial-content">
+                                <p>"Amazing place! The food was delicious and the staff was so friendly. We had a wonderful time at Jasmine Restaurant & Hotel."</p>
+                                <div className="testimonial-author">
+                                    <strong>Sarah & John</strong>
+                                    <span>UK Visitors</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="testimonial" onClick={() => window.open('https://www.tripadvisor.com/ShowUserReviews-g312737-d26286044-r1028933671-Jasmine_Restaurant_Bar-Oludeniz_Fethiye_Mugla_Province_Turkish_Aegean_Coast.html', '_blank')}>
+                            <div className="testimonial-content">
+                                <p>Excellent food,excellent hosts and the dogs made it even more special we will certainly be back again , well worth a visit!"</p>
+                                <div className="testimonial-author">
+                                    <strong>Maria & Carlos</strong>
+                                    <span>Spanish Tourists</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="testimonials-cta">
+                            <a
+                                href="https://www.tripadvisor.com/ShowUserReviews-g312737-d26286044-r1028933671-Jasmine_Restaurant_Bar-Oludeniz_Fethiye_Mugla_Province_Turkish_Aegean_Coast.html"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn btn-primary testimonials-btn"
+                            >
+                                <i className="fa fa-tripadvisor"></i>
+                                Read More Reviews on TripAdvisor
+                            </a>
                         </div>
                     </div>
                 </div>

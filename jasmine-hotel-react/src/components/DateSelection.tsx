@@ -30,6 +30,10 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
 
     return (
         <div className="date-selection">
+            <div className="rooms-header">
+                <h2>Our Rooms</h2>
+                <p>Choose from our comfortable accommodations</p>
+            </div>
             <h3>📅 Select Your Dates</h3>
             <p className="date-requirement">Please select your check-in and check-out dates to contact us about room availability.</p>
             <div className="date-inputs">

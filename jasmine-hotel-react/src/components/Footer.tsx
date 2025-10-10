@@ -58,18 +58,16 @@ const Footer: React.FC = () => {
                         <a href="#home">Home</a>
                         <a href="#restaurant">Restaurant</a>
                         <a href="#hotel">Hotel</a>
+                        <a href="#car-rental">Car Rental</a>
                         <a href="#rooms">Rooms</a>
                         <a href="#customers">Reviews</a>
                         <a href="#contact">Contact</a>
                     </div>
                     <div className="footer-social">
-                        <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/jasminerestaurantbar/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-facebook"></i>
                         </a>
-                        <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://tripadvisor.com" aria-label="TripAdvisor" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.tripadvisor.com/Restaurant_Review-g312737-d26286044-Reviews-Jasmine_Restaurant_Bar-Oludeniz_Fethiye_Mugla_Province_Turkish_Aegean_Coast.html" aria-label="TripAdvisor" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-tripadvisor"></i>
                         </a>
                     </div>

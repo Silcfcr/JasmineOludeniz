@@ -13,6 +13,7 @@ const Header: React.FC = () => {
                         <li><a href="#restaurant">Restaurant</a></li>
                         <li><a href="#hotel">Hotel</a></li>
                         <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#car-rental">Car Rental</a></li>
                         <li><a href="#customers">Our Customers</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>

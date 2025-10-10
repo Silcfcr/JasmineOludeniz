@@ -28,9 +28,11 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
             title: '1 Bedroom Apartment - First Floor',
             description: 'Comfortable apartment with modern amenities, perfect for couples or small families.',
             images: [
-                { src: 'Img/Apt3/Apt3.1.jpeg', alt: '1 Bedroom Apartment - Living Area' },
-                { src: 'Img/Apt3/Apt3.2.jpeg', alt: '1 Bedroom Apartment - Kitchen' },
-                { src: 'Img/Apt3/Apt3.3.jpeg', alt: '1 Bedroom Apartment - Bedroom' }
+                { src: 'Img/Apt3/Apt3.1.jpeg', alt: '1 Bedroom Apartment First Floor - Main View' },
+                { src: 'Img/Apt3/Apt3.2.jpeg', alt: '1 Bedroom Apartment First Floor - Living Area' },
+                { src: 'Img/Apt3/Apt3.3.jpeg', alt: '1 Bedroom Apartment First Floor - Bedroom' },
+                { src: 'Img/Apt3/Apt3.4.jpeg', alt: '1 Bedroom Apartment First Floor - Kitchen' },
+                { src: 'Img/Apt3/Apt3.5.jpeg', alt: '1 Bedroom Apartment First Floor - Bathroom' }
             ],
             features: [
                 { icon: 'fas fa-bed', text: '1 Double Bed' },
@@ -45,9 +47,11 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
             title: '1 Bedroom Apartment - Ground Floor',
             description: 'Ground floor apartment with easy access and garden views.',
             images: [
-                { src: 'https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: '1 Bedroom Apartment Ground Floor' },
-                { src: 'https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: '1 Bedroom Apartment Kitchen' },
-                { src: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: '1 Bedroom Apartment Garden' }
+                { src: 'Img/Apt1/Apt1.1.jpeg', alt: '1 Bedroom Apartment Ground Floor - Main View' },
+                { src: 'Img/Apt1/Apt1.2.jpeg', alt: '1 Bedroom Apartment Ground Floor - Living Area' },
+                { src: 'Img/Apt1/Apt1.3.jpeg', alt: '1 Bedroom Apartment Ground Floor - Bedroom' },
+                { src: 'Img/Apt1/Apt1.4.jpeg', alt: '1 Bedroom Apartment Ground Floor - Kitchen' },
+                { src: 'Img/Apt1/Apt1.5.jpeg', alt: '1 Bedroom Apartment Ground Floor - Bathroom' }
             ],
             features: [
                 { icon: 'fas fa-bed', text: '1 Double Bed' },
@@ -132,9 +136,11 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
             title: '1 Bedroom Apartment - Garden Side',
             description: 'Peaceful garden-side apartment with beautiful natural surroundings.',
             images: [
-                { src: 'https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: '1 Bedroom Apartment Garden Side' },
-                { src: 'https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: '1 Bedroom Apartment Garden View' },
-                { src: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: '1 Bedroom Apartment Kitchen' }
+                { src: 'Img/Apt1Garden/Apt1Garden.1.jpeg', alt: '1 Bedroom Apartment Garden Side - Main View' },
+                { src: 'Img/Apt1Garden/Apt1Garden.2.jpeg', alt: '1 Bedroom Apartment Garden Side - Living Area' },
+                { src: 'Img/Apt1Garden/Apt1Garden.3.jpeg', alt: '1 Bedroom Apartment Garden Side - Bedroom' },
+                { src: 'Img/Apt1Garden/Apt1Garden.4.jpeg', alt: '1 Bedroom Apartment Garden Side - Kitchen' },
+                { src: 'Img/Apt1Garden/Apt1Garden.5.jpeg', alt: '1 Bedroom Apartment Garden Side - Garden View' }
             ],
             features: [
                 { icon: 'fas fa-bed', text: '1 Double Bed' },
@@ -150,9 +156,11 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
             title: 'Studio Room - Garden Side',
             description: 'Compact studio room with garden views, perfect for solo travelers or couples.',
             images: [
-                { src: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: 'Studio Room Garden Side' },
-                { src: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: 'Studio Room Garden View' },
-                { src: 'https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: 'Studio Room Living' }
+                { src: 'Img/Apt1Garden/Apt1Garden.1.jpeg', alt: 'Studio Room Garden Side - Main View' },
+                { src: 'Img/Apt1Garden/Apt1Garden.2.jpeg', alt: 'Studio Room Garden Side - Living Area' },
+                { src: 'Img/Apt1Garden/Apt1Garden.3.jpeg', alt: 'Studio Room Garden Side - Bedroom' },
+                { src: 'Img/Apt1Garden/Apt1Garden.4.jpeg', alt: 'Studio Room Garden Side - Kitchen' },
+                { src: 'Img/Apt1Garden/Apt1Garden.5.jpeg', alt: 'Studio Room Garden Side - Garden View' }
             ],
             features: [
                 { icon: 'fas fa-bed', text: '1 Double Bed + 1 Single Bed' },
@@ -166,9 +174,13 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
             title: 'Studio 101',
             description: 'Modern studio room with double bed, ideal for short stays.',
             images: [
-                { src: 'https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: 'Studio 101' },
-                { src: 'https://images.unsplash.com/photo-1611892440501-80c6e516f0d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: 'Studio 101 Living' },
-                { src: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80', alt: 'Studio 101 View' }
+                { src: 'Img/Apt101/Apt101.1.jpeg', alt: 'Studio 101 - Main View' },
+                { src: 'Img/Apt101/Apt101.2.jpeg', alt: 'Studio 101 - Living Area' },
+                { src: 'Img/Apt101/Apt101.3.jpeg', alt: 'Studio 101 - Bedroom' },
+                { src: 'Img/Apt101/Apt101.4.jpeg', alt: 'Studio 101 - Kitchen' },
+                { src: 'Img/Apt101/Apt101.5.jpeg', alt: 'Studio 101 - Bathroom' },
+                { src: 'Img/Apt101/Apt101.6.jpeg', alt: 'Studio 101 - Balcony' },
+                { src: 'Img/Apt101/Apt101.7.jpeg', alt: 'Studio 101 - Exterior' }
             ],
             features: [
                 { icon: 'fas fa-bed', text: '1 Double Bed' },
@@ -181,26 +193,24 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
     return (
         <section id="rooms" className="rooms-section">
             <div className="container">
-                <div className="section-header">
-                    <h2>Our Rooms</h2>
-                    <p>Choose from our comfortable accommodations</p>
-                </div>
+                <div className="rooms-content">
+                    {/* Date Selection */}
+                    <DateSelection onContactWithDates={handleContactWithDates} />
 
-                {/* Date Selection */}
-                <DateSelection onContactWithDates={handleContactWithDates} />
-                <div className="rooms-grid">
-                    {roomsData.map((room) => (
-                        <RoomCard
-                            key={room.id}
-                            id={room.id}
-                            title={room.title}
-                            description={room.description}
-                            images={room.images}
-                            features={room.features}
-                            onWhatsAppClick={onWhatsAppClick}
-                            selectedDates={selectedDates}
-                        />
-                    ))}
+                    <div className="rooms-grid">
+                        {roomsData.map((room) => (
+                            <RoomCard
+                                key={room.id}
+                                id={room.id}
+                                title={room.title}
+                                description={room.description}
+                                images={room.images}
+                                features={room.features}
+                                onWhatsAppClick={onWhatsAppClick}
+                                selectedDates={selectedDates}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
