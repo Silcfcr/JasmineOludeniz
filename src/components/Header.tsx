@@ -3,6 +3,11 @@ import React, { useState } from 'react';
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    // Force alert on component load
+    React.useEffect(() => {
+        alert('HEADER COMPONENT LOADED!');
+    }, []);
+
     const toggleMenu = () => {
         console.log('Hamburger clicked, current state:', isMenuOpen);
         setIsMenuOpen(!isMenuOpen);
