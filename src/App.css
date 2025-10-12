@@ -2522,6 +2522,9 @@ section:first-of-type {
     
     .car-rental-form .date-input input {
         text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
     }
     
     .car-rental-btn {
@@ -2556,6 +2559,9 @@ section:first-of-type {
         padding: 0.625rem 0.875rem;
         font-size: 0.95rem;
         text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
     }
 }
 
@@ -2613,6 +2619,39 @@ section:first-of-type {
 
 .date-input input {
     text-align: center;
+}
+
+/* Mobile-specific date input centering */
+@media (max-width: 768px) {
+    .date-input input {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .date-inputs {
+        align-items: center;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .date-input input {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .car-rental-form .date-input input {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0.625rem 0.5rem;
+    }
 }
 
 .date-input {
