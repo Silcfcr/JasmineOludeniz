@@ -82,10 +82,10 @@ function App() {
       message += `\n\n🏨 Room: ${roomTitle}`;
       message += `\n📅 Check-in: ${checkinFormatted}`;
       message += `\n📅 Check-out: ${checkoutFormatted}`;
-      message += `\n💰 Price: €${price}/night (${nights} nights = €${totalPrice} total)`;
+      message += `\n💰 Price: £${price}/night (${nights} nights = £${totalPrice} total)`;
       message += `\n\nPlease let me know about availability and booking process. Thank you!`;
     } else {
-      message += `\n\n💰 Price: €${price}/night`;
+      message += `\n\n💰 Price: £${price}/night`;
       message += `\n\nPlease let me know about availability and booking process. Thank you!`;
     }
 

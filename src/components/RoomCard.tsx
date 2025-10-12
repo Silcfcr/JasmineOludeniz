@@ -86,7 +86,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
                         </li>
                     ))}
                 </ul>
-                <div className="room-price">€{price}/night</div>
+                <div className="room-price">£{price}/night</div>
                 <button
                     className="btn btn-whatsapp"
                     onClick={handleWhatsAppClick}

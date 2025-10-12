@@ -5,7 +5,7 @@ const HotelSection: React.FC = () => {
         <section id="hotel" className="hotel-section">
             <div className="container">
                 <div className="section-header">
-                    <h2>Jasmine Hotel</h2>
+                    <h2>Evita Apartments</h2>
                     <p>Comfortable family accommodation in the heart of Oludeniz</p>
                 </div>
                 <div className="hotel-content">
