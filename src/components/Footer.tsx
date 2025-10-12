@@ -68,8 +68,11 @@ const Footer: React.FC = () => {
                         <a href="https://www.facebook.com/jasminerestaurantbar/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-facebook"></i>
                         </a>
-                        <a href="https://www.tripadvisor.com/Restaurant_Review-g312737-d26286044-Reviews-Jasmine_Restaurant_Bar-Oludeniz_Fethiye_Mugla_Province_Turkish_Aegean_Coast.html" aria-label="TripAdvisor" target="_blank" rel="noopener noreferrer">
-                            <i className="fab fa-tripadvisor"></i>
+                        <a href="https://www.instagram.com/jasminerestaurantbar/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <i className="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@jasminerestaurantbar" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                            <i className="fab fa-tiktok"></i>
                         </a>
                     </div>
                     <div className="footer-copyright">
