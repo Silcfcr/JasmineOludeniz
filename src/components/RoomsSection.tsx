@@ -25,7 +25,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
     const roomsData: RoomData[] = [
         {
             id: 'room1',
-            title: '1 Bedroom Apartment - First Floor',
+            title: '1 Bedroom Apartment - 301',
             description: 'Comfortable apartment with modern amenities, perfect for couples or small families.',
             images: [
                 { src: 'Img/Apt1/Apt1.1.jpeg', alt: '1 Bedroom Apartment First Floor - Main View' },
@@ -44,7 +44,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room2',
-            title: '1 Bedroom Apartment - Ground Floor',
+            title: '1 Bedroom Apartment - 101',
             description: 'Ground floor apartment with easy access and garden views.',
             images: [
                 { src: 'Img/Apt1/Apt1.1.jpeg', alt: '1 Bedroom Apartment Ground Floor - Main View' },
@@ -63,7 +63,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room3',
-            title: '2 Bedroom Apartment - Ground Floor',
+            title: '2 Bedroom Apartment - 201',
             description: 'Spacious ground floor apartment perfect for families or groups.',
             images: [
                 { src: 'Img/Apt2/Apt.2.1.jpeg', alt: '2 Bedroom Apartment Ground Floor - Living Area' },
@@ -83,7 +83,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room4',
-            title: '2 Bedroom Apartment - First Floor',
+            title: '2 Bedroom Apartment - 202',
             description: 'First floor apartment with great views and family-friendly layout.',
             images: [
                 { src: 'Img/Apt2/Apt.2.1.jpeg', alt: '2 Bedroom Apartment First Floor - Living Area' },
@@ -103,7 +103,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room5',
-            title: '3 Bed Apartment - Second Floor',
+            title: '3 Bed Apartment - 302',
             description: 'Top floor apartment with balcony, wet bathroom, and panoramic views.',
             images: [
                 { src: 'Img/Apt3/Apt3.1.jpeg', alt: '3 Bed Apartment - Living Area' },
@@ -131,7 +131,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room6',
-            title: '1 Bedroom Apartment - Garden Side',
+            title: '1 Bedroom Apartment - 102',
             description: 'Peaceful garden-side apartment with beautiful natural surroundings.',
             images: [
                 { src: 'Img/Apt1Garden/Apt1Garden.1.jpeg', alt: '1 Bedroom Apartment Garden Side - Main View' },
@@ -150,7 +150,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room7',
-            title: 'Studio Room - Garden Side',
+            title: 'Studio Room - 103',
             description: 'Compact studio room with garden views, perfect for solo travelers or couples.',
             images: [
                 { src: 'Img/Apt1Garden/Apt1Garden.1.jpeg', alt: 'Studio Room Garden Side - Main View' },
