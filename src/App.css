@@ -250,9 +250,7 @@ body {
 
 .hero-image img {
     width: 100%;
-    height: auto;
-    max-height: 450px;
-    min-height: 350px;
+    height: 600px;
     object-fit: contain;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -604,8 +602,7 @@ section:first-of-type {
 
 .hotel-image img {
     width: 100%;
-    height: auto;
-    max-height: 400px;
+    height: 400px;
     object-fit: contain;
     border-radius: 15px;
 }
@@ -1090,8 +1087,7 @@ section:first-of-type {
 
 .gallery-item img {
     width: 100%;
-    height: auto;
-    max-height: 300px;
+    height: 100%;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -1674,8 +1670,7 @@ section:first-of-type {
     }
 
     .hero-image img {
-        max-height: 300px;
-        min-height: 250px;
+        height: 400px;
     }
 
     .hero-text h1 {
@@ -1858,8 +1853,7 @@ section:first-of-type {
     }
 
     .hero-image img {
-        max-height: 250px;
-        min-height: 200px;
+        height: 350px;
     }
 
     .hero-text h1 {
@@ -2529,8 +2523,7 @@ section:first-of-type {
 
 .car-rental-image img {
     width: 100%;
-    height: auto;
-    max-height: 400px;
+    height: 400px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
