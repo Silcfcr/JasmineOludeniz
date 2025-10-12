@@ -15,6 +15,31 @@ const Header: React.FC = () => {
     console.log('Header component rendering, isMenuOpen:', isMenuOpen);
 
     return (
+        <div style={{ 
+            position: 'fixed', 
+            top: 0, 
+            left: 0, 
+            width: '100%', 
+            height: '100%', 
+            background: 'rgba(255,0,0,0.1)', 
+            zIndex: 9999,
+            pointerEvents: 'none'
+        }}>
+            <div style={{ 
+                position: 'absolute', 
+                top: '20px', 
+                left: '20px', 
+                background: 'yellow', 
+                padding: '10px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                color: 'black',
+                zIndex: 10000,
+                pointerEvents: 'auto'
+            }}>
+                HEADER COMPONENT IS RENDERING!
+            </div>
+        </div>
         <header className="header">
             <nav className="nav">
                 <div className="nav-container">
