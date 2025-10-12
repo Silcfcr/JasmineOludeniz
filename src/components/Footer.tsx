@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
                         <a href="https://www.instagram.com/jasminerestaurantbarr/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-instagram"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@jasminerestaurantbar" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.tiktok.com/@jasminereataurantbar" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
                             <i className="fab fa-tiktok"></i>
                         </a>
                     </div>
