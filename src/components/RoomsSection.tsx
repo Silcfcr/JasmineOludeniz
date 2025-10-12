@@ -136,10 +136,11 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
             title: '1 Bedroom Apartment - 301',
             description: 'First floor apartment with pools views and family-friendly layout.',
             images: [
-                { src: 'Img/Apt1Garden/Apt1Garden.1.jpeg', alt: '1 Bedroom Apartment Garden Side - Main View' },
-                { src: 'Img/Apt1Garden/Apt1Garden.2.jpeg', alt: '1 Bedroom Apartment Garden Side - Living Area' },
-                { src: 'Img/Apt1Garden/Apt1Garden.3.jpeg', alt: '1 Bedroom Apartment Garden Side - Bedroom' },
-                { src: 'Img/Apt1Garden/Apt1Garden.5.jpeg', alt: '1 Bedroom Apartment Garden Side - Garden View' }
+                { src: 'Img/Apt1/Apt1.1.jpeg', alt: '1 Bedroom Apartment 301 - Main View' },
+                { src: 'Img/Apt1/Apt1.2.jpeg', alt: '1 Bedroom Apartment 301 - Living Area' },
+                { src: 'Img/Apt1/Apt1.3.jpeg', alt: '1 Bedroom Apartment 301 - Bedroom' },
+                { src: 'Img/Apt1/Apt1.4.jpeg', alt: '1 Bedroom Apartment 301 - Kitchen' },
+                { src: 'Img/Apt1/Apt1.5.jpeg', alt: '1 Bedroom Apartment 301 - Bathroom' }
             ],
             features: [
                 { icon: 'fas fa-bed', text: '1 Double Bed' },

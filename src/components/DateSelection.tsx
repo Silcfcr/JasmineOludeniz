@@ -64,20 +64,25 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
                 </div>
                 <div className="date-input">
                     <label htmlFor="numberOfPeople">Number of People *</label>
-                    <select
-                        id="numberOfPeople"
-                        name="numberOfPeople"
-                        value={numberOfPeople}
-                        onChange={(e) => setNumberOfPeople(parseInt(e.target.value))}
-                        required
-                    >
-                        <option value={1}>1 Person</option>
-                        <option value={2}>2 People</option>
-                        <option value={3}>3 People</option>
-                        <option value={4}>4 People</option>
-                        <option value={5}>5 People</option>
-                        <option value={6}>6 People</option>
-                    </select>
+                    <div className="people-counter">
+                        <button 
+                            type="button" 
+                            className="counter-btn minus"
+                            onClick={() => setNumberOfPeople(Math.max(1, numberOfPeople - 1))}
+                            disabled={numberOfPeople <= 1}
+                        >
+                            −
+                        </button>
+                        <span className="counter-display">{numberOfPeople} {numberOfPeople === 1 ? 'Person' : 'People'}</span>
+                        <button 
+                            type="button" 
+                            className="counter-btn plus"
+                            onClick={() => setNumberOfPeople(Math.min(6, numberOfPeople + 1))}
+                            disabled={numberOfPeople >= 6}
+                        >
+                            +
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
