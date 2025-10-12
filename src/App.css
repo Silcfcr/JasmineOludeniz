@@ -244,13 +244,14 @@ body {
     padding: 3rem 3rem 4rem 3rem;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
+    min-height: 500px;
 }
 
 .hero-image img {
     width: 100%;
-    height: 600px;
+    height: 100%;
     object-fit: cover;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
@@ -1669,8 +1670,12 @@ section:first-of-type {
         padding: 2rem 2rem 2.5rem 2rem;
     }
 
+    .hero-image {
+        min-height: 350px;
+    }
+    
     .hero-image img {
-        height: 400px;
+        height: 100%;
     }
 
     .hero-text h1 {
@@ -1852,8 +1857,12 @@ section:first-of-type {
         padding: 1.5rem 1rem 2rem 1rem;
     }
 
+    .hero-image {
+        min-height: 300px;
+    }
+    
     .hero-image img {
-        height: 350px;
+        height: 100%;
     }
 
     .hero-text h1 {
