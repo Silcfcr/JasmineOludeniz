@@ -147,15 +147,19 @@ body {
     min-height: 100vh;
     align-items: center;
     background: linear-gradient(135deg, #dbeafe 0%, #fce7f3 100%);
-    padding: 150px 0 100px 0;
-    margin: 2rem 0 4rem 0;
+    padding: 150px 0 50px 0;
+    margin: 2rem 0 2rem 0;
 }
 
 .hero-content {
     flex: 1;
-    padding: 4rem 3rem;
+    padding: 2rem 3rem 1rem 3rem;
     max-width: 600px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 700px;
 }
 
 .hero-badge {
@@ -180,7 +184,7 @@ body {
     font-size: 3rem;
     font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -191,13 +195,13 @@ body {
     color: var(--text-light);
     font-size: 1.5rem;
     font-weight: 300;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .hero-text p {
     font-size: 1.1rem;
     color: var(--text-light);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     line-height: 1.8;
 }
 
@@ -1663,7 +1667,8 @@ section:first-of-type {
     }
 
     .hero-content {
-        padding: 3rem 2rem;
+        padding: 2rem 2rem 1rem 2rem;
+        min-height: 500px;
     }
     
     .hero-image {
@@ -1850,7 +1855,8 @@ section:first-of-type {
 
     .hero-content {
         order: 2;
-        padding: 2.5rem 1.5rem;
+        padding: 2rem 1.5rem 1rem 1.5rem;
+        min-height: 450px;
     }
 
     .hero-image {
