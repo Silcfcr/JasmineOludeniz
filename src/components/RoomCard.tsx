@@ -38,7 +38,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
 
     useEffect(() => {
         let roomPrice: number;
-        
+
         // If dates are selected, use the check-in date to determine season and number of people
         if (selectedDates && selectedDates.checkin) {
             const season = getSeasonFromDate(selectedDates.checkin);
@@ -50,7 +50,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
             roomPrice = getRoomPrice(title);
             console.log(`RoomCard - ${title}: Using current season pricing: £${roomPrice}`);
         }
-        
+
         setPrice(roomPrice);
     }, [title, selectedDates?.checkin, selectedDates?.checkout, selectedDates?.numberOfPeople]);
 

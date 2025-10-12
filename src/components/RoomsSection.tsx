@@ -47,7 +47,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         {
             id: 'room2',
             title: '1 Bedroom Apartment - 201',
-            description: 'Ground floor apartment with easy access and garden views.',
+            description: 'Ground floor apartment with easy access and pool views.',
             images: [
                 { src: 'Img/Apt1/Apt1.1.jpeg', alt: '1 Bedroom Apartment Ground Floor - Main View' },
                 { src: 'Img/Apt1/Apt1.2.jpeg', alt: '1 Bedroom Apartment Ground Floor - Living Area' },
@@ -133,8 +133,8 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room6',
-            title: '1 Bedroom Apartment - 102',
-            description: 'Peaceful garden-side apartment with beautiful natural surroundings.',
+            title: '1 Bedroom Apartment - 301',
+            description: 'First floor apartment with pools views and family-friendly layout.',
             images: [
                 { src: 'Img/Apt1Garden/Apt1Garden.1.jpeg', alt: '1 Bedroom Apartment Garden Side - Main View' },
                 { src: 'Img/Apt1Garden/Apt1Garden.2.jpeg', alt: '1 Bedroom Apartment Garden Side - Living Area' },

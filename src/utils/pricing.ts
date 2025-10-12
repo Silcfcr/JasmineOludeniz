@@ -97,7 +97,7 @@ export function getRoomPrice(roomType: string, season: string | null = null, num
 
     const roomCategory = getRoomCategory(roomType);
     const occupancyType = numberOfPeople === 1 ? 'single' : 'multiple';
-    
+
     return pricingData[roomCategory as keyof typeof pricingData][occupancyType][season as keyof typeof pricingData["1 BR (all types)"]["single"]];
 }
 
