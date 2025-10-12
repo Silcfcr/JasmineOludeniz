@@ -4,6 +4,7 @@ const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
+        console.log('Hamburger clicked, current state:', isMenuOpen);
         setIsMenuOpen(!isMenuOpen);
     };
 

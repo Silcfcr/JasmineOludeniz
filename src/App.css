@@ -57,6 +57,16 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    position: static;
+    left: auto;
+    top: auto;
+    flex-direction: row;
+    background-color: transparent;
+    width: auto;
+    text-align: left;
+    box-shadow: none;
+    padding: 0;
+    z-index: auto;
 }
 
 .nav-menu a {
@@ -1518,6 +1528,27 @@ section:first-of-type {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Desktop Navigation */
+@media (min-width: 769px) {
+    .nav-menu {
+        display: flex;
+        position: static;
+        left: auto;
+        top: auto;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        text-align: left;
+        box-shadow: none;
+        padding: 0;
+        z-index: auto;
+    }
+    
+    .hamburger {
+        display: none;
     }
 }
 
