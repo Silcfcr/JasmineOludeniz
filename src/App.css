@@ -1650,6 +1650,11 @@ section:first-of-type {
     .mobile-hamburger {
         display: flex !important;
     }
+    
+    .hotel-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
 }
 
 @media (min-width: 769px) {
@@ -1727,11 +1732,6 @@ section:first-of-type {
     
     .offer-icon {
         font-size: 2rem;
-    }
-    
-    .hotel-content {
-        grid-template-columns: 1fr !important;
-        gap: 2rem;
     }
 
 .hotel-image img {
