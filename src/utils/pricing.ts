@@ -41,6 +41,22 @@ export function getCurrentSeason(): string {
     }
 }
 
+// Get season based on specific date
+export function getSeasonFromDate(dateString: string): string {
+    const date = new Date(dateString);
+    const month = date.getMonth() + 1; // 1-12
+
+    if (month >= 7 && month <= 8) {
+        return 'peak';     // Jul–Aug
+    } else if (month === 6) {
+        return 'high';     // Jun
+    } else if (month === 5 || month === 9) {
+        return 'shoulder'; // May, Sep
+    } else {
+        return 'low';      // Jan–Apr, Oct–Dec
+    }
+}
+
 // Get price for room type and season
 export function getRoomPrice(roomType: string, season: string | null = null): number {
     if (!season) {

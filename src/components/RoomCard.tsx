@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { getRoomPrice } from '../utils/pricing';
+import { getRoomPrice, getSeasonFromDate } from '../utils/pricing';
 
 interface RoomImage {
     src: string;
@@ -37,9 +37,19 @@ const RoomCard: React.FC<RoomCardProps> = ({
     const [price, setPrice] = useState<number>(0);
 
     useEffect(() => {
-        const roomPrice = getRoomPrice(title);
+        let roomPrice: number;
+        
+        // If dates are selected, use the check-in date to determine season
+        if (selectedDates && selectedDates.checkin) {
+            const season = getSeasonFromDate(selectedDates.checkin);
+            roomPrice = getRoomPrice(title, season);
+        } else {
+            // Default to current season if no dates selected
+            roomPrice = getRoomPrice(title);
+        }
+        
         setPrice(roomPrice);
-    }, [title]);
+    }, [title, selectedDates]);
 
     const handleWhatsAppClick = () => {
         console.log('RoomCard - selectedDates:', selectedDates);
