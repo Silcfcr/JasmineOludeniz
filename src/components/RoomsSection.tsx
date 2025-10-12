@@ -153,7 +153,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         {
             id: 'room7',
             title: 'Studio Room - 102',
-            description: 'Compact studio room with garden views, perfect for solo travelers or couples.',
+            description: 'Modern studio room with double bed, ideal for short stays.',
             images: [
                 { src: 'Img/Apt1Garden/Apt1Garden.1.jpeg', alt: 'Studio Room Garden Side - Main View' },
                 { src: 'Img/Apt1Garden/Apt1Garden.2.jpeg', alt: 'Studio Room Garden Side - Living Area' },
