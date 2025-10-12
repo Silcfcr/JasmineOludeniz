@@ -19,21 +19,21 @@ const DogsSection: React.FC = () => {
             name: 'Charlie',
             image: 'Img/dogs/dog3.jpeg',
             age: '4 years old',
-            description: 'Charlie is the cool kid, quiet company'
+            description: 'Charlie is the cool kid, quiet and easy company for you'
         },
         {
             id: 4,
             name: 'Alex',
             image: 'Img/dogs/dog4.jpeg',
             age: '1 year old',
-            description: 'Playful puppy, full of energy and love'
+            description: 'Alex has the most inocent gaze and will make you forget your troubles'
         },
         {
             id: 5,
             name: 'Rex',
             image: 'Img/dogs/dog5.jpeg',
             age: '5 years old',
-            description: 'Protective and intelligent, great guard dog'
+            description: 'Rex loves sleeping on the couch, make sure he is allowed'
         }
     ];
 
