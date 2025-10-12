@@ -361,8 +361,8 @@ section:first-of-type {
 }
 
 .offer-features-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 2rem;
     margin: 3rem 0;
     border: 2px solid red; /* Temporary debug border */
@@ -550,8 +550,8 @@ section:first-of-type {
 }
 
 .hotel-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
     gap: 4rem;
     align-items: center;
     margin-bottom: 2rem;
@@ -837,8 +837,8 @@ section:first-of-type {
 }
 
 .rooms-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
     gap: 2rem;
     margin-top: 2rem;
     border: 2px solid blue; /* Temporary debug border */
