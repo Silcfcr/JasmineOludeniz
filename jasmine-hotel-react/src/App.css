@@ -134,7 +134,7 @@ body {
 /* Hero Section - Congruent Design */
 .hero {
     padding: 15rem 0 5rem 0;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, #f8f4ff 0%, #f0f9ff 30%, #f8fafc 70%, #ffffff 100%);
     position: relative;
     overflow: hidden;
 }
@@ -183,17 +183,19 @@ body {
 .hero-text h1 {
     font-size: 3.5rem;
     font-weight: 700;
-    color: white;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 1rem;
     line-height: 1.1;
     animation: fadeInUp 0.8s ease-out 0.2s both;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-light);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -202,14 +204,14 @@ body {
 }
 
 .separator {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     font-weight: 300;
 }
 
 .hero-description {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-light);
     line-height: 1.6;
     animation: fadeInUp 0.8s ease-out 0.6s both;
     max-width: 500px;
@@ -228,11 +230,11 @@ body {
     align-items: center;
     gap: 0.75rem;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-light);
 }
 
 .hero-feature i {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     font-size: 1.1rem;
     width: 20px;
     text-align: center;
@@ -472,7 +474,7 @@ section:first-of-type {
     padding: 1rem 2rem;
     font-size: 1.1rem;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 25px;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -970,15 +972,19 @@ section:first-of-type {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 8px;
-    font-weight: 600;
+    border-radius: 25px;
+    font-weight: 500;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1rem;
+    min-height: 44px;
+    min-width: 120px;
 }
 
 .btn-primary {
@@ -992,22 +998,25 @@ section:first-of-type {
 }
 
 .btn-secondary {
-    background: var(--text-light);
-    color: white;
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
-    background: #4b5563;
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
 }
 
 .btn-whatsapp {
     background: #25d366;
     color: white;
-        width: 100%;
-        justify-content: center;
+    width: 100%;
+    justify-content: center;
     margin-top: auto;
     margin-bottom: 0;
-    }
+}
     
 .btn-whatsapp:hover {
     background: #128c7e;
@@ -1042,7 +1051,7 @@ section:first-of-type {
     background: var(--primary-color);
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 25px;
     font-weight: 600;
     transition: all 0.3s ease;
 }
@@ -2218,8 +2227,6 @@ section:first-of-type {
 .modal-footer .btn {
     flex: 1;
     min-width: 140px;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
 }
 
 @keyframes slideIn {
@@ -2677,7 +2684,6 @@ section:first-of-type {
 .date-contact .btn {
     padding: 1rem 2rem;
     font-size: 1.1rem;
-    font-weight: 600;
 }
 
 /* Mobile styles for date selection */

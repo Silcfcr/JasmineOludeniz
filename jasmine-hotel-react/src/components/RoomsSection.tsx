@@ -28,11 +28,11 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
             title: '1 Bedroom Apartment - First Floor',
             description: 'Comfortable apartment with modern amenities, perfect for couples or small families.',
             images: [
-                { src: 'Img/Apt3/Apt3.1.jpeg', alt: '1 Bedroom Apartment First Floor - Main View' },
-                { src: 'Img/Apt3/Apt3.2.jpeg', alt: '1 Bedroom Apartment First Floor - Living Area' },
-                { src: 'Img/Apt3/Apt3.3.jpeg', alt: '1 Bedroom Apartment First Floor - Bedroom' },
-                { src: 'Img/Apt3/Apt3.4.jpeg', alt: '1 Bedroom Apartment First Floor - Kitchen' },
-                { src: 'Img/Apt3/Apt3.5.jpeg', alt: '1 Bedroom Apartment First Floor - Bathroom' }
+                { src: 'Img/Apt1/Apt1.1.jpeg', alt: '1 Bedroom Apartment First Floor - Main View' },
+                { src: 'Img/Apt1/Apt1.2.jpeg', alt: '1 Bedroom Apartment First Floor - Living Area' },
+                { src: 'Img/Apt1/Apt1.3.jpeg', alt: '1 Bedroom Apartment First Floor - Bedroom' },
+                { src: 'Img/Apt1/Apt1.4.jpeg', alt: '1 Bedroom Apartment First Floor - Kitchen' },
+                { src: 'Img/Apt1/Apt1.5.jpeg', alt: '1 Bedroom Apartment First Floor - Bathroom' }
             ],
             features: [
                 { icon: 'fas fa-bed', text: '1 Double Bed' },
@@ -69,7 +69,6 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
                 { src: 'Img/Apt2/Apt.2.1.jpeg', alt: '2 Bedroom Apartment Ground Floor - Living Area' },
                 { src: 'Img/Apt2/Apt2.2.jpeg', alt: '2 Bedroom Apartment Ground Floor - Bedroom' },
                 { src: 'Img/Apt2/Apt2.3.jpeg', alt: '2 Bedroom Apartment Ground Floor - Kitchen' },
-                { src: 'Img/Apt2/Apt2.4.jpeg', alt: '2 Bedroom Apartment Ground Floor - Bathroom' },
                 { src: 'Img/Apt2/Apt2.5.jpeg', alt: '2 Bedroom Apartment Ground Floor - View' },
                 { src: 'Img/Apt2/Apt2.6.jpeg', alt: '2 Bedroom Apartment Ground Floor - Outdoor' },
                 { src: 'Img/Apt2/Apt2.7.jpeg', alt: '2 Bedroom Apartment Ground Floor - Details' }
@@ -90,7 +89,6 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
                 { src: 'Img/Apt2/Apt.2.1.jpeg', alt: '2 Bedroom Apartment First Floor - Living Area' },
                 { src: 'Img/Apt2/Apt2.2.jpeg', alt: '2 Bedroom Apartment First Floor - Bedroom' },
                 { src: 'Img/Apt2/Apt2.3.jpeg', alt: '2 Bedroom Apartment First Floor - Kitchen' },
-                { src: 'Img/Apt2/Apt2.4.jpeg', alt: '2 Bedroom Apartment First Floor - Bathroom' },
                 { src: 'Img/Apt2/Apt2.5.jpeg', alt: '2 Bedroom Apartment First Floor - View' },
                 { src: 'Img/Apt2/Apt2.6.jpeg', alt: '2 Bedroom Apartment First Floor - Outdoor' },
                 { src: 'Img/Apt2/Apt2.7.jpeg', alt: '2 Bedroom Apartment First Floor - Details' }
@@ -139,7 +137,6 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
                 { src: 'Img/Apt1Garden/Apt1Garden.1.jpeg', alt: '1 Bedroom Apartment Garden Side - Main View' },
                 { src: 'Img/Apt1Garden/Apt1Garden.2.jpeg', alt: '1 Bedroom Apartment Garden Side - Living Area' },
                 { src: 'Img/Apt1Garden/Apt1Garden.3.jpeg', alt: '1 Bedroom Apartment Garden Side - Bedroom' },
-                { src: 'Img/Apt1Garden/Apt1Garden.4.jpeg', alt: '1 Bedroom Apartment Garden Side - Kitchen' },
                 { src: 'Img/Apt1Garden/Apt1Garden.5.jpeg', alt: '1 Bedroom Apartment Garden Side - Garden View' }
             ],
             features: [
@@ -159,7 +156,6 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
                 { src: 'Img/Apt1Garden/Apt1Garden.1.jpeg', alt: 'Studio Room Garden Side - Main View' },
                 { src: 'Img/Apt1Garden/Apt1Garden.2.jpeg', alt: 'Studio Room Garden Side - Living Area' },
                 { src: 'Img/Apt1Garden/Apt1Garden.3.jpeg', alt: 'Studio Room Garden Side - Bedroom' },
-                { src: 'Img/Apt1Garden/Apt1Garden.4.jpeg', alt: 'Studio Room Garden Side - Kitchen' },
                 { src: 'Img/Apt1Garden/Apt1Garden.5.jpeg', alt: 'Studio Room Garden Side - Garden View' }
             ],
             features: [
