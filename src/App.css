@@ -2914,6 +2914,13 @@ section:first-of-type {
     text-align: center;
 }
 
+/* Required field styling */
+.date-input label::after {
+    content: " *";
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
 .date-contact {
     display: flex;
     justify-content: center;

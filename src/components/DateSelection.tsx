@@ -20,9 +20,9 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
         }
     }, [checkin, checkout]);
 
-    // Call onContactWithDates whenever both dates are selected
+    // Call onContactWithDates whenever all required fields are selected
     useEffect(() => {
-        if (checkin && checkout) {
+        if (checkin && checkout && numberOfPeople > 0) {
             onContactWithDates(checkin, checkout, numberOfPeople);
         }
     }, [checkin, checkout, numberOfPeople, onContactWithDates]);
@@ -65,8 +65,8 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
                 <div className="date-input">
                     <label htmlFor="numberOfPeople">Number of Guests *</label>
                     <div className="people-counter">
-                        <button 
-                            type="button" 
+                        <button
+                            type="button"
                             className="counter-btn minus"
                             onClick={() => setNumberOfPeople(Math.max(1, numberOfPeople - 1))}
                             disabled={numberOfPeople <= 1}
@@ -74,8 +74,8 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
                             −
                         </button>
                         <span className="counter-display">{numberOfPeople}</span>
-                        <button 
-                            type="button" 
+                        <button
+                            type="button"
                             className="counter-btn plus"
                             onClick={() => setNumberOfPeople(Math.min(6, numberOfPeople + 1))}
                             disabled={numberOfPeople >= 6}

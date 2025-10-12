@@ -56,8 +56,8 @@ const RoomCard: React.FC<RoomCardProps> = ({
 
     const handleWhatsAppClick = () => {
         console.log('RoomCard - selectedDates:', selectedDates);
-        if (!selectedDates || !selectedDates.checkin || !selectedDates.checkout) {
-            alert('Please select your check-in and check-out dates first.');
+        if (!selectedDates || !selectedDates.checkin || !selectedDates.checkout || !selectedDates.numberOfPeople) {
+            alert('Please select your check-in and check-out dates and number of guests first.');
             return;
         }
         onWhatsAppClick(title, price, selectedDates);
