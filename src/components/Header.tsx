@@ -28,6 +28,7 @@ const Header: React.FC = () => {
                         <li><a href="#rooms">Rooms</a></li>
                         <li><a href="#car-rental">Car Rental</a></li>
                         <li><a href="#customers">Our Customers</a></li>
+                        <li><a href="#dogs">Our Dogs</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
 
@@ -51,6 +52,7 @@ const Header: React.FC = () => {
                             <li><a href="#rooms" onClick={closeMenu}>Rooms</a></li>
                             <li><a href="#car-rental" onClick={closeMenu}>Car Rental</a></li>
                             <li><a href="#customers" onClick={closeMenu}>Our Customers</a></li>
+                            <li><a href="#dogs" onClick={closeMenu}>Our Dogs</a></li>
                             <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
                         </ul>
                     </div>

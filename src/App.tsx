@@ -8,6 +8,7 @@ import RoomsSection from './components/RoomsSection';
 import SpecialOffer from './components/SpecialOffer';
 import HappyClientsSection from './components/HappyClientsSection';
 import CarRentalSection from './components/CarRentalSection';
+import DogsSection from './components/DogsSection';
 import Footer from './components/Footer';
 import DepartureModal from './components/DepartureModal';
 import { menuData } from './data/menuData';
@@ -179,6 +180,8 @@ function App() {
       <CarRentalSection onContactClick={handleCarRentalContact} />
 
       <HappyClientsSection />
+
+      <DogsSection />
 
       <Footer />
 
