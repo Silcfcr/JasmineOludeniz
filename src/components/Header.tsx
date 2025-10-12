@@ -5,7 +5,7 @@ const Header: React.FC = () => {
 
     // Force alert on component load
     React.useEffect(() => {
-        alert('HEADER COMPONENT LOADED!');
+        alert('HEADER COMPONENT LOADED - VERSION 2!');
     }, []);
 
     const toggleMenu = () => {
