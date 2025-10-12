@@ -86,7 +86,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         {
             id: 'room4',
             title: '2 Bedroom Apartment - 302',
-            description: 'First floor apartment with great views and family-friendly layout.',
+            description: 'First floor apartment with perfect for families or groups.',
             images: [
                 { src: 'Img/Apt2/Apt.2.1.jpeg', alt: '2 Bedroom Apartment First Floor - Living Area' },
                 { src: 'Img/Apt2/Apt2.2.jpeg', alt: '2 Bedroom Apartment First Floor - Bedroom' },
