@@ -43,13 +43,15 @@ const RoomCard: React.FC<RoomCardProps> = ({
         if (selectedDates && selectedDates.checkin) {
             const season = getSeasonFromDate(selectedDates.checkin);
             roomPrice = getRoomPrice(title, season);
+            console.log(`RoomCard - ${title}: Using ${season} season pricing for ${selectedDates.checkin}: £${roomPrice}`);
         } else {
             // Default to current season if no dates selected
             roomPrice = getRoomPrice(title);
+            console.log(`RoomCard - ${title}: Using current season pricing: £${roomPrice}`);
         }
         
         setPrice(roomPrice);
-    }, [title, selectedDates]);
+    }, [title, selectedDates?.checkin, selectedDates?.checkout]);
 
     const handleWhatsAppClick = () => {
         console.log('RoomCard - selectedDates:', selectedDates);
