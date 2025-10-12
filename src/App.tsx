@@ -83,7 +83,7 @@ function App() {
 
       const numberOfPeople = selectedDates.numberOfPeople || 2;
       message += `\n\n🏨 Room: ${roomTitle}`;
-      message += `\n👥 Guests: ${numberOfPeople} ${numberOfPeople === 1 ? 'person' : 'people'}`;
+      message += `\n👥 Guests: ${numberOfPeople}`;
       message += `\n📅 Check-in: ${checkinFormatted}`;
       message += `\n📅 Check-out: ${checkoutFormatted}`;
       message += `\n💰 Price: £${price}/night (${nights} nights = £${totalPrice} total)`;

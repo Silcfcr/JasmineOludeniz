@@ -44,7 +44,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
             const season = getSeasonFromDate(selectedDates.checkin);
             const numberOfPeople = selectedDates.numberOfPeople || 2;
             roomPrice = getRoomPrice(title, season, numberOfPeople);
-            console.log(`RoomCard - ${title}: Using ${season} season pricing for ${selectedDates.checkin} (${numberOfPeople} people): £${roomPrice}`);
+            console.log(`RoomCard - ${title}: Using ${season} season pricing for ${selectedDates.checkin} (${numberOfPeople} guests): £${roomPrice}`);
         } else {
             // Default to current season if no dates selected
             roomPrice = getRoomPrice(title);

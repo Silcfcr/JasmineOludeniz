@@ -63,7 +63,7 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
                     />
                 </div>
                 <div className="date-input">
-                    <label htmlFor="numberOfPeople">Number of People *</label>
+                    <label htmlFor="numberOfPeople">Number of Guests *</label>
                     <div className="people-counter">
                         <button 
                             type="button" 
@@ -73,7 +73,7 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
                         >
                             −
                         </button>
-                        <span className="counter-display">{numberOfPeople} {numberOfPeople === 1 ? 'Person' : 'People'}</span>
+                        <span className="counter-display">{numberOfPeople}</span>
                         <button 
                             type="button" 
                             className="counter-btn plus"
