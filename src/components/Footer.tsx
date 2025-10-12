@@ -1,9 +1,10 @@
 import React from 'react';
+import { createWhatsAppUrl } from '../constants/whatsapp';
 
 const Footer: React.FC = () => {
     const contactWhatsApp = () => {
         const message = "Hi! I'm interested in booking at Jasmine Hotel. Can you provide more information about availability and rates?";
-        const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = createWhatsAppUrl(message);
         window.open(whatsappUrl, '_blank');
     };
 

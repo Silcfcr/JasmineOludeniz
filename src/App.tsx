@@ -12,6 +12,7 @@ import DogsSection from './components/DogsSection';
 import Footer from './components/Footer';
 import DepartureModal from './components/DepartureModal';
 import { menuData } from './data/menuData';
+import { createWhatsAppUrl } from './constants/whatsapp';
 import './App.css';
 
 function App() {
@@ -90,12 +91,12 @@ function App() {
       message += `\n\nPlease let me know about availability and booking process. Thank you!`;
     }
 
-    const whatsappUrl = `https://wa.me/901234567890?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `createWhatsAppUrl(message)`;
     window.open(whatsappUrl, '_blank');
   };
 
   const handleCarRentalContact = (message: string) => {
-    const whatsappUrl = `https://wa.me/901234567890?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `createWhatsAppUrl(message)`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -146,7 +147,7 @@ function App() {
     });
     orderMessage += `\nTotal: ₺${cartTotal}`;
 
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(orderMessage)}`;
+    const whatsappUrl = createWhatsAppUrl(orderMessage);
     window.open(whatsappUrl, '_blank');
   };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { createWhatsAppUrl } from '../constants/whatsapp';
 
 const SpecialOffer: React.FC = () => {
     const contactPickupWhatsApp = () => {
@@ -12,7 +13,7 @@ const SpecialOffer: React.FC = () => {
 • Free pickup from my hotel
 
 Please let me know more details about this service and how to arrange it. Thank you!`;
-        const whatsappUrl = `https://wa.me/901234567890?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = createWhatsAppUrl(message);
         window.open(whatsappUrl, '_blank');
     };
 

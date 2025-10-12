@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { createWhatsAppUrl } from '../constants/whatsapp';
 
 const DepartureModal: React.FC = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -29,7 +30,7 @@ const DepartureModal: React.FC = () => {
 
 Please let me know more details about this service and how to arrange it. Thank you!`;
 
-        const whatsappUrl = `https://wa.me/901234567890?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = createWhatsAppUrl(message);
         window.open(whatsappUrl, '_blank');
     };
 
