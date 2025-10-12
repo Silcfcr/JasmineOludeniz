@@ -1730,7 +1730,7 @@ section:first-of-type {
     }
     
     .hotel-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 2rem;
     }
 

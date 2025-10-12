@@ -33,7 +33,7 @@ const Header: React.FC = () => {
                     </ul>
 
                     {/* Mobile Hamburger Button */}
-                    <button 
+                    <button
                         className="mobile-hamburger"
                         onClick={toggleMenu}
                         aria-label="Toggle menu"
