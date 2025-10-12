@@ -35,7 +35,7 @@ const DogsSection: React.FC = () => {
             name: 'Rex',
             image: 'Img/dogs/dog5.jpeg',
             age: '3 years old',
-            description: 'Rex loves sleeping on the couch, make sure he is allowed'
+            description: 'Rex loves sleeping on the couch, make sure you have one space for him'
         }
     ];
 
