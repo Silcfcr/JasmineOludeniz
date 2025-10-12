@@ -2,11 +2,11 @@ import React from 'react';
 
 const DogsSection: React.FC = () => {
     const dogs = [
-        { id: 1, name: 'Buddy', image: 'Img/dogs/dog1.jpeg' },
-        { id: 2, name: 'Luna', image: 'Img/dogs/dog2.jpeg' },
-        { id: 3, name: 'Max', image: 'Img/dogs/dog3.jpeg' },
-        { id: 4, name: 'Bella', image: 'Img/dogs/dog4.jpeg' },
-        { id: 5, name: 'Charlie', image: 'Img/dogs/dog5.jpeg' }
+        { id: 1, name: 'Lucas', image: 'Img/dogs/dog1.jpeg' },
+        { id: 2, name: 'Bobby', image: 'Img/dogs/dog2.jpeg' },
+        { id: 3, name: 'Charlie', image: 'Img/dogs/dog3.jpeg' },
+        { id: 4, name: 'Alex', image: 'Img/dogs/dog4.jpeg' },
+        { id: 5, name: 'Rex', image: 'Img/dogs/dog5.jpeg' }
     ];
 
     return (
