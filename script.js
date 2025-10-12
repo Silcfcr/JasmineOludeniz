@@ -239,7 +239,7 @@ function contactWhatsApp(roomType, price) {
     }
 
     // WhatsApp phone number
-    const phoneNumber = '50689268481'; // Costa Rica format without +
+    const phoneNumber = '901234567890'; // Turkey format without +
 
     const checkinFormatted = formatDate(checkinDate);
     const checkoutFormatted = formatDate(checkoutDate);
@@ -263,7 +263,7 @@ function contactWhatsApp(roomType, price) {
 // WhatsApp contact for hotel pickup
 function contactPickupWhatsApp() {
     // WhatsApp phone number
-    const phoneNumber = '50689268481'; // Costa Rica format without +
+    const phoneNumber = '901234567890'; // Turkey format without +
 
     let message = `Hello! We would like to visit you today, could you pick us up at...`;
 

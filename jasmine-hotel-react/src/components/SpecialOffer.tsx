@@ -12,7 +12,7 @@ const SpecialOffer: React.FC = () => {
 • Free pickup from my hotel
 
 Please let me know more details about this service and how to arrange it. Thank you!`;
-        const whatsappUrl = `https://wa.me/50689268481?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://wa.me/901234567890?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     };
 

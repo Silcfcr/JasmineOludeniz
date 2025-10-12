@@ -89,12 +89,12 @@ function App() {
       message += `\n\nPlease let me know about availability and booking process. Thank you!`;
     }
 
-    const whatsappUrl = `https://wa.me/50689268481?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/901234567890?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const handleCarRentalContact = (message: string) => {
-    const whatsappUrl = `https://wa.me/50689268481?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/901234567890?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
