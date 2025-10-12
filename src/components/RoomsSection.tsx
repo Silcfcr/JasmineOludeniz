@@ -44,7 +44,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room2',
-            title: '1 Bedroom Apartment - 101',
+            title: '1 Bedroom Apartment - 201',
             description: 'Ground floor apartment with easy access and garden views.',
             images: [
                 { src: 'Img/Apt1/Apt1.1.jpeg', alt: '1 Bedroom Apartment Ground Floor - Main View' },
@@ -63,7 +63,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room3',
-            title: '2 Bedroom Apartment - 201',
+            title: '2 Bedroom Apartment - 202',
             description: 'Spacious ground floor apartment perfect for families or groups.',
             images: [
                 { src: 'Img/Apt2/Apt.2.1.jpeg', alt: '2 Bedroom Apartment Ground Floor - Living Area' },
@@ -83,7 +83,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room4',
-            title: '2 Bedroom Apartment - 202',
+            title: '2 Bedroom Apartment - 302',
             description: 'First floor apartment with great views and family-friendly layout.',
             images: [
                 { src: 'Img/Apt2/Apt.2.1.jpeg', alt: '2 Bedroom Apartment First Floor - Living Area' },
@@ -103,7 +103,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room5',
-            title: '3 Bed Apartment - 302',
+            title: '3 Bed Apartment - 401',
             description: 'Top floor apartment with balcony, wet bathroom, and panoramic views.',
             images: [
                 { src: 'Img/Apt3/Apt3.1.jpeg', alt: '3 Bed Apartment - Living Area' },
@@ -150,7 +150,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room7',
-            title: 'Studio Room - 103',
+            title: 'Studio Room - 102',
             description: 'Compact studio room with garden views, perfect for solo travelers or couples.',
             images: [
                 { src: 'Img/Apt1Garden/Apt1Garden.1.jpeg', alt: 'Studio Room Garden Side - Main View' },
@@ -167,7 +167,7 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
         },
         {
             id: 'room8',
-            title: 'Studio 101',
+            title: 'Studio Room - 101',
             description: 'Modern studio room with double bed, ideal for short stays.',
             images: [
                 { src: 'Img/Apt101/Apt101.1.jpeg', alt: 'Studio 101 - Main View' },
