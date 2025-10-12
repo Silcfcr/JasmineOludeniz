@@ -365,6 +365,7 @@ section:first-of-type {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin: 3rem 0;
+    border: 2px solid red; /* Temporary debug border */
 }
 
 .offer-feature {
@@ -554,6 +555,7 @@ section:first-of-type {
     gap: 4rem;
     align-items: center;
     margin-bottom: 2rem;
+    border: 2px solid green; /* Temporary debug border */
 }
 
 .hotel-info h3 {
@@ -839,6 +841,7 @@ section:first-of-type {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+    border: 2px solid blue; /* Temporary debug border */
 }
 
 .room-card {
@@ -2430,7 +2433,7 @@ section:first-of-type {
 
 .car-rental-content {
     display: grid;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: start;
 }
