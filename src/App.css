@@ -147,13 +147,15 @@ body {
     min-height: 100vh;
     align-items: center;
     background: linear-gradient(135deg, #dbeafe 0%, #fce7f3 100%);
-    padding-top: 100px;
+    padding: 120px 0 80px 0;
+    margin-bottom: 2rem;
 }
 
 .hero-content {
     flex: 1;
-    padding: 2rem;
+    padding: 3rem 2rem;
     max-width: 600px;
+    margin: 0 auto;
 }
 
 .hero-badge {
@@ -230,7 +232,8 @@ body {
 
 .hero-image {
     flex: 1;
-    padding: 1rem 2rem 2rem 2rem;
+    padding: 2rem 2rem 3rem 2rem;
+    margin: 0 auto;
 }
 
 .hero-image img {
@@ -365,7 +368,6 @@ section:first-of-type {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 2rem;
     margin: 3rem 0;
-    border: 2px solid red; /* Temporary debug border */
 }
 
 .offer-feature {
@@ -555,7 +557,6 @@ section:first-of-type {
     gap: 4rem;
     align-items: center;
     margin-bottom: 2rem;
-    border: 2px solid green; /* Temporary debug border */
 }
 
 .hotel-info h3 {
@@ -841,7 +842,6 @@ section:first-of-type {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
     gap: 2rem;
     margin-top: 2rem;
-    border: 2px solid blue; /* Temporary debug border */
 }
 
 .room-card {
@@ -1645,7 +1645,7 @@ section:first-of-type {
 }
     
     .hero {
-        padding-top: 110px;
+        padding: 130px 0 60px 0;
     }
 
     .hero-content {
@@ -1824,7 +1824,7 @@ section:first-of-type {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 120px;
+        padding: 140px 0 40px 0;
     }
 
     .hero-content {
