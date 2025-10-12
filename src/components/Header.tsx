@@ -12,6 +12,8 @@ const Header: React.FC = () => {
         setIsMenuOpen(false);
     };
 
+    console.log('Header component rendering, isMenuOpen:', isMenuOpen);
+
     return (
         <header className="header">
             <nav className="nav">
@@ -19,6 +21,41 @@ const Header: React.FC = () => {
                     <div className="logo">
                         <img src="/jasmine-logo.png" alt="Jasmine Logo" className="logo-img" />
                     </div>
+                    
+                    {/* Debug text */}
+                    <div style={{ 
+                        position: 'absolute', 
+                        top: '10px', 
+                        left: '10px', 
+                        color: 'red', 
+                        fontSize: '12px',
+                        zIndex: 9999,
+                        background: 'yellow',
+                        padding: '5px'
+                    }}>
+                        DEBUG: Header loaded
+                    </div>
+                    
+                    {/* Test button - always visible */}
+                    <button 
+                        onClick={() => {
+                            console.log('TEST BUTTON CLICKED!');
+                            alert('Test button works!');
+                        }}
+                        style={{ 
+                            position: 'fixed',
+                            top: '50px',
+                            right: '10px',
+                            background: 'green',
+                            color: 'white',
+                            border: 'none',
+                            padding: '10px',
+                            zIndex: 9999,
+                            borderRadius: '5px'
+                        }}
+                    >
+                        TEST
+                    </button>
                     
                     {/* Desktop Menu */}
                     <ul className="nav-menu desktop-menu">
@@ -38,13 +75,17 @@ const Header: React.FC = () => {
                         style={{ 
                             display: 'block',
                             background: 'red',
-                            border: 'none',
-                            padding: '15px',
+                            border: '3px solid blue',
+                            padding: '20px',
                             cursor: 'pointer',
-                            position: 'relative',
-                            zIndex: 1001
+                            position: 'fixed',
+                            top: '10px',
+                            right: '10px',
+                            zIndex: 9999,
+                            borderRadius: '5px'
                         }}
                     >
+                        <div style={{ color: 'white', fontSize: '10px', marginBottom: '5px' }}>MENU</div>
                         <div style={{ 
                             width: '25px', 
                             height: '3px', 
