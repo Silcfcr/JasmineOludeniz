@@ -136,7 +136,7 @@ body {
     display: flex;
     min-height: 100vh;
     align-items: center;
-    background: linear-gradient(135deg, var(--blue-light) 0%, var(--pink-light) 100%);
+    background: linear-gradient(135deg, #dbeafe 0%, #fce7f3 100%);
     padding-top: 80px;
 }
 
