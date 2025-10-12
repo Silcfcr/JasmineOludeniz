@@ -181,7 +181,7 @@ body {
 }
 
 .hero-text h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
@@ -1685,7 +1685,7 @@ section:first-of-type {
     }
 
     .hero-text h1 {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
     }
 
     .hero-text h2 {
@@ -1874,7 +1874,7 @@ section:first-of-type {
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .hero-buttons {
@@ -2377,7 +2377,7 @@ section:first-of-type {
     }
     
     .modal-icon {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .modal-body {
