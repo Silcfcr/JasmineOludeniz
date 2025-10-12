@@ -253,7 +253,7 @@ body {
     height: auto;
     max-height: 450px;
     min-height: 350px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
@@ -604,8 +604,9 @@ section:first-of-type {
 
 .hotel-image img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
     border-radius: 15px;
 }
 
@@ -1089,8 +1090,9 @@ section:first-of-type {
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
@@ -2527,8 +2529,9 @@ section:first-of-type {
 
 .car-rental-image img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
