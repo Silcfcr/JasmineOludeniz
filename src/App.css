@@ -477,7 +477,7 @@ section:first-of-type {
 /* Tablet styles for special offer */
 @media (max-width: 1024px) {
     .offer-features-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 1.5rem;
     }
 }
@@ -501,7 +501,7 @@ section:first-of-type {
     }
     
     .offer-features-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 1rem;
         margin: 2rem 0;
     }
