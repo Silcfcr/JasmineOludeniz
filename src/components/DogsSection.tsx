@@ -2,11 +2,46 @@ import React from 'react';
 
 const DogsSection: React.FC = () => {
     const dogs = [
-        { id: 1, name: 'Lucas', image: 'Img/dogs/dog1.jpeg' },
-        { id: 2, name: 'Bobby', image: 'Img/dogs/dog2.jpeg' },
-        { id: 3, name: 'Charlie', image: 'Img/dogs/dog3.jpeg' },
-        { id: 4, name: 'Alex', image: 'Img/dogs/dog4.jpeg' },
-        { id: 5, name: 'Rex', image: 'Img/dogs/dog5.jpeg' }
+        { 
+            id: 1, 
+            name: 'Lucas', 
+            image: 'Img/dogs/dog1.jpeg',
+            age: '3 years old',
+            breed: 'Mixed breed',
+            description: 'Friendly and energetic, loves playing with children'
+        },
+        { 
+            id: 2, 
+            name: 'Bobby', 
+            image: 'Img/dogs/dog2.jpeg',
+            age: '2 years old',
+            breed: 'Golden Retriever mix',
+            description: 'Gentle and calm, perfect for families'
+        },
+        { 
+            id: 3, 
+            name: 'Charlie', 
+            image: 'Img/dogs/dog3.jpeg',
+            age: '4 years old',
+            breed: 'Labrador mix',
+            description: 'Loyal companion, great with other pets'
+        },
+        { 
+            id: 4, 
+            name: 'Alex', 
+            image: 'Img/dogs/dog4.jpeg',
+            age: '1 year old',
+            breed: 'Terrier mix',
+            description: 'Playful puppy, full of energy and love'
+        },
+        { 
+            id: 5, 
+            name: 'Rex', 
+            image: 'Img/dogs/dog5.jpeg',
+            age: '5 years old',
+            breed: 'German Shepherd mix',
+            description: 'Protective and intelligent, great guard dog'
+        }
     ];
 
     return (
@@ -24,7 +59,9 @@ const DogsSection: React.FC = () => {
                             </div>
                             <div className="dog-info">
                                 <h3>{dog.name}</h3>
-                                <p>Looking for a loving family</p>
+                                <p className="dog-age">{dog.age}</p>
+                                <p className="dog-breed">{dog.breed}</p>
+                                <p className="dog-description">{dog.description}</p>
                             </div>
                         </div>
                     ))}

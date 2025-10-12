@@ -3475,7 +3475,24 @@ section:first-of-type {
 .dog-info p {
     color: var(--text-dark);
     font-size: 0.9rem;
-    margin: 0;
+    margin: 0.3rem 0;
+}
+
+.dog-age {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.dog-breed {
+    font-style: italic;
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+.dog-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
 }
 
 .dogs-cta {
