@@ -72,7 +72,7 @@ function App() {
     return Math.ceil(timeDiff / (1000 * 3600 * 24));
   };
 
-  const handleWhatsAppClick = (roomTitle: string, price: number, selectedDates?: { checkin: string; checkout: string } | null) => {
+  const handleWhatsAppClick = (roomTitle: string, price: number, selectedDates?: { checkin: string; checkout: string; numberOfPeople: number } | null) => {
     let message = `Hello! I'm interested in booking the ${roomTitle} at Jasmine Restaurant & Bar Hotel.`;
 
     if (selectedDates && selectedDates.checkin && selectedDates.checkout) {
@@ -81,7 +81,9 @@ function App() {
       const nights = calculateNights(selectedDates.checkin, selectedDates.checkout);
       const totalPrice = price * nights;
 
+      const numberOfPeople = selectedDates.numberOfPeople || 2;
       message += `\n\n🏨 Room: ${roomTitle}`;
+      message += `\n👥 Guests: ${numberOfPeople} ${numberOfPeople === 1 ? 'person' : 'people'}`;
       message += `\n📅 Check-in: ${checkinFormatted}`;
       message += `\n📅 Check-out: ${checkoutFormatted}`;
       message += `\n💰 Price: £${price}/night (${nights} nights = £${totalPrice} total)`;
@@ -91,12 +93,12 @@ function App() {
       message += `\n\nPlease let me know about availability and booking process. Thank you!`;
     }
 
-    const whatsappUrl = `createWhatsAppUrl(message)`;
+    const whatsappUrl = createWhatsAppUrl(message);
     window.open(whatsappUrl, '_blank');
   };
 
   const handleCarRentalContact = (message: string) => {
-    const whatsappUrl = `createWhatsAppUrl(message)`;
+    const whatsappUrl = createWhatsAppUrl(message);
     window.open(whatsappUrl, '_blank');
   };
 

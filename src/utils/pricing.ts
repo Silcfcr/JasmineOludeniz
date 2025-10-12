@@ -1,28 +1,60 @@
 // Dynamic Pricing System
 export const pricingData = {
     "1 BR (all types)": {
-        low: 30,    // Jan–Apr, Oct–Dec
-        shoulder: 35, // May, Sep
-        high: 40,   // Jun
-        peak: 60    // Jul–Aug
+        single: {
+            low: 25,    // Jan–Apr, Oct–Dec
+            shoulder: 25, // May, Sep
+            high: 35,   // Jun
+            peak: 40    // Jul–Aug
+        },
+        multiple: {
+            low: 30,    // Jan–Apr, Oct–Dec
+            shoulder: 35, // May, Sep
+            high: 40,   // Jun
+            peak: 60    // Jul–Aug
+        }
     },
     "2 BR (all types)": {
-        low: 30,    // Jan–Apr, Oct–Dec
-        shoulder: 45, // May, Sep
-        high: 45,   // Jun
-        peak: 60    // Jul–Aug
+        single: {
+            low: 25,    // Jan–Apr, Oct–Dec
+            shoulder: 25, // May, Sep
+            high: 35,   // Jun
+            peak: 40    // Jul–Aug
+        },
+        multiple: {
+            low: 30,    // Jan–Apr, Oct–Dec
+            shoulder: 45, // May, Sep
+            high: 45,   // Jun
+            peak: 60    // Jul–Aug
+        }
     },
     "3 BR top floor": {
-        low: 40,    // Jan–Apr, Oct–Dec
-        shoulder: 50, // May, Sep
-        high: 50,   // Jun
-        peak: 80    // Jul–Aug
+        single: {
+            low: 40,    // Jan–Apr, Oct–Dec
+            shoulder: 50, // May, Sep
+            high: 50,   // Jun
+            peak: 80    // Jul–Aug
+        },
+        multiple: {
+            low: 40,    // Jan–Apr, Oct–Dec
+            shoulder: 50, // May, Sep
+            high: 50,   // Jun
+            peak: 80    // Jul–Aug
+        }
     },
     "Studio": {
-        low: 25,    // Jan–Apr, Oct–Dec
-        shoulder: 30, // May, Sep
-        high: 30,   // Jun
-        peak: 40    // Jul–Aug
+        single: {
+            low: 25,    // Jan–Apr, Oct–Dec
+            shoulder: 25, // May, Sep
+            high: 35,   // Jun
+            peak: 40    // Jul–Aug
+        },
+        multiple: {
+            low: 25,    // Jan–Apr, Oct–Dec
+            shoulder: 30, // May, Sep
+            high: 30,   // Jun
+            peak: 40    // Jul–Aug
+        }
     }
 };
 
@@ -57,14 +89,16 @@ export function getSeasonFromDate(dateString: string): string {
     }
 }
 
-// Get price for room type and season
-export function getRoomPrice(roomType: string, season: string | null = null): number {
+// Get price for room type, season, and number of people
+export function getRoomPrice(roomType: string, season: string | null = null, numberOfPeople: number = 2): number {
     if (!season) {
         season = getCurrentSeason();
     }
 
     const roomCategory = getRoomCategory(roomType);
-    return pricingData[roomCategory as keyof typeof pricingData][season as keyof typeof pricingData["1 BR (all types)"]];
+    const occupancyType = numberOfPeople === 1 ? 'single' : 'multiple';
+    
+    return pricingData[roomCategory as keyof typeof pricingData][occupancyType][season as keyof typeof pricingData["1 BR (all types)"]["single"]];
 }
 
 // Map room types to pricing categories

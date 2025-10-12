@@ -21,8 +21,8 @@ interface RoomCardProps {
     description: string;
     images: RoomImage[];
     features: RoomFeature[];
-    onWhatsAppClick: (roomTitle: string, price: number, selectedDates?: { checkin: string; checkout: string } | null) => void;
-    selectedDates?: { checkin: string; checkout: string } | null;
+    onWhatsAppClick: (roomTitle: string, price: number, selectedDates?: { checkin: string; checkout: string; numberOfPeople: number } | null) => void;
+    selectedDates?: { checkin: string; checkout: string; numberOfPeople: number } | null;
 }
 
 const RoomCard: React.FC<RoomCardProps> = ({
@@ -39,11 +39,12 @@ const RoomCard: React.FC<RoomCardProps> = ({
     useEffect(() => {
         let roomPrice: number;
         
-        // If dates are selected, use the check-in date to determine season
+        // If dates are selected, use the check-in date to determine season and number of people
         if (selectedDates && selectedDates.checkin) {
             const season = getSeasonFromDate(selectedDates.checkin);
-            roomPrice = getRoomPrice(title, season);
-            console.log(`RoomCard - ${title}: Using ${season} season pricing for ${selectedDates.checkin}: £${roomPrice}`);
+            const numberOfPeople = selectedDates.numberOfPeople || 2;
+            roomPrice = getRoomPrice(title, season, numberOfPeople);
+            console.log(`RoomCard - ${title}: Using ${season} season pricing for ${selectedDates.checkin} (${numberOfPeople} people): £${roomPrice}`);
         } else {
             // Default to current season if no dates selected
             roomPrice = getRoomPrice(title);
@@ -51,7 +52,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
         }
         
         setPrice(roomPrice);
-    }, [title, selectedDates?.checkin, selectedDates?.checkout]);
+    }, [title, selectedDates?.checkin, selectedDates?.checkout, selectedDates?.numberOfPeople]);
 
     const handleWhatsAppClick = () => {
         console.log('RoomCard - selectedDates:', selectedDates);

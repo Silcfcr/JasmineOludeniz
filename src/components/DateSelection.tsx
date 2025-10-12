@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
 interface DateSelectionProps {
-    onContactWithDates: (checkin: string, checkout: string) => void;
+    onContactWithDates: (checkin: string, checkout: string, numberOfPeople: number) => void;
 }
 
 const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => {
     const [checkin, setCheckin] = useState('');
     const [checkout, setCheckout] = useState('');
+    const [numberOfPeople, setNumberOfPeople] = useState(2);
     const [today] = useState(new Date().toISOString().split('T')[0]);
 
     // Update checkout minimum date when checkin changes
@@ -22,9 +23,9 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
     // Call onContactWithDates whenever both dates are selected
     useEffect(() => {
         if (checkin && checkout) {
-            onContactWithDates(checkin, checkout);
+            onContactWithDates(checkin, checkout, numberOfPeople);
         }
-    }, [checkin, checkout, onContactWithDates]);
+    }, [checkin, checkout, numberOfPeople, onContactWithDates]);
 
 
 
@@ -60,6 +61,23 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
                         min={checkin ? new Date(checkin).toISOString().split('T')[0] : today}
                         required
                     />
+                </div>
+                <div className="date-input">
+                    <label htmlFor="numberOfPeople">Number of People *</label>
+                    <select
+                        id="numberOfPeople"
+                        name="numberOfPeople"
+                        value={numberOfPeople}
+                        onChange={(e) => setNumberOfPeople(parseInt(e.target.value))}
+                        required
+                    >
+                        <option value={1}>1 Person</option>
+                        <option value={2}>2 People</option>
+                        <option value={3}>3 People</option>
+                        <option value={4}>4 People</option>
+                        <option value={5}>5 People</option>
+                        <option value={6}>6 People</option>
+                    </select>
                 </div>
             </div>
         </div>

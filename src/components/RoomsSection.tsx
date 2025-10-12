@@ -11,16 +11,16 @@ interface RoomData {
 }
 
 interface RoomsSectionProps {
-    onWhatsAppClick: (roomTitle: string, price: number, selectedDates?: { checkin: string; checkout: string } | null) => void;
+    onWhatsAppClick: (roomTitle: string, price: number, selectedDates?: { checkin: string; checkout: string; numberOfPeople: number } | null) => void;
 }
 
 
 const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
-    const [selectedDates, setSelectedDates] = useState<{ checkin: string, checkout: string } | null>(null);
+    const [selectedDates, setSelectedDates] = useState<{ checkin: string, checkout: string, numberOfPeople: number } | null>(null);
 
-    const handleContactWithDates = (checkin: string, checkout: string) => {
-        console.log('RoomsSection - Setting dates:', { checkin, checkout });
-        setSelectedDates({ checkin, checkout });
+    const handleContactWithDates = (checkin: string, checkout: string, numberOfPeople: number) => {
+        console.log('RoomsSection - Setting dates:', { checkin, checkout, numberOfPeople });
+        setSelectedDates({ checkin, checkout, numberOfPeople });
     };
     const roomsData: RoomData[] = [
         {
