@@ -25,14 +25,16 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
     const roomsData: RoomData[] = [
         {
             id: 'room1',
-            title: '1 Bedroom Apartment - 301',
+            title: '1 Bedroom Apartment - 103',
             description: 'Comfortable apartment with modern amenities, perfect for couples or small families.',
             images: [
-                { src: 'Img/Apt1/Apt1.1.jpeg', alt: '1 Bedroom Apartment First Floor - Main View' },
-                { src: 'Img/Apt1/Apt1.2.jpeg', alt: '1 Bedroom Apartment First Floor - Living Area' },
-                { src: 'Img/Apt1/Apt1.3.jpeg', alt: '1 Bedroom Apartment First Floor - Bedroom' },
-                { src: 'Img/Apt1/Apt1.4.jpeg', alt: '1 Bedroom Apartment First Floor - Kitchen' },
-                { src: 'Img/Apt1/Apt1.5.jpeg', alt: '1 Bedroom Apartment First Floor - Bathroom' }
+                { src: 'Img/103/103.1.jpeg', alt: '1 Bedroom Apartment 103 - Main View' },
+                { src: 'Img/103/103.2.jpeg', alt: '1 Bedroom Apartment 103 - Living Area' },
+                { src: 'Img/103/103.3.jpeg', alt: '1 Bedroom Apartment 103 - Bedroom' },
+                { src: 'Img/103/103.4.jpeg', alt: '1 Bedroom Apartment 103 - Kitchen' },
+                { src: 'Img/103/103.5.jpeg', alt: '1 Bedroom Apartment 103 - Bathroom' },
+                { src: 'Img/103/103.6.jpeg', alt: '1 Bedroom Apartment 103 - Additional View' },
+                { src: 'Img/103/103.7.jpeg', alt: '1 Bedroom Apartment 103 - Exterior' }
             ],
             features: [
                 { icon: 'fas fa-bed', text: '1 Double Bed' },
