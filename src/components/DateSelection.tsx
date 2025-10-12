@@ -35,7 +35,7 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
                 <p>Choose from our comfortable accommodations</p>
             </div>
             <h3>📅 Select Your Dates</h3>
-            <p className="date-requirement">Please select your check-in and check-out dates to contact us about room availability.</p>
+            <p className="date-requirement">Please select your check-in and check-out dates to view seasonal prices.</p>
             <div className="date-inputs">
                 <div className="date-input">
                     <label htmlFor="checkin">Check-in Date *</label>
