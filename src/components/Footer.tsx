@@ -40,9 +40,9 @@ const Footer: React.FC = () => {
                     <div className="footer-map">
                         <h4>Find Us</h4>
                         <div className="map-container">
-                            <img 
-                                src="/Img/jasmine-map.png" 
-                                alt="Jasmine Restaurant & Bar Location Map" 
+                            <img
+                                src="/Img/jasmine-map.png"
+                                alt="Jasmine Restaurant & Bar Location Map"
                                 style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '10px' }}
                             />
                         </div>
