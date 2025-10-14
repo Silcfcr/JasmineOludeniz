@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                             </div>
                             <div className="contact-item">
                                 <i className="fas fa-envelope"></i>
-                                <span>info@jasminehotel.com</span>
+                                <span>jasminerestaurantbar@gmail.com</span>
                             </div>
                         </div>
                         <button className="btn btn-whatsapp" onClick={contactWhatsApp}>
