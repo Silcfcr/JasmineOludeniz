@@ -65,7 +65,7 @@ const DogsSection: React.FC = () => {
                     <div className="dogs-cta-buttons">
                         <a href="#contact" className="btn btn-primary">Contact Us About Adoption</a>
                         <a href="https://www.gofundme.com/f/help-rehome-the-jasmine-dogs" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                            <i className="fas fa-heart"></i> Support Our Dogs
+                            <i className="fas fa-heart"></i> Support on GoFundMe
                         </a>
                     </div>
                 </div>
