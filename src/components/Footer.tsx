@@ -40,16 +40,11 @@ const Footer: React.FC = () => {
                     <div className="footer-map">
                         <h4>Find Us</h4>
                         <div className="map-container">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.3565216025736!2d29.144372174432867!3d36.56962548066551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c0477a64b73fdd%3A0xb20abcf06ae0ea4c!2sJasmine%20Restaurant%26Bar!5e0!3m2!1ses-419!2str!4v1759172523807!5m2!1ses-419!2str"
-                                width="100%"
-                                height="300"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                title="Jasmine Hotel Location"
-                            ></iframe>
+                            <img 
+                                src="/Img/jasmine-map.png" 
+                                alt="Jasmine Restaurant & Bar Location Map" 
+                                style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '10px' }}
+                            />
                         </div>
                     </div>
                 </div>
