@@ -1,6 +1,13 @@
 import React from 'react';
+import { createWhatsAppUrl } from '../constants/whatsapp';
 
 const DogsSection: React.FC = () => {
+    const handleAdoptionWhatsApp = () => {
+        const message = "Hello! I'm interested in adopting one of your dogs. Could you provide more information about the adoption process and available dogs?";
+        const whatsappUrl = createWhatsAppUrl(message);
+        window.open(whatsappUrl, '_blank');
+    };
+
     const dogs = [
         {
             id: 1,
@@ -63,7 +70,9 @@ const DogsSection: React.FC = () => {
                 <div className="dogs-cta">
                     <p>These wonderful dogs are part of our family and are looking for their forever homes. Contact us to learn more about adoption.</p>
                     <div className="dogs-cta-buttons">
-                        <a href="#contact" className="btn btn-primary">Contact Us About Adoption</a>
+                        <button onClick={handleAdoptionWhatsApp} className="btn btn-primary">
+                            <i className="fab fa-whatsapp"></i> Contact Us About Adoption
+                        </button>
                         <a href="https://www.gofundme.com/f/help-rehome-the-jasmine-dogs" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                             <i className="fas fa-heart"></i> Support on GoFundMe
                         </a>
