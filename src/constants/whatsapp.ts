@@ -1,5 +1,5 @@
 // WhatsApp contact information
-export const WHATSAPP_PHONE_NUMBER = '901234567890';
+export const WHATSAPP_PHONE_NUMBER = '905537283045';
 
 // Helper function to create WhatsApp URL
 export const createWhatsAppUrl = (message: string): string => {
