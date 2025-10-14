@@ -28,7 +28,7 @@ const MenuToggleSection: React.FC<MenuToggleSectionProps> = ({
                 {/* Menu Content */}
                 <div id="menu-content" className={`menu-content ${showMenu ? 'menu-visible' : 'menu-hidden'}`}>
                     <div className="interactive-menu">
-                        <h3>Our Traditional Turkish Menu</h3>
+                        <h3>Take Away Menu - Order Here</h3>
                         <p>Select your items and quantities, then place your order!</p>
 
                         {/* Shopping Cart Summary */}
