@@ -17,11 +17,11 @@ const Footer: React.FC = () => {
                             <img src="/jasmine.png" alt="Jasmine Logo" />
                             <h3>Jasmine Restaurant & Bar</h3>
                         </div>
-                        <p>Experience comfortable family accommodation and delicious home-style dining in the heart of Oludeniz, Turkey.</p>
+                        <p>Experience comfortable family accommodation and delicious home-style dining in the heart of Ölüdeniz, Turkey.</p>
                         <div className="footer-contact">
                             <div className="contact-item">
                                 <i className="fas fa-map-marker-alt"></i>
-                                <span>Oludeniz, Fethiye, Turkey</span>
+                                <span>Ölüdeniz, Mendos Cd. No:14, 48300 Fethiye/Muğla</span>
                             </div>
                             <div className="contact-item">
                                 <i className="fas fa-phone"></i>
