@@ -3514,6 +3514,14 @@ section:first-of-type {
     line-height: 1.6;
 }
 
+.dogs-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
 /* Responsive Dogs Section */
 @media (max-width: 1024px) {
     .dogs-grid {
