@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface DateSelectionProps {
     onContactWithDates: (checkin: string, checkout: string, numberOfPeople: number) => void;
 }
 
 const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => {
+    const { t } = useLanguage();
     const [checkin, setCheckin] = useState('');
     const [checkout, setCheckout] = useState('');
     const [numberOfPeople, setNumberOfPeople] = useState(2);
@@ -32,14 +34,14 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
     return (
         <div className="date-selection">
             <div className="rooms-header">
-                <h2>Our Rooms</h2>
-                <p>Choose from our comfortable accommodations</p>
+                <h2>{t('rooms.title')}</h2>
+                <p>{t('rooms.subtitle')}</p>
             </div>
-            <h3>📅 Select Your Dates</h3>
+            <h3>📅 {t('rooms.select-dates')}</h3>
             <p className="date-requirement">Please select your check-in and check-out dates to view seasonal prices.</p>
             <div className="date-inputs">
                 <div className="date-input">
-                    <label htmlFor="checkin">Check-in Date *</label>
+                    <label htmlFor="checkin">{t('rooms.checkin')} *</label>
                     <input
                         type="date"
                         id="checkin"
@@ -51,7 +53,7 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
                     />
                 </div>
                 <div className="date-input">
-                    <label htmlFor="checkout">Check-out Date *</label>
+                    <label htmlFor="checkout">{t('rooms.checkout')} *</label>
                     <input
                         type="date"
                         id="checkout"
@@ -63,7 +65,7 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
                     />
                 </div>
                 <div className="date-input">
-                    <label htmlFor="numberOfPeople">Number of Guests *</label>
+                    <label htmlFor="numberOfPeople">{t('rooms.guests')} *</label>
                     <div className="people-counter">
                         <button
                             type="button"

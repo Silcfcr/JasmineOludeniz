@@ -1,48 +1,50 @@
 import React from 'react';
 import { createWhatsAppUrl } from '../constants/whatsapp';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const DogsSection: React.FC = () => {
+    const { t } = useLanguage();
     const handleAdoptionWhatsApp = () => {
         const message = "Hello! I'm interested in adopting one of your dogs. Could you provide more information about the adoption process and available dogs?";
         const whatsappUrl = createWhatsAppUrl(message);
         window.open(whatsappUrl, '_blank');
     };
 
-    const dogs = [
+    const getDogsData = () => [
         {
             id: 1,
             name: 'Lucas',
             image: 'Img/dogs/dog1.jpeg',
-            age: '3 years old',
-            description: "Loves food except tomatoes, if you want company while you're eating Lucas is your guy"
+            age: t('dogs.age'),
+            description: t('dogs.lucas.description')
         },
         {
             id: 2,
             name: 'Bobby',
             image: 'Img/dogs/dog2.jpeg',
-            age: '3 years old',
-            description: "If you're looking for a dance partner full of energy, Bobby is your guy"
+            age: t('dogs.age'),
+            description: t('dogs.bobby.description')
         },
         {
             id: 3,
             name: 'Charlie',
             image: 'Img/dogs/dog3.jpeg',
-            age: '3 years old',
-            description: 'Charlie is the cool kid, quiet and easy company for you'
+            age: t('dogs.age'),
+            description: t('dogs.charlie.description')
         },
         {
             id: 4,
             name: 'Alex',
             image: 'Img/dogs/dog4.jpeg',
-            age: '3 years old',
-            description: 'Alex has the most inocent gaze and will make you forget your troubles'
+            age: t('dogs.age'),
+            description: t('dogs.alex.description')
         },
         {
             id: 5,
             name: 'Rex',
             image: 'Img/dogs/dog5.jpeg',
-            age: '3 years old',
-            description: 'Rex loves sleeping on the couch, make sure you have one space for him'
+            age: t('dogs.age'),
+            description: t('dogs.rex.description')
         }
     ];
 
@@ -50,11 +52,11 @@ const DogsSection: React.FC = () => {
         <section id="dogs" className="dogs-section">
             <div className="container">
                 <div className="section-header">
-                    <h2>Our Furry Friends</h2>
-                    <p>Give a forever home to one of our beloved strays</p>
+                    <h2>{t('dogs.title')}</h2>
+                    <p>{t('dogs.subtitle')}</p>
                 </div>
                 <div className="dogs-grid">
-                    {dogs.map((dog) => (
+                    {getDogsData().map((dog) => (
                         <div key={dog.id} className="dog-card">
                             <div className="dog-image">
                                 <img src={dog.image} alt={`${dog.name} - Looking for a home`} />
@@ -68,13 +70,13 @@ const DogsSection: React.FC = () => {
                     ))}
                 </div>
                 <div className="dogs-cta">
-                    <p>These wonderful dogs are part of our family and are looking for their forever homes. Contact us to learn more about adoption.</p>
+                    <p>{t('dogs.description')}</p>
                     <div className="dogs-cta-buttons">
                         <button onClick={handleAdoptionWhatsApp} className="btn btn-primary">
-                            <i className="fab fa-whatsapp"></i> Contact Us About Adoption
+                            <i className="fab fa-whatsapp"></i> {t('dogs.contact-adoption')}
                         </button>
                         <a href="https://www.gofundme.com/f/help-rehome-the-jasmine-dogs" className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                            <i className="fas fa-heart"></i> Support on GoFundMe
+                            <i className="fas fa-heart"></i> {t('dogs.support-gofundme')}
                         </a>
                     </div>
                 </div>

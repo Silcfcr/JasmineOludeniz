@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { menuData } from '../data/menuData';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface MenuToggleSectionProps {
     showMenu: boolean;
@@ -21,6 +22,57 @@ const MenuToggleSection: React.FC<MenuToggleSectionProps> = ({
     onSendWhatsAppOrder
 }) => {
     const [activeTab, setActiveTab] = useState('breakfast');
+    const { t } = useLanguage();
+
+    // Helper function to get translated menu item
+    const getTranslatedMenuItem = (item: any) => {
+        const translatedName = t(`menu.${item.id}.name`);
+        const translatedDesc = t(`menu.${item.id}.desc`);
+
+        return {
+            ...item,
+            name: translatedName !== `menu.${item.id}.name` ? translatedName : item.name,
+            description: translatedDesc !== `menu.${item.id}.desc` ? translatedDesc : item.description
+        };
+    };
+
+    // Helper function to get translated category
+    const getTranslatedCategory = (category: any, tabKey: string) => {
+        // Create a mapping of actual category titles to translation keys
+        const categoryKeyMap: { [key: string]: string } = {
+            'BREAKFAST PLATES': 'breakfast-plates',
+            'EGGS & OMELETTES': 'eggs-omelettes',
+            'TOAST & PANCAKES': 'toast-pancakes',
+            'BREAKFAST DRINKS': 'breakfast-drinks',
+            'BREAKFAST ADD ONS': 'breakfast-add-ons',
+            'STARTERS': 'starters',
+            'SALADS': 'salads',
+            'BURGERS': 'burgers',
+            'PIZZA': 'pizza',
+            'PASTA': 'pasta',
+            'CHICKEN DISHES': 'chicken-dishes',
+            'MEAT DISHES': 'meat-dishes',
+            'TRADITIONAL TURKISH MEALS': 'traditional-turkish-meals',
+            'WRAPS': 'wraps',
+            'TOASTIES': 'toasties',
+            'SANDWICHES': 'sandwiches',
+            'SOFT DRINKS': 'soft-drinks',
+            'TEA & COFFEE': 'tea-coffee',
+            'ALCOHOLIC DRINKS': 'alcoholic-drinks',
+            'KIDS MENU': 'kids-menu',
+            'DESSERTS': 'desserts'
+        };
+
+        const categoryKey = categoryKeyMap[category.title] || category.title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+        const translatedTitle = t(`menu.${tabKey}.${categoryKey}.title`);
+        const translatedSubtitle = t(`menu.${tabKey}.${categoryKey}.subtitle`);
+
+        return {
+            ...category,
+            title: translatedTitle !== `menu.${tabKey}.${categoryKey}.title` ? translatedTitle : category.title,
+            subtitle: translatedSubtitle !== `menu.${tabKey}.${categoryKey}.subtitle` ? translatedSubtitle : category.subtitle
+        };
+    };
 
     return (
         <section className="menu-toggle-section">
@@ -28,13 +80,13 @@ const MenuToggleSection: React.FC<MenuToggleSectionProps> = ({
                 {/* Menu Content */}
                 <div id="menu-content" className={`menu-content ${showMenu ? 'menu-visible' : 'menu-hidden'}`}>
                     <div className="interactive-menu">
-                        <h3>Take Away Menu - Order Here</h3>
-                        <p>Select your items and quantities, then place your order!</p>
+                        <h3>{t('menu.title')}</h3>
+                        <p>{t('menu.description')}</p>
 
                         {/* Shopping Cart Summary */}
                         <div className="cart-summary" id="cartSummary" style={{ display: cartTotal > 0 ? 'block' : 'none' }}>
                             <div className="cart-header">
-                                <h4><i className="fas fa-shopping-cart"></i> Your Order</h4>
+                                <h4><i className="fas fa-shopping-cart"></i> {t('menu.your-order')}</h4>
                                 <span className="cart-total" id="cartTotal">₺{cartTotal.toFixed(2)}</span>
                             </div>
                             <div className="cart-items" id="cartItems">
@@ -46,7 +98,7 @@ const MenuToggleSection: React.FC<MenuToggleSectionProps> = ({
                                     for (const tabData of Object.values(menuData)) {
                                         for (const category of tabData.categories) {
                                             if (category.items) {
-                                                const foundItem = category.items.find(catItem => catItem.id === itemId);
+                                                const foundItem = category.items.find((menuItem: any) => menuItem.id === itemId);
                                                 if (foundItem) {
                                                     item = foundItem;
                                                     break;
@@ -54,7 +106,7 @@ const MenuToggleSection: React.FC<MenuToggleSectionProps> = ({
                                             }
                                             if (category.subcategories) {
                                                 for (const subcategory of category.subcategories) {
-                                                    const foundItem = subcategory.items.find(catItem => catItem.id === itemId);
+                                                    const foundItem = subcategory.items.find((menuItem: any) => menuItem.id === itemId);
                                                     if (foundItem) {
                                                         item = foundItem;
                                                         break;
@@ -62,6 +114,7 @@ const MenuToggleSection: React.FC<MenuToggleSectionProps> = ({
                                                 }
                                             }
                                         }
+                                        if (item) break;
                                     }
 
                                     if (!item) return null;
@@ -81,10 +134,10 @@ const MenuToggleSection: React.FC<MenuToggleSectionProps> = ({
                             </div>
                             <div className="cart-actions">
                                 <button className="btn btn-secondary" onClick={onClearCart}>
-                                    <i className="fas fa-trash"></i> Clear Cart
+                                    <i className="fas fa-trash"></i> {t('menu.clear-cart')}
                                 </button>
                                 <button className="btn btn-whatsapp" onClick={onSendWhatsAppOrder}>
-                                    <i className="fab fa-whatsapp"></i> Send Order via WhatsApp
+                                    <i className="fab fa-whatsapp"></i> {t('menu.send-order')}
                                 </button>
                             </div>
                         </div>
@@ -98,7 +151,7 @@ const MenuToggleSection: React.FC<MenuToggleSectionProps> = ({
                                     onClick={() => setActiveTab(tabKey)}
                                 >
                                     <i className={tabData.icon}></i>
-                                    {tabData.title}
+                                    {t(`menu.${tabKey}.title`)}
                                 </button>
                             ))}
                         </div>
@@ -111,144 +164,153 @@ const MenuToggleSection: React.FC<MenuToggleSectionProps> = ({
                                     className={`menu-tab-content ${activeTab === tabKey ? 'active' : ''}`}
                                 >
                                     <div className="menu-categories">
-                                        {tabData.categories.map((category, categoryIndex) => (
-                                            <div key={categoryIndex} className="menu-category">
-                                                <h4><i className="fas fa-utensils"></i> {category.title}</h4>
-                                                {category.subtitle && (
-                                                    <p className="category-subtitle">{category.subtitle}</p>
-                                                )}
-                                                {category.note && (
-                                                    <p className="category-note">{category.note}</p>
-                                                )}
+                                        {tabData.categories.map((category: any, categoryIndex: number) => {
+                                            const translatedCategory = getTranslatedCategory(category, tabKey);
+                                            return (
+                                                <div key={categoryIndex} className="menu-category">
+                                                    <h4><i className="fas fa-utensils"></i> {translatedCategory.title}</h4>
+                                                    {translatedCategory.subtitle && (
+                                                        <p className="category-subtitle">{translatedCategory.subtitle}</p>
+                                                    )}
+                                                    {translatedCategory.note && (
+                                                        <p className="category-note">{translatedCategory.note}</p>
+                                                    )}
 
-                                                {/* Main items */}
-                                                {category.items && (
-                                                    <div className="selectable-menu-items">
-                                                        {category.items.map((item) => (
-                                                            <div key={item.id} className="selectable-menu-item">
-                                                                <div className="item-info">
-                                                                    <div className="item-name">{item.name}</div>
-                                                                    {item.description && (
-                                                                        <div className="item-description">{item.description}</div>
-                                                                    )}
-                                                                    <div className="item-price">₺{item.price}</div>
-                                                                </div>
-                                                                <div className="item-controls">
-                                                                    <button
-                                                                        className="quantity-btn"
-                                                                        onClick={() => onQuantityChange(item.id, (cart[item.id] || 0) - 1)}
-                                                                        disabled={(cart[item.id] || 0) <= 0}
-                                                                    >
-                                                                        -
-                                                                    </button>
-                                                                    <span className="quantity">{cart[item.id] || 0}</span>
-                                                                    <button
-                                                                        className="quantity-btn"
-                                                                        onClick={() => onQuantityChange(item.id, (cart[item.id] || 0) + 1)}
-                                                                    >
-                                                                        +
-                                                                    </button>
-                                                                    <button
-                                                                        className="btn btn-primary"
-                                                                        onClick={() => onAddToCart(item.id)}
-                                                                        disabled={(cart[item.id] || 0) <= 0}
-                                                                    >
-                                                                        Add to Cart
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                )}
-
-                                                {/* Subcategories (for Light Meals) */}
-                                                {category.subcategories && (
-                                                    <div className="subcategories">
-                                                        {category.subcategories.map((subcategory, subIndex) => (
-                                                            <div key={subIndex} className="subcategory">
-                                                                <h5>{subcategory.title}</h5>
-                                                                <div className="selectable-menu-items">
-                                                                    {subcategory.items.map((item) => (
-                                                                        <div key={item.id} className="selectable-menu-item">
-                                                                            <div className="item-info">
-                                                                                <div className="item-name">{item.name}</div>
-                                                                                {item.description && (
-                                                                                    <div className="item-description">{item.description}</div>
-                                                                                )}
-                                                                                <div className="item-price">₺{item.price}</div>
-                                                                            </div>
-                                                                            <div className="item-controls">
-                                                                                <button
-                                                                                    className="quantity-btn"
-                                                                                    onClick={() => onQuantityChange(item.id, (cart[item.id] || 0) - 1)}
-                                                                                    disabled={(cart[item.id] || 0) <= 0}
-                                                                                >
-                                                                                    -
-                                                                                </button>
-                                                                                <span className="quantity">{cart[item.id] || 0}</span>
-                                                                                <button
-                                                                                    className="quantity-btn"
-                                                                                    onClick={() => onQuantityChange(item.id, (cart[item.id] || 0) + 1)}
-                                                                                >
-                                                                                    +
-                                                                                </button>
-                                                                                <button
-                                                                                    className="btn btn-primary"
-                                                                                    onClick={() => onAddToCart(item.id)}
-                                                                                    disabled={(cart[item.id] || 0) <= 0}
-                                                                                >
-                                                                                    Add to Cart
-                                                                                </button>
-                                                                            </div>
-                                                                        </div>
-                                                                    ))}
-                                                                </div>
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                )}
-
-                                                {/* Add-ons */}
-                                                {category.addOns && (
-                                                    <div className="add-ons">
-                                                        <h5>Add Ons:</h5>
+                                                    {/* Main items */}
+                                                    {translatedCategory.items && (
                                                         <div className="selectable-menu-items">
-                                                            {category.addOns.map((addOn) => (
-                                                                <div key={addOn.id} className="selectable-menu-item">
-                                                                    <div className="item-info">
-                                                                        <div className="item-name">{addOn.name}</div>
-                                                                        <div className="item-price">₺{addOn.price}</div>
+                                                            {translatedCategory.items.map((item: any) => {
+                                                                const translatedItem = getTranslatedMenuItem(item);
+                                                                return (
+                                                                    <div key={item.id} className="selectable-menu-item">
+                                                                        <div className="item-info">
+                                                                            <div className="item-name">{translatedItem.name}</div>
+                                                                            {translatedItem.description && (
+                                                                                <div className="item-description">{translatedItem.description}</div>
+                                                                            )}
+                                                                            <div className="item-price">₺{item.price}</div>
+                                                                        </div>
+                                                                        <div className="item-controls">
+                                                                            <button
+                                                                                className="quantity-btn"
+                                                                                onClick={() => onQuantityChange(item.id, (cart[item.id] || 0) - 1)}
+                                                                                disabled={(cart[item.id] || 0) <= 0}
+                                                                            >
+                                                                                -
+                                                                            </button>
+                                                                            <span className="quantity">{cart[item.id] || 0}</span>
+                                                                            <button
+                                                                                className="quantity-btn"
+                                                                                onClick={() => onQuantityChange(item.id, (cart[item.id] || 0) + 1)}
+                                                                            >
+                                                                                +
+                                                                            </button>
+                                                                            <button
+                                                                                className="btn btn-primary"
+                                                                                onClick={() => onAddToCart(item.id)}
+                                                                                disabled={(cart[item.id] || 0) <= 0}
+                                                                            >
+                                                                                {t('menu.add-to-cart')}
+                                                                            </button>
+                                                                        </div>
                                                                     </div>
-                                                                    <div className="item-controls">
-                                                                        <button
-                                                                            className="quantity-btn"
-                                                                            onClick={() => onQuantityChange(addOn.id, (cart[addOn.id] || 0) - 1)}
-                                                                            disabled={(cart[addOn.id] || 0) <= 0}
-                                                                        >
-                                                                            -
-                                                                        </button>
-                                                                        <span className="quantity">{cart[addOn.id] || 0}</span>
-                                                                        <button
-                                                                            className="quantity-btn"
-                                                                            onClick={() => onQuantityChange(addOn.id, (cart[addOn.id] || 0) + 1)}
-                                                                        >
-                                                                            +
-                                                                        </button>
-                                                                        <button
-                                                                            className="btn btn-primary"
-                                                                            onClick={() => onAddToCart(addOn.id)}
-                                                                            disabled={(cart[addOn.id] || 0) <= 0}
-                                                                        >
-                                                                            Add to Cart
-                                                                        </button>
+                                                                );
+                                                            })}
+                                                        </div>
+                                                    )}
+
+                                                    {/* Subcategories (for Light Meals) */}
+                                                    {translatedCategory.subcategories && (
+                                                        <div className="subcategories">
+                                                            {translatedCategory.subcategories.map((subcategory: any, subIndex: number) => (
+                                                                <div key={subIndex} className="subcategory">
+                                                                    <h5>{subcategory.title}</h5>
+                                                                    <div className="selectable-menu-items">
+                                                                        {subcategory.items.map((item: any) => {
+                                                                            const translatedSubItem = getTranslatedMenuItem(item);
+                                                                            return (
+                                                                                <div key={item.id} className="selectable-menu-item">
+                                                                                    <div className="item-info">
+                                                                                        <div className="item-name">{translatedSubItem.name}</div>
+                                                                                        {translatedSubItem.description && (
+                                                                                            <div className="item-description">{translatedSubItem.description}</div>
+                                                                                        )}
+                                                                                        <div className="item-price">₺{item.price}</div>
+                                                                                    </div>
+                                                                                    <div className="item-controls">
+                                                                                        <button
+                                                                                            className="quantity-btn"
+                                                                                            onClick={() => onQuantityChange(item.id, (cart[item.id] || 0) - 1)}
+                                                                                            disabled={(cart[item.id] || 0) <= 0}
+                                                                                        >
+                                                                                            -
+                                                                                        </button>
+                                                                                        <span className="quantity">{cart[item.id] || 0}</span>
+                                                                                        <button
+                                                                                            className="quantity-btn"
+                                                                                            onClick={() => onQuantityChange(item.id, (cart[item.id] || 0) + 1)}
+                                                                                        >
+                                                                                            +
+                                                                                        </button>
+                                                                                        <button
+                                                                                            className="btn btn-primary"
+                                                                                            onClick={() => onAddToCart(item.id)}
+                                                                                            disabled={(cart[item.id] || 0) <= 0}
+                                                                                        >
+                                                                                            {t('menu.add-to-cart')}
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            );
+                                                                        })}
                                                                     </div>
                                                                 </div>
                                                             ))}
                                                         </div>
-                                                    </div>
-                                                )}
-                                            </div>
-                                        ))}
+                                                    )}
+
+                                                    {/* Add-ons */}
+                                                    {category.addOns && (
+                                                        <div className="add-ons">
+                                                            <h5>{t('menu.add-ons-title')}</h5>
+                                                            <div className="selectable-menu-items">
+                                                                {category.addOns.map((addOn: any) => (
+                                                                    <div key={addOn.id} className="selectable-menu-item">
+                                                                        <div className="item-info">
+                                                                            <div className="item-name">{addOn.name}</div>
+                                                                            <div className="item-price">₺{addOn.price}</div>
+                                                                        </div>
+                                                                        <div className="item-controls">
+                                                                            <button
+                                                                                className="quantity-btn"
+                                                                                onClick={() => onQuantityChange(addOn.id, (cart[addOn.id] || 0) - 1)}
+                                                                                disabled={(cart[addOn.id] || 0) <= 0}
+                                                                            >
+                                                                                -
+                                                                            </button>
+                                                                            <span className="quantity">{cart[addOn.id] || 0}</span>
+                                                                            <button
+                                                                                className="quantity-btn"
+                                                                                onClick={() => onQuantityChange(addOn.id, (cart[addOn.id] || 0) + 1)}
+                                                                            >
+                                                                                +
+                                                                            </button>
+                                                                            <button
+                                                                                className="btn btn-primary"
+                                                                                onClick={() => onAddToCart(addOn.id)}
+                                                                                disabled={(cart[addOn.id] || 0) <= 0}
+                                                                            >
+                                                                                {t('menu.add-to-cart')}
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 </div>
                             ))}

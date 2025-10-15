@@ -4,6 +4,7 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { getRoomPrice, getSeasonFromDate } from '../utils/pricing';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface RoomImage {
     src: string;
@@ -34,6 +35,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
     onWhatsAppClick,
     selectedDates
 }) => {
+    const { t } = useLanguage();
     const [price, setPrice] = useState<number>(0);
 
     useEffect(() => {
@@ -57,7 +59,7 @@ const RoomCard: React.FC<RoomCardProps> = ({
     const handleWhatsAppClick = () => {
         console.log('RoomCard - selectedDates:', selectedDates);
         if (!selectedDates || !selectedDates.checkin || !selectedDates.checkout || !selectedDates.numberOfPeople) {
-            alert('Please select your check-in and check-out dates and number of guests first.');
+            alert(t('common.select-dates-first'));
             return;
         }
         onWhatsAppClick(title, price, selectedDates);
@@ -99,12 +101,12 @@ const RoomCard: React.FC<RoomCardProps> = ({
                         </li>
                     ))}
                 </ul>
-                <div className="room-price">£{price}/night</div>
+                <div className="room-price">£{price}/{t('rooms.per-night')}</div>
                 <button
                     className="btn btn-whatsapp"
                     onClick={handleWhatsAppClick}
                 >
-                    <i className="fab fa-whatsapp"></i> Contact via WhatsApp
+                    <i className="fab fa-whatsapp"></i> {t('rooms.contact-whatsapp')}
                 </button>
             </div>
         </div>

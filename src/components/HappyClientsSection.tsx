@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const HappyClientsSection: React.FC = () => {
+    const { t } = useLanguage();
     const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
     const customerImages = [
@@ -37,13 +39,13 @@ const HappyClientsSection: React.FC = () => {
             <div className="container">
                 <div className="customers-content">
                     <div className="customers-header">
-                        <h2>Our Happy Customers</h2>
-                        <p>See the wonderful moments our guests have shared with us</p>
+                        <h2>{t('clients.title')}</h2>
+                        <p>{t('clients.subtitle')}</p>
                     </div>
 
                     <div className="customers-layout">
                         <div className="customer-gallery">
-                            <h3>Guest Gallery</h3>
+                            <h3>{t('clients.gallery')}</h3>
                             <div className="gallery-grid">
                                 {customerImages.map((image, index) => (
                                     <div key={index} className="gallery-item" onClick={() => openGallery(index)}>
@@ -57,17 +59,17 @@ const HappyClientsSection: React.FC = () => {
                         </div>
 
                         <div className="customer-testimonials">
-                            <h3>What Our Guests Say</h3>
+                            <h3>{t('clients.testimonials')}</h3>
                             <div className="testimonials-grid">
                                 <div className="testimonial" onClick={() => window.open('https://www.tripadvisor.com/ShowUserReviews-g312737-d26286044-r1028933671-Jasmine_Restaurant_Bar-Oludeniz_Fethiye_Mugla_Province_Turkish_Aegean_Coast.html', '_blank')}>
                                     <div className="testimonial-content">
                                         <div className="testimonial-quote">
                                             <i className="fas fa-quote-left"></i>
                                         </div>
-                                        <p>"Amazing place! The food was delicious and the staff was so friendly. We had a wonderful time at Jasmine Restaurant & Hotel."</p>
+                                        <p>"{t('clients.review1')}"</p>
                                         <div className="testimonial-author">
-                                            <strong>Sarah & John</strong>
-                                            <span>UK Visitors</span>
+                                            <strong>{t('clients.review1.author')}</strong>
+                                            <span>{t('clients.review1.location')}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -76,10 +78,10 @@ const HappyClientsSection: React.FC = () => {
                                         <div className="testimonial-quote">
                                             <i className="fas fa-quote-left"></i>
                                         </div>
-                                        <p>"Excellent food, excellent hosts and the dogs made it even more special. We will certainly be back again, well worth a visit!"</p>
+                                        <p>"{t('clients.review2')}"</p>
                                         <div className="testimonial-author">
-                                            <strong>Maria & Carlos</strong>
-                                            <span>Spanish Tourists</span>
+                                            <strong>{t('clients.review2.author')}</strong>
+                                            <span>{t('clients.review2.location')}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -93,7 +95,7 @@ const HappyClientsSection: React.FC = () => {
                                     className="btn btn-primary testimonials-btn"
                                 >
                                     <i className="fa fa-tripadvisor"></i>
-                                    Read More Reviews on TripAdvisor
+                                    {t('clients.read-reviews')}
                                 </a>
                             </div>
                         </div>

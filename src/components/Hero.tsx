@@ -1,16 +1,19 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="home" className="hero">
             <div className="hero-content">
                 <div className="hero-text">
-                    <h1>Welcome to Jasmine</h1>
-                    <h2>Restaurant & Bar • Hotel</h2>
-                    <p>Experience comfortable family accommodation and delicious home-style dining in the heart of Oludeniz, Turkey.</p>
+                    <h1>{t('hero.welcome')}</h1>
+                    <h2>{t('hero.subtitle')}</h2>
+                    <p>{t('hero.description')}</p>
                     <div className="hero-buttons">
-                        <a href="#restaurant" className="btn btn-primary">Explore Restaurant</a>
-                        <a href="#rooms" className="btn btn-secondary">View Rooms</a>
+                        <a href="#restaurant" className="btn btn-primary">{t('hero.explore-restaurant')}</a>
+                        <a href="#rooms" className="btn btn-secondary">{t('hero.view-rooms')}</a>
                     </div>
                 </div>
             </div>

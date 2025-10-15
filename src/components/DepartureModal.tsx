@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { createWhatsAppUrl } from '../constants/whatsapp';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const DepartureModal: React.FC = () => {
+    const { t } = useLanguage();
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -47,60 +49,60 @@ Please let me know more details about this service and how to arrange it. Thank 
                     <div className="modal-icon">
                         <i className="fas fa-plane-departure"></i>
                     </div>
-                    <h2>Special Departure Day Offer!</h2>
-                    <p className="modal-subtitle">Make the most of your last day in Oludeniz</p>
+                    <h2>{t('special.title')}!</h2>
+                    <p className="modal-subtitle">{t('special.subtitle')}</p>
                 </div>
 
                 <div className="modal-body">
                     <div className="offer-highlight">
-                        <p>Don't let your departure day go to waste! Whether you have a late flight, early arrival, or just want to enjoy our beautiful facilities one more time, we've got you covered.</p>
+                        <p>{t('special.description')}</p>
                     </div>
 
                     <div className="features-grid">
                         <div className="feature-card">
                             <i className="fas fa-suitcase"></i>
-                            <h4>Luggage Storage</h4>
-                            <p>Store your bags safely while you explore</p>
+                            <h4>{t('special.feature1.title')}</h4>
+                            <p>{t('special.feature1.desc')}</p>
                         </div>
                         <div className="feature-card">
                             <i className="fas fa-shower"></i>
-                            <h4>Shower Facilities</h4>
-                            <p>Fresh and clean before your journey</p>
+                            <h4>{t('special.feature2.title')}</h4>
+                            <p>{t('special.feature2.desc')}</p>
                         </div>
                         <div className="feature-card">
                             <i className="fas fa-swimming-pool"></i>
-                            <h4>Pool Access</h4>
-                            <p>Relax by our beautiful pool</p>
+                            <h4>{t('special.feature3.title')}</h4>
+                            <p>{t('special.feature3.desc')}</p>
                         </div>
                         <div className="feature-card">
                             <i className="fas fa-sun"></i>
-                            <h4>Sunbeds</h4>
-                            <p>Comfortable lounging in the sun</p>
+                            <h4>{t('special.feature4.title')}</h4>
+                            <p>{t('special.feature4.desc')}</p>
                         </div>
                         <div className="feature-card">
                             <i className="fas fa-car"></i>
-                            <h4>Hotel Pickup</h4>
-                            <p>Free transportation from your hotel</p>
+                            <h4>{t('special.feature5.title')}</h4>
+                            <p>{t('special.feature5.desc')}</p>
                         </div>
                         <div className="feature-card">
                             <i className="fas fa-utensils"></i>
-                            <h4>Restaurant Access</h4>
-                            <p>Enjoy our delicious meals and drinks</p>
+                            <h4>{t('special.feature6.title')}</h4>
+                            <p>{t('special.feature6.desc')}</p>
                         </div>
                     </div>
 
                     <div className="modal-note">
                         <i className="fas fa-info-circle"></i>
-                        <p><strong>Terms:</strong> Free facilities available when dining at our restaurant. Perfect for making your departure day comfortable and memorable!</p>
+                        <p><strong>{t('special.terms')}</strong></p>
                     </div>
                 </div>
 
                 <div className="modal-footer">
                     <button className="btn btn-secondary" onClick={handleClose}>
-                        <i className="fas fa-times"></i> Not Today
+                        <i className="fas fa-times"></i> {t('special.not-today')}
                     </button>
                     <button className="btn btn-primary" onClick={handleContactPickup}>
-                        <i className="fab fa-whatsapp"></i> Book This Service
+                        <i className="fab fa-whatsapp"></i> {t('special.book-now')}
                     </button>
                 </div>
             </div>

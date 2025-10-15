@@ -1,23 +1,26 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const HotelSection: React.FC = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="hotel" className="hotel-section">
             <div className="container">
                 <div className="section-header">
-                    <h2>Evita Apartments</h2>
-                    <p>Comfortable family accommodation in the heart of Oludeniz</p>
+                    <h2>{t('hotel.title')}</h2>
+                    <p>{t('hotel.subtitle')}</p>
                 </div>
                 <div className="hotel-content">
                     <div className="hotel-info">
-                        <h3>Family-Friendly Accommodation</h3>
-                        <p>Our hotel offers comfortable rooms and apartments perfect for families. Enjoy modern amenities, beautiful surroundings, and a warm, welcoming atmosphere that makes you feel at home.</p>
+                        <h3>{t('hotel.family-accommodation')}</h3>
+                        <p>{t('hotel.description')}</p>
                         <ul className="features">
-                            <li><i className="fas fa-wifi"></i> Free WiFi</li>
-                            <li><i className="fas fa-swimming-pool"></i> Swimming Pool</li>
-                            <li><i className="fas fa-car"></i> Free Parking</li>
-                            <li><i className="fas fa-heart"></i> Family-Friendly Service</li>
-                            <li><i className="fas fa-child"></i> Kid-Friendly Environment</li>
+                            <li><i className="fas fa-wifi"></i> {t('hotel.features.wifi')}</li>
+                            <li><i className="fas fa-swimming-pool"></i> {t('hotel.features.pool')}</li>
+                            <li><i className="fas fa-car"></i> {t('hotel.features.parking')}</li>
+                            <li><i className="fas fa-heart"></i> {t('hotel.features.family-service')}</li>
+                            <li><i className="fas fa-child"></i> {t('hotel.features.kid-friendly')}</li>
                         </ul>
                     </div>
                     <div className="hotel-image">

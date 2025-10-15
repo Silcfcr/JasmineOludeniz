@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface CarRentalSectionProps {
     onContactClick: (message: string) => void;
 }
 
 const CarRentalSection: React.FC<CarRentalSectionProps> = ({ onContactClick }) => {
+    const { t } = useLanguage();
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     const [today] = useState(new Date().toISOString().split('T')[0]);
@@ -60,19 +62,19 @@ Thank you!`;
             <div className="container">
                 <div className="car-rental-card">
                     <div className="car-rental-header">
-                        <h2>Car Rental Service</h2>
-                        <p>Explore Oludeniz and surrounding areas with our reliable car rental service</p>
+                        <h2>{t('car.title')}</h2>
+                        <p>{t('car.subtitle')}</p>
                     </div>
 
                     <div className="car-rental-content">
                         <div className="car-rental-form">
-                            <h3>Request Car Rental</h3>
-                            <p className="booking-note">Select your rental dates and we'll contact you with availability and pricing</p>
+                            <h3>{t('car.request-title')}</h3>
+                            <p className="booking-note">{t('car.booking-note')}</p>
 
                             <div className="date-selection">
                                 <div className="date-inputs">
                                     <div className="date-input">
-                                        <label htmlFor="startDate">Start Date *</label>
+                                        <label htmlFor="startDate">{t('car.start-date')} *</label>
                                         <input
                                             type="date"
                                             id="startDate"
@@ -83,7 +85,7 @@ Thank you!`;
                                         />
                                     </div>
                                     <div className="date-input">
-                                        <label htmlFor="endDate">End Date *</label>
+                                        <label htmlFor="endDate">{t('car.end-date')} *</label>
                                         <input
                                             type="date"
                                             id="endDate"
@@ -101,7 +103,7 @@ Thank you!`;
                                 onClick={handleContactClick}
                             >
                                 <i className="fab fa-whatsapp"></i>
-                                Contact via WhatsApp
+                                {t('car.contact-whatsapp')}
                             </button>
                         </div>
 
