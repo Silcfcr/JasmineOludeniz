@@ -355,7 +355,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         'rooms.room3.description': { en: 'Spacious two-bedroom apartment perfect for families.', ru: 'Просторная двухкомнатная квартира, идеально подходящая для семей.' },
         'rooms.room4.title': { en: '2 Bedroom Apartment - 203', ru: '2-комнатная квартира - 203' },
         'rooms.room4.description': { en: 'Comfortable two-bedroom apartment with modern amenities.', ru: 'Удобная двухкомнатная квартира с современными удобствами.' },
-        'rooms.room5.title': { en: '3 Bedroom Apartment - 301', ru: '3-комнатная квартира - 301' },
+        'rooms.room5.title': { en: '3 Bedroom Apartment - 401', ru: '3-комнатная квартира - 401' },
         'rooms.room5.description': { en: 'Large three-bedroom apartment with stunning views.', ru: 'Большая трехкомнатная квартира с потрясающими видами.' },
         'rooms.room6.title': { en: '1 Bedroom Apartment - 301', ru: '1-комнатная квартира - 301' },
         'rooms.room6.description': { en: 'First floor apartment with pools views and family-friendly layout.', ru: 'Квартира на первом этаже с видом на бассейн и семейной планировкой.' },

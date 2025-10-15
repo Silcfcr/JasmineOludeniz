@@ -159,10 +159,12 @@ const RoomsSection: React.FC<RoomsSectionProps> = ({ onWhatsAppClick }) => {
             title: t('rooms.room7.title'),
             description: t('rooms.room7.description'),
             images: [
-                { src: 'Img/Apt1Garden/Apt1Garden.1.jpeg', alt: 'Studio Room Garden Side - Main View' },
-                { src: 'Img/Apt1Garden/Apt1Garden.2.jpeg', alt: 'Studio Room Garden Side - Living Area' },
-                { src: 'Img/Apt1Garden/Apt1Garden.3.jpeg', alt: 'Studio Room Garden Side - Bedroom' },
-                { src: 'Img/Apt1Garden/Apt1Garden.5.jpeg', alt: 'Studio Room Garden Side - Garden View' }
+                { src: 'Img/Apt102/Apt102.1.jpeg', alt: 'Studio Room 102 - Main View' },
+                { src: 'Img/Apt102/Apt102.2.jpeg', alt: 'Studio Room 102 - Living Area' },
+                { src: 'Img/Apt102/Apt102.3.jpeg', alt: 'Studio Room 102 - Bedroom' },
+                { src: 'Img/Apt102/Apt102.4.jpeg', alt: 'Studio Room 102 - Kitchen' },
+                { src: 'Img/Apt102/Apt102.5.jpeg', alt: 'Studio Room 102 - Bathroom' },
+                { src: 'Img/Apt102/Apt102.6.jpeg', alt: 'Studio Room 102 - Additional View' }
             ],
             features: [
                 { icon: 'fas fa-bed', text: t('rooms.features.double-single-bed') },
