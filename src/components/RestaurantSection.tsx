@@ -23,8 +23,18 @@ const RestaurantSection: React.FC<RestaurantSectionProps> = ({ onToggleMenu, men
                             <li><i className="fas fa-utensils"></i> {t('restaurant.features.traditional')}</li>
                             <li><i className="fas fa-cocktail"></i> {t('restaurant.features.drinks')}</li>
                             <li><i className="fas fa-swimming-pool"></i> {t('restaurant.features.poolside')}</li>
-                            <li><i className="fas fa-heart"></i> {t('restaurant.features.kid-friendly')}</li>
+                            <li><i className="fas fa-car"></i> {t('restaurant.features.pickup')}</li>
                         </ul>
+
+                        {/* Quiz Night Section */}
+                        <div className="quiz-night-section">
+                            <div className="quiz-night-header">
+                                <i className="fas fa-question-circle"></i>
+                                <h4>{t('quiz.title')}</h4>
+                                <span className="quiz-day">{t('quiz.subtitle')}</span>
+                            </div>
+                            <p>{t('quiz.description')}</p>
+                        </div>
                     </div>
                     <div className="hotel-image">
                         <img src="/Img/front.jpeg" alt="Hotel Exterior" />

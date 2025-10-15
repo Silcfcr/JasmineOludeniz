@@ -48,6 +48,10 @@ const Footer: React.FC = () => {
                                 style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '10px' }}
                             />
                         </div>
+                        <div className="pickup-message">
+                            <i className="fas fa-car"></i>
+                            <p>{t('footer.pickup-message')}</p>
+                        </div>
                     </div>
                 </div>
 

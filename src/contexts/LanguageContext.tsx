@@ -50,6 +50,12 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         'restaurant.features.drinks': { en: 'Full Bar & Cocktails', ru: 'Полный бар и коктейли' },
         'restaurant.features.poolside': { en: 'Poolside Dining', ru: 'Обед у бассейна' },
         'restaurant.features.kid-friendly': { en: 'Kid-Friendly Menu', ru: 'Детское меню' },
+        'restaurant.features.pickup': { en: 'Free Pickup for Clients', ru: 'Бесплатный трансфер для клиентов' },
+
+        // Quiz Night
+        'quiz.title': { en: 'Quiz Night', ru: 'Викторина' },
+        'quiz.subtitle': { en: 'Every Thursday', ru: 'Каждый четверг' },
+        'quiz.description': { en: 'Join us for a fun quiz night every Thursday! Test your knowledge, meet new people, and enjoy great food and drinks.', ru: 'Присоединяйтесь к нам на веселую викторину каждый четверг! Проверьте свои знания, познакомьтесь с новыми людьми и насладитесь отличной едой и напитками.' },
 
         // Hotel Section
         'hotel.title': { en: 'Our Hotel', ru: 'Наш отель' },
@@ -78,7 +84,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         'special.feature5.desc': { en: 'We\'ll pick you up from your hotel', ru: 'Мы заберем вас из вашего отеля' },
         'special.feature6.title': { en: 'Free Restaurant Access', ru: 'Бесплатный доступ в ресторан' },
         'special.feature6.desc': { en: 'Enjoy our restaurant facilities', ru: 'Наслаждайтесь удобствами нашего ресторана' },
-        'special.terms': { en: 'Terms: Must have stayed with us for at least 2 nights. Valid for departure day only.', ru: 'Условия: Должны были остановиться у нас минимум на 2 ночи. Действительно только в день отъезда.' },
+        'special.terms': { en: 'Terms: Must order food and drinks at the restaurant.', ru: 'Условия: Должны заказать еду и напитки в ресторане.' },
         'special.book-now': { en: 'Book This Service', ru: 'Забронировать услугу' },
         'special.not-today': { en: 'Not Today', ru: 'Не сегодня' },
 
@@ -432,6 +438,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
         'footer.title': { en: 'Jasmine Restaurant & Bar', ru: 'Ресторан и бар Жасмин' },
         'footer.description': { en: 'Your home away from home in Oludeniz, Turkey. Experience authentic Turkish hospitality and cuisine.', ru: 'Ваш дом вдали от дома в Олюденизе, Турция. Познакомьтесь с аутентичным турецким гостеприимством и кухней.' },
         'footer.find-us': { en: 'Find Us', ru: 'Найти нас' },
+        'footer.pickup-message': { en: 'Can\'t find us? Call us and we\'ll come get you!', ru: 'Не можете нас найти? Позвоните нам, и мы приедем за вами!' },
         'footer.map-alt': { en: 'Jasmine Restaurant & Bar Location Map', ru: 'Карта расположения ресторана и бара Жасмин' },
         'footer.contact-whatsapp': { en: 'Contact via WhatsApp', ru: 'Связаться через WhatsApp' },
         'footer.whatsapp-message': { en: 'Hello! I would like to know more about Jasmine Restaurant & Bar. Could you provide me with more information?', ru: 'Привет! Я хотел бы узнать больше о ресторане и баре Жасмин. Не могли бы вы предоставить мне дополнительную информацию?' },
