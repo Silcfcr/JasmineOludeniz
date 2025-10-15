@@ -11,7 +11,28 @@ const HappyClientsSection: React.FC = () => {
         { src: '/Img/costumers/cos3.jpeg', alt: 'Happy customers at Jasmine' },
         { src: '/Img/costumers/cos4.jpeg', alt: 'Happy customers at Jasmine' },
         { src: '/Img/costumers/cos5.jpeg', alt: 'Happy customers at Jasmine' },
-        { src: '/Img/costumers/cos6.jpeg', alt: 'Happy customers at Jasmine' }
+        { src: '/Img/costumers/cos6.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos7.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos8.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos9.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos10.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos11.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos12.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos13.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos14.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos15.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos16.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos17.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos18.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos19.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos20.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos21.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos22.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos23.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos24.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos25.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos26.jpeg', alt: 'Happy customers at Jasmine' },
+        { src: '/Img/costumers/cos27.jpeg', alt: 'Happy customers at Jasmine' }
     ];
 
     const openGallery = (index: number) => {

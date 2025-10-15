@@ -1121,10 +1121,14 @@ section:first-of-type {
 }
 
 .customer-gallery {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    margin: 2rem 0;
 }
 
 .gallery-item {
@@ -1177,10 +1181,14 @@ section:first-of-type {
 }
 
 .customer-testimonials {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
 }
 
 .testimonial {
@@ -1219,10 +1227,10 @@ section:first-of-type {
 
 /* Improved Layout Styles */
 .customers-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 4rem;
-    align-items: start;
+    align-items: stretch;
 }
 
 .customer-gallery h3,
@@ -1375,8 +1383,7 @@ section:first-of-type {
     }
     
     .customers-layout {
-        grid-template-columns: 1fr;
-    gap: 3rem;
+        gap: 3rem;
     }
     
     .gallery-grid {
