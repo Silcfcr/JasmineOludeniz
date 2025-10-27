@@ -38,7 +38,7 @@ const DateSelection: React.FC<DateSelectionProps> = ({ onContactWithDates }) => 
                 <p>{t('rooms.subtitle')}</p>
             </div>
             <h3>📅 {t('rooms.select-dates')}</h3>
-            <p className="date-requirement">Please select your check-in and check-out dates to view seasonal prices.</p>
+            <p className="date-requirement">{t('rooms.date-requirement')}</p>
             <div className="date-inputs">
                 <div className="date-input">
                     <label htmlFor="checkin">{t('rooms.checkin')} *</label>

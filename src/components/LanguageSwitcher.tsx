@@ -4,7 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 const LanguageSwitcher: React.FC = () => {
     const { language, setLanguage } = useLanguage();
 
-    const handleLanguageChange = (newLanguage: 'en' | 'ru') => {
+    const handleLanguageChange = (newLanguage: 'en' | 'ru' | 'tr') => {
         setLanguage(newLanguage);
     };
 
@@ -14,15 +14,25 @@ const LanguageSwitcher: React.FC = () => {
                 className={`lang-btn ${language === 'en' ? 'active' : ''}`}
                 onClick={() => handleLanguageChange('en')}
                 aria-label="Switch to English"
+                title="English"
             >
-                EN
+                🇬🇧
             </button>
             <button
                 className={`lang-btn ${language === 'ru' ? 'active' : ''}`}
                 onClick={() => handleLanguageChange('ru')}
                 aria-label="Switch to Russian"
+                title="Русский"
             >
-                RU
+                🇷🇺
+            </button>
+            <button
+                className={`lang-btn ${language === 'tr' ? 'active' : ''}`}
+                onClick={() => handleLanguageChange('tr')}
+                aria-label="Switch to Turkish"
+                title="Türkçe"
+            >
+                🇹🇷
             </button>
         </div>
     );
